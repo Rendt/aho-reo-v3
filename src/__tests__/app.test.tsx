@@ -46,6 +46,15 @@ describe('Aho Reo App end-to-end user flow', () => {
     // Jump to Step 5 Practice
     fireEvent.click(screen.getByRole('button', { name: /5\s*Practice/i }));
 
+    // Pattern hint is hidden by default and target-word hint must never appear
+    expect(screen.queryByText(/Nō \+ Tāmaki Makaurau \+ ahau/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Nō \+ \[Place\] \+ \[Pronoun\]/i)).not.toBeInTheDocument();
+
+    // Clicking "Show hint" reveals only the placeholder pattern
+    fireEvent.click(screen.getByRole('button', { name: /Show hint/i }));
+    expect(screen.getByText(/Pattern hint: Nō \+ \[Place\] \+ \[Pronoun\]/i)).toBeInTheDocument();
+    expect(screen.queryByText(/Nō \+ Tāmaki Makaurau \+ ahau/i)).not.toBeInTheDocument();
+
     const input = screen.getByPlaceholderText(/Type your sentence in Te Reo Māori/i);
     const checkBtn = screen.getByRole('button', { name: /Check Answer/i });
 

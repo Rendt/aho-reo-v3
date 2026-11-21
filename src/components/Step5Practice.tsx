@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   Eye,
   EyeOff,
+  Lightbulb,
   Mic,
   MicOff,
   RotateCcw,
@@ -57,6 +58,7 @@ export function Step5Practice({
 }: Step5PracticeProps) {
   const prompt = mod.prompts[promptIdx] ?? mod.prompts[0];
   const [answer, setAnswer] = useState('');
+  const [showHint, setShowHint] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
   const [manualChipOverride, setManualChipOverride] = useState<boolean | null>(null);
   const [outcome, setOutcome] = useState<GradeOutcome | null>(null);
@@ -210,6 +212,16 @@ export function Step5Practice({
           <div className="row-wrap">
             <button
               type="button"
+              id="toggleHintBtn"
+              className="btn btn-secondary btn-sm"
+              aria-pressed={showHint}
+              onClick={() => setShowHint((v) => !v)}
+            >
+              <Lightbulb size={14} />
+              <span>{showHint ? 'Hide hint' : 'Show hint'}</span>
+            </button>
+            <button
+              type="button"
               id="revealAnswerBtn"
               className="btn btn-secondary btn-sm"
               onClick={() => setShowAnswer((v) => !v)}
@@ -231,7 +243,11 @@ export function Step5Practice({
 
         <div className="prompt-target">“{prompt.target}”</div>
 
-        {prompt.hint && <div className="prompt-hint">Pattern: {prompt.hint}</div>}
+        {showHint && (
+          <div id="step5PatternHint" className="prompt-hint">
+            Pattern hint: {mod.pattern}
+          </div>
+        )}
 
         {showAnswer && (
           <div className="concept-box">
@@ -396,7 +412,7 @@ export function Step5Practice({
             <div className="stack-sm">
               <strong>{outcome.message}</strong>
               <div>
-                Hint: <span className="mono">{prompt.hint ?? mod.pattern}</span>
+                Pattern hint: <span className="mono">{mod.pattern}</span>
               </div>
             </div>
           )}

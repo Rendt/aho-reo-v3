@@ -154,7 +154,7 @@ export function DrillModal({
             </span>
             <div className="prompt-target">“{entry.prompt.target}”</div>
             {showHint && (
-              <div className="prompt-hint">Pattern: {entry.prompt.hint ?? entry.mod.pattern}</div>
+              <div className="prompt-hint">Pattern hint: {entry.mod.pattern}</div>
             )}
           </div>
 
@@ -234,7 +234,7 @@ export function DrillModal({
               {outcome.kind === 'mismatch' && (
                 <div>
                   <strong>{outcome.message}</strong> Expected pattern:{' '}
-                  <span className="mono">{entry.prompt.hint ?? entry.mod.pattern}</span>
+                  <span className="mono">{entry.mod.pattern}</span>
                 </div>
               )}
             </div>
