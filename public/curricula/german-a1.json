@@ -1,0 +1,1540 @@
+{
+  "meta": {
+    "id": "AHO_DEU_A1",
+    "languageName": "Deutsch (German)",
+    "bcp47": "de-DE",
+    "baseLanguage": "English",
+    "curriculumLevel": "CEFR A1 · Beginner",
+    "author": "Aho Reo Educational Baseline",
+    "versionDate": "2026-11-21",
+    "version": "3.1",
+    "specialChars": ["ä", "ö", "ü", "ß", "Ä", "Ö", "Ü"],
+    "packLabels": {
+      "workplace": "Arbeit & Büro",
+      "outside": "Natur & Reisen",
+      "community": "Stadt & Alltag",
+      "social": "Familie & Freunde"
+    },
+    "praisePhrase": "Ausgezeichnet!"
+  },
+  "modules": [
+    {
+      "id": "DEU_W1_M01",
+      "title": "Lesson 1.1: Self & Identity (Ich heiße / Ich bin)",
+      "tier": 1,
+      "wahanga": "Group 1: Identity & Connections",
+      "kowae": "Unit 1.1: Personal Identity",
+      "canDo": "Greet someone and introduce yourself using Ich heiße or Ich bin.",
+      "readerRole": "Foundation",
+      "concept": "In German statements, the conjugated verb always sits in second position (V2): 'Ich heiße Anna' or 'Ich bin Lukas'.",
+      "pattern": "Ich + heiße / bin + [Name]",
+      "slots": [
+        { "label": "Ich", "meaning": "I (subject)", "type": "fixed" },
+        { "label": "heiße / bin", "meaning": "am called / am (V2 verb)", "type": "fixed" },
+        { "label": "[Name]", "meaning": "proper name", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "Hallo", "meaning": "hello", "emoji": "👋" },
+        { "word": "Ich", "meaning": "I", "emoji": "👤" },
+        { "word": "heiße", "meaning": "am called", "emoji": "🪪" },
+        { "word": "bin", "meaning": "am", "emoji": "✨" },
+        { "word": "du", "meaning": "you (informal)", "emoji": "🫵" },
+        { "word": "Guten Tag", "meaning": "good day / hello (formal)", "emoji": "☀️" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "der Kollege", "meaning": "the colleague (m)", "emoji": "💼" },
+          { "word": "die Kollegin", "meaning": "the colleague (f)", "emoji": "📋" }
+        ],
+        "outside": [
+          { "word": "der Gast", "meaning": "the guest", "emoji": "🧭" },
+          { "word": "der Reisende", "meaning": "the traveler", "emoji": "🧳" }
+        ],
+        "community": [
+          { "word": "der Nachbar", "meaning": "the neighbor", "emoji": "🏘️" },
+          { "word": "die Gruppe", "meaning": "the group", "emoji": "👥" }
+        ],
+        "social": [
+          { "word": "mein Freund", "meaning": "my friend (m)", "emoji": "🤝" },
+          { "word": "meine Familie", "meaning": "my family", "emoji": "👨‍👩‍👧‍👦" }
+        ]
+      },
+      "model": {
+        "context": "First greeting at a language meetup:",
+        "en": "Hello! What is your name? — Hello! My name is Anna.",
+        "target": "Hallo! Ich heiße Anna.",
+        "literal": "[I = Ich] + [am called = heiße] + [Name = Anna]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Hallo! Wie heißt du?", "en": "Hello! What is your name?" },
+          { "speaker": "Speaker B", "target": "Hallo! Ich heiße Anna.", "en": "Hello! My name is Anna." }
+        ],
+        "check": {
+          "question": "Where does the verb 'heiße' sit in the German statement 'Ich heiße Anna'?",
+          "options": [
+            { "text": "In second position right after the subject", "correct": true },
+            { "text": "At the very end of the sentence", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W1_M01_P1",
+          "situation": "Introduce yourself as Anna:",
+          "target": "My name is Anna.",
+          "expected": ["Ich heiße Anna", "Ich bin Anna"],
+          "hint": "Ich + heiße + Anna"
+        },
+        {
+          "id": "DEU_W1_M01_P2",
+          "situation": "Say hello and introduce yourself as Lukas:",
+          "target": "Hello, I am Lukas.",
+          "expected": ["Hallo ich bin Lukas", "Hallo ich heiße Lukas"],
+          "hint": "Hallo, ich bin Lukas"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W1_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the right verb form for 'ich'",
+          "contextPrompt": "My name is Anna.",
+          "sentenceTemplate": "Ich _____ Anna.",
+          "answer": "heiße",
+          "choices": ["heiße", "heißt", "kommst"],
+          "completedSentence": "Ich heiße Anna.",
+          "explanation": "'ich' takes the '-e' verb ending: 'ich heiße'."
+        },
+        {
+          "id": "DEU_W1_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Greet someone politely at work",
+          "contextPrompt": "Good day, I am Lukas.",
+          "sentenceTemplate": "_____, ich bin Lukas.",
+          "answer": "Guten Tag",
+          "choices": ["Guten Tag", "Tschüss", "Danke"],
+          "completedSentence": "Guten Tag, ich bin Lukas.",
+          "explanation": "'Guten Tag' is the standard polite greeting."
+        },
+        {
+          "id": "DEU_W1_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Complete the informal question",
+          "contextPrompt": "What is your name?",
+          "sentenceTemplate": "Wie heißt _____?",
+          "answer": "du",
+          "choices": ["du", "ich", "wir"],
+          "completedSentence": "Wie heißt du?",
+          "explanation": "'du' is informal singular 'you'."
+        },
+        {
+          "id": "DEU_W1_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "My name is Anna.",
+          "sentenceTemplate": "Ich heiße Anna.",
+          "answer": "Ich + heiße / bin + [Name]",
+          "choices": [
+            "Ich + heiße / bin + [Name]",
+            "[Subject] + komme aus + [Place]",
+            "[Subject] + muss + [Infinitive]"
+          ],
+          "completedSentence": "Ich heiße Anna.",
+          "explanation": "Personal introductions use 'Ich heiße' or 'Ich bin' + name."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 1.2 (Professions & Roles)", "target": "DEU_W1_M02" }]
+    },
+    {
+      "id": "DEU_W1_M02",
+      "title": "Lesson 1.2: Professions & Roles (Ich bin / Das ist)",
+      "tier": 1,
+      "wahanga": "Group 1: Identity & Connections",
+      "kowae": "Unit 1.2: Stating Professions",
+      "canDo": "State your profession or role without an article, and identify objects with ein / eine.",
+      "readerRole": "Contrast",
+      "concept": "When stating professions in German, drop the article: 'Ich bin Lehrer' (I am a teacher). Use 'ein' (masculine/neuter) or 'eine' (feminine) when pointing out things with 'Das ist'.",
+      "pattern": "[Subject] + bin / ist + [Profession]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun (Ich / Er / Sie)", "type": "variable" },
+        { "label": "bin / ist", "meaning": "am / is", "type": "fixed" },
+        { "label": "[Beruf]", "meaning": "profession (no article)", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "Lehrer", "meaning": "teacher (m)", "emoji": "🏫" },
+        { "word": "Lehrerin", "meaning": "teacher (f)", "emoji": "🏫" },
+        { "word": "Student", "meaning": "university student (m)", "emoji": "📘" },
+        { "word": "Studentin", "meaning": "university student (f)", "emoji": "📘" },
+        { "word": "Arzt", "meaning": "doctor (m)", "emoji": "🩺" },
+        { "word": "ist", "meaning": "is", "emoji": "🔗" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "Ingenieur", "meaning": "engineer (m)", "emoji": "⚙️" },
+          { "word": "Managerin", "meaning": "manager (f)", "emoji": "📊" }
+        ],
+        "outside": [
+          { "word": "ein Berg", "meaning": "a mountain", "emoji": "⛰️" },
+          { "word": "ein Fluss", "meaning": "a river", "emoji": "🌊" }
+        ],
+        "community": [
+          { "word": "eine Schule", "meaning": "a school", "emoji": "🏫" },
+          { "word": "ein Rathaus", "meaning": "a town hall", "emoji": "🏛️" }
+        ],
+        "social": [
+          { "word": "Freundin", "meaning": "friend (f)", "emoji": "🤝" },
+          { "word": "Künstlerin", "meaning": "artist (f)", "emoji": "🎨" }
+        ]
+      },
+      "model": {
+        "context": "Talking about work and studies:",
+        "en": "Are you a student? — Yes, I am a student. She is a teacher.",
+        "target": "Ich bin Student.",
+        "literal": "[I = Ich] + [am = bin] + [student = Student]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Bist du Student?", "en": "Are you a student?" },
+          { "speaker": "Speaker B", "target": "Ja, ich bin Student. Sie ist Lehrerin.", "en": "Yes, I am a student. She is a teacher." }
+        ],
+        "check": {
+          "question": "How do you naturally say 'I am a teacher' in German?",
+          "options": [
+            { "text": "Ich bin Lehrer. / Ich bin Lehrerin.", "correct": true },
+            { "text": "Ich bin ein der Lehrer.", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W1_M02_P1",
+          "situation": "Tell someone you are a student:",
+          "target": "I am a student.",
+          "expected": ["Ich bin Student", "Ich bin Studentin"],
+          "hint": "Ich + bin + Student / Studentin"
+        },
+        {
+          "id": "DEU_W1_M02_P2",
+          "situation": "Say that she is a teacher:",
+          "target": "She is a teacher.",
+          "expected": ["Sie ist Lehrerin"],
+          "hint": "Sie + ist + Lehrerin"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W1_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the verb for 'sie' (she)",
+          "contextPrompt": "She is a teacher.",
+          "sentenceTemplate": "Sie _____ Lehrerin.",
+          "answer": "ist",
+          "choices": ["ist", "bin", "bist"],
+          "completedSentence": "Sie ist Lehrerin.",
+          "explanation": "'er / sie / es' takes 'ist'."
+        },
+        {
+          "id": "DEU_W1_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a workplace role",
+          "contextPrompt": "She is a manager.",
+          "sentenceTemplate": "Sie ist _____.",
+          "answer": "Managerin",
+          "choices": ["Managerin", "Berg", "Fluss"],
+          "completedSentence": "Sie ist Managerin.",
+          "explanation": "'Managerin' is the feminine form for manager."
+        },
+        {
+          "id": "DEU_W1_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the right indefinite article for 'Schule' (feminine)",
+          "contextPrompt": "That is a school.",
+          "sentenceTemplate": "Das ist _____ Schule.",
+          "answer": "eine",
+          "choices": ["eine", "ein", "einen"],
+          "completedSentence": "Das ist eine Schule.",
+          "explanation": "Feminine nouns like 'die Schule' take 'eine'."
+        },
+        {
+          "id": "DEU_W1_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "She is a teacher.",
+          "sentenceTemplate": "Sie ist Lehrerin.",
+          "answer": "[Subject] + bin / ist + [Profession]",
+          "choices": [
+            "[Subject] + bin / ist + [Profession]",
+            "[Subject] + komme aus + [Place]",
+            "Ich + habe + [Past Participle]"
+          ],
+          "completedSentence": "Sie ist Lehrerin.",
+          "explanation": "Professions follow 'sein' directly without an article."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 1.3 (Origins with aus)", "target": "DEU_W1_M03" }]
+    },
+    {
+      "id": "DEU_W1_M03",
+      "title": "Lesson 1.3: Origins & Countries (kommen aus)",
+      "tier": 1,
+      "wahanga": "Group 1: Identity & Connections",
+      "kowae": "Unit 1.3: Where You Are From",
+      "canDo": "Ask and state which city or country someone comes from using kommen aus.",
+      "readerRole": "Connection",
+      "concept": "Use 'kommen aus' (to come from) followed by a city or country: 'Ich komme aus Berlin', 'Er kommt aus Österreich'.",
+      "pattern": "[Subject] + komme / kommt + aus + [Place]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun (Ich / Er / Wir)", "type": "variable" },
+        { "label": "komme aus", "meaning": "come from", "type": "fixed" },
+        { "label": "[Ort]", "meaning": "city or country", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "komme", "meaning": "come (ich)", "emoji": "📍" },
+        { "word": "aus", "meaning": "from / out of", "emoji": "🧭" },
+        { "word": "woher", "meaning": "where from?", "emoji": "❓" },
+        { "word": "Berlin", "meaning": "Berlin", "emoji": "🏙️" },
+        { "word": "München", "meaning": "Munich", "emoji": "🏔️" },
+        { "word": "Österreich", "meaning": "Austria", "emoji": "🇦🇹" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "Deutschland", "meaning": "Germany", "emoji": "🗺️" },
+          { "word": "Neuseeland", "meaning": "New Zealand", "emoji": "🌏" }
+        ],
+        "outside": [
+          { "word": "Hamburg", "meaning": "Hamburg", "emoji": "⚓" },
+          { "word": "den Alpen", "meaning": "the Alps", "emoji": "⛰️" }
+        ],
+        "community": [
+          { "word": "Wien", "meaning": "Vienna", "emoji": "🏛️" },
+          { "word": "Zürich", "meaning": "Zurich", "emoji": "🏞️" }
+        ],
+        "social": [
+          { "word": "wir", "meaning": "we", "emoji": "👥" },
+          { "word": "er", "meaning": "he", "emoji": "🧑" }
+        ]
+      },
+      "model": {
+        "context": "Chatting at a café:",
+        "en": "Where are you from? — I come from Munich.",
+        "target": "Ich komme aus München.",
+        "literal": "[I = Ich] + [come = komme] + [from = aus] + [Munich = München]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Woher kommst du?", "en": "Where are you from?" },
+          { "speaker": "Speaker B", "target": "Ich komme aus München.", "en": "I come from Munich." }
+        ],
+        "check": {
+          "question": "Which preposition means 'from' when stating your hometown or country?",
+          "options": [
+            { "text": "aus (e.g. 'aus München')", "correct": true },
+            { "text": "auf (e.g. 'auf München')", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W1_M03_P1",
+          "situation": "Tell someone you come from Munich:",
+          "target": "I come from Munich.",
+          "expected": ["Ich komme aus München"],
+          "hint": "Ich + komme + aus + München"
+        },
+        {
+          "id": "DEU_W1_M03_P2",
+          "situation": "Say that he comes from Austria:",
+          "target": "He comes from Austria.",
+          "expected": ["Er kommt aus Österreich"],
+          "hint": "Er + kommt + aus + Österreich"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W1_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the origin preposition",
+          "contextPrompt": "I come from Berlin.",
+          "sentenceTemplate": "Ich komme _____ Berlin.",
+          "answer": "aus",
+          "choices": ["aus", "in", "auf"],
+          "completedSentence": "Ich komme aus Berlin.",
+          "explanation": "'kommen aus' expresses where someone originates."
+        },
+        {
+          "id": "DEU_W1_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in another country",
+          "contextPrompt": "I come from New Zealand.",
+          "sentenceTemplate": "Ich komme aus _____.",
+          "answer": "Neuseeland",
+          "choices": ["Neuseeland", "Lehrer", "Büro"],
+          "completedSentence": "Ich komme aus Neuseeland.",
+          "explanation": "'Neuseeland' is German for New Zealand."
+        },
+        {
+          "id": "DEU_W1_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the question word for origin",
+          "contextPrompt": "Where are you from?",
+          "sentenceTemplate": "_____ kommst du?",
+          "answer": "Woher",
+          "choices": ["Woher", "Wo", "Wie"],
+          "completedSentence": "Woher kommst du?",
+          "explanation": "'Woher' specifically asks 'where from?'."
+        },
+        {
+          "id": "DEU_W1_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "He comes from Austria.",
+          "sentenceTemplate": "Er kommt aus Österreich.",
+          "answer": "[Subject] + komme / kommt + aus + [Place]",
+          "choices": [
+            "[Subject] + komme / kommt + aus + [Place]",
+            "[Subject] + bin / ist + [Profession]",
+            "[Subject] + gehe + nach / in + [Destination]"
+          ],
+          "completedSentence": "Er kommt aus Österreich.",
+          "explanation": "'kommen aus + place' states geographic origin."
+        }
+      ],
+      "pathways": [{ "label": "Next: Group 2 · Everyday Actions", "target": "DEU_W2_M01" }]
+    },
+    {
+      "id": "DEU_W2_M01",
+      "title": "Lesson 2.1: Everyday Present Actions",
+      "tier": 2,
+      "wahanga": "Group 2: Actions & Wellbeing",
+      "kowae": "Unit 2.1: Present Tense Verbs",
+      "canDo": "Describe what you and others do or are doing right now using regular present verbs.",
+      "readerRole": "Action",
+      "concept": "German uses a single present tense for both 'I work' and 'I am working'. Regular verb endings: ich -e, du -st, er/sie -t, wir -en.",
+      "pattern": "[Subject] + [Verb-Ending] + [Object / Time]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun (Ich / Wir)", "type": "variable" },
+        { "label": "[Verb]", "meaning": "conjugated verb (V2)", "type": "fixed" },
+        { "label": "[Detail]", "meaning": "object or time word", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "arbeite", "meaning": "work (ich)", "emoji": "💼" },
+        { "word": "lerne", "meaning": "learn / study (ich)", "emoji": "📖" },
+        { "word": "Deutsch", "meaning": "German (language)", "emoji": "🗣️" },
+        { "word": "lese", "meaning": "read (ich)", "emoji": "📑" },
+        { "word": "schreibe", "meaning": "write (ich)", "emoji": "✍️" },
+        { "word": "heute", "meaning": "today", "emoji": "📅" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "plane", "meaning": "plan (ich)", "emoji": "📋" },
+          { "word": "telefoniere", "meaning": "call on the phone", "emoji": "📞" }
+        ],
+        "outside": [
+          { "word": "wandere", "meaning": "hike (ich)", "emoji": "🥾" },
+          { "word": "laufe", "meaning": "run / walk (ich)", "emoji": "🏃" }
+        ],
+        "community": [
+          { "word": "höre zu", "meaning": "listen", "emoji": "👂" },
+          { "word": "singe", "meaning": "sing", "emoji": "🎵" }
+        ],
+        "social": [
+          { "word": "koche", "meaning": "cook (ich)", "emoji": "🍳" },
+          { "word": "trinke Kaffee", "meaning": "drink coffee", "emoji": "☕" }
+        ]
+      },
+      "model": {
+        "context": "Checking in with a study partner:",
+        "en": "What are you doing today? — I am studying German.",
+        "target": "Ich lerne Deutsch.",
+        "literal": "[I = Ich] + [learn = lerne] + [German = Deutsch]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Was machst du heute?", "en": "What are you doing today?" },
+          { "speaker": "Speaker B", "target": "Ich lerne Deutsch und arbeite.", "en": "I am studying German and working." }
+        ],
+        "check": {
+          "question": "How do you express 'I am studying German' in German?",
+          "options": [
+            { "text": "Ich lerne Deutsch.", "correct": true },
+            { "text": "Ich bin lernen Deutsch.", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W2_M01_P1",
+          "situation": "Tell a friend you are studying German:",
+          "target": "I am studying German.",
+          "expected": ["Ich lerne Deutsch"],
+          "hint": "Ich + lerne + Deutsch"
+        },
+        {
+          "id": "DEU_W2_M01_P2",
+          "situation": "Say that you are working today:",
+          "target": "I am working today.",
+          "expected": ["Ich arbeite heute", "Heute arbeite ich"],
+          "hint": "Ich + arbeite + heute"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W2_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the right conjugation for 'ich'",
+          "contextPrompt": "I am studying German.",
+          "sentenceTemplate": "Ich _____ Deutsch.",
+          "answer": "lerne",
+          "choices": ["lerne", "lernst", "lernen"],
+          "completedSentence": "Ich lerne Deutsch.",
+          "explanation": "'ich' takes '-e': 'ich lerne'."
+        },
+        {
+          "id": "DEU_W2_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a social activity",
+          "contextPrompt": "I am cooking today.",
+          "sentenceTemplate": "Ich _____ heute.",
+          "answer": "koche",
+          "choices": ["koche", "heiße", "bin"],
+          "completedSentence": "Ich koche heute.",
+          "explanation": "'koche' means 'cook / am cooking'."
+        },
+        {
+          "id": "DEU_W2_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the conjugation for 'wir' (we)",
+          "contextPrompt": "We are studying German.",
+          "sentenceTemplate": "Wir _____ Deutsch.",
+          "answer": "lernen",
+          "choices": ["lernen", "lerne", "lernt"],
+          "completedSentence": "Wir lernen Deutsch.",
+          "explanation": "'wir' takes the '-en' ending: 'wir lernen'."
+        },
+        {
+          "id": "DEU_W2_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am working today.",
+          "sentenceTemplate": "Ich arbeite heute.",
+          "answer": "[Subject] + [Verb-Ending] + [Object / Time]",
+          "choices": [
+            "[Subject] + [Verb-Ending] + [Object / Time]",
+            "Mir geht es + [Adverb]",
+            "[Subject] + habe + [Past Participle]"
+          ],
+          "completedSentence": "Ich arbeite heute.",
+          "explanation": "Regular German present statements place the conjugated verb second."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 2.2 (Feelings & Wellbeing)", "target": "DEU_W2_M02" }]
+    },
+    {
+      "id": "DEU_W2_M02",
+      "title": "Lesson 2.2: Feelings & Wellbeing (Wie geht es dir?)",
+      "tier": 2,
+      "wahanga": "Group 2: Actions & Wellbeing",
+      "kowae": "Unit 2.2: States & Feelings",
+      "canDo": "Ask how someone is doing and describe how you feel.",
+      "readerRole": "Expression",
+      "concept": "Ask 'Wie geht es dir?' (How is it going for you?) and reply 'Mir geht es gut'. For specific feelings like tired or happy, use 'Ich bin müde' / 'Ich bin glücklich'.",
+      "pattern": "Mir geht es + [Adverb] / Ich bin + [Adjective]",
+      "slots": [
+        { "label": "Ich bin", "meaning": "I am", "type": "fixed" },
+        { "label": "[Adjektiv]", "meaning": "feeling (müde / glücklich)", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "gut", "meaning": "good / well", "emoji": "👍" },
+        { "word": "müde", "meaning": "tired", "emoji": "😴" },
+        { "word": "glücklich", "meaning": "happy", "emoji": "😊" },
+        { "word": "hungrig", "meaning": "hungry", "emoji": "🍲" },
+        { "word": "durstig", "meaning": "thirsty", "emoji": "💧" },
+        { "word": "Mir geht es", "meaning": "I am doing (lit. to me it goes)", "emoji": "💬" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "beschäftigt", "meaning": "busy", "emoji": "🐝" },
+          { "word": "entspannt", "meaning": "relaxed", "emoji": "🌿" }
+        ],
+        "outside": [
+          { "word": "kalt", "meaning": "cold", "emoji": "❄️" },
+          { "word": "warm", "meaning": "warm", "emoji": "☀️" }
+        ],
+        "community": [
+          { "word": "gesund", "meaning": "healthy", "emoji": "🌱" },
+          { "word": "zufrieden", "meaning": "content / satisfied", "emoji": "✨" }
+        ],
+        "social": [
+          { "word": "traurig", "meaning": "sad", "emoji": "🌧️" },
+          { "word": "aufgeregt", "meaning": "excited", "emoji": "🎉" }
+        ]
+      },
+      "model": {
+        "context": "Checking in with a friend:",
+        "en": "How are you? — I am doing well, thanks! And you?",
+        "target": "Mir geht es gut.",
+        "literal": "[To me = Mir] + [goes = geht] + [it = es] + [well = gut]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Hallo! Wie geht es dir?", "en": "Hello! How are you?" },
+          { "speaker": "Speaker B", "target": "Mir geht es gut, danke! Ich bin glücklich.", "en": "I am doing well, thanks! I am happy." }
+        ],
+        "check": {
+          "question": "Which phrase correctly answers 'Wie geht es dir?'?",
+          "options": [
+            { "text": "Mir geht es gut.", "correct": true },
+            { "text": "Ich gehe es gut.", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W2_M02_P1",
+          "situation": "Reply that you are doing well:",
+          "target": "I am doing well.",
+          "expected": ["Mir geht es gut", "Es geht mir gut"],
+          "hint": "Mir geht es + gut"
+        },
+        {
+          "id": "DEU_W2_M02_P2",
+          "situation": "Say that you are tired:",
+          "target": "I am tired.",
+          "expected": ["Ich bin müde"],
+          "hint": "Ich + bin + müde"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W2_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the dative pronoun for 'Mir geht es'",
+          "contextPrompt": "I am doing well.",
+          "sentenceTemplate": "_____ geht es gut.",
+          "answer": "Mir",
+          "choices": ["Mir", "Ich", "Mich"],
+          "completedSentence": "Mir geht es gut.",
+          "explanation": "'gehen' in wellbeing phrases uses the dative pronoun 'mir'."
+        },
+        {
+          "id": "DEU_W2_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Describe being busy at work",
+          "contextPrompt": "I am busy.",
+          "sentenceTemplate": "Ich bin _____.",
+          "answer": "beschäftigt",
+          "choices": ["beschäftigt", "hungrig", "traurig"],
+          "completedSentence": "Ich bin beschäftigt.",
+          "explanation": "'beschäftigt' means 'busy'."
+        },
+        {
+          "id": "DEU_W2_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the right feeling adjective",
+          "contextPrompt": "I am happy.",
+          "sentenceTemplate": "Ich bin _____.",
+          "answer": "glücklich",
+          "choices": ["glücklich", "müde", "durstig"],
+          "completedSentence": "Ich bin glücklich.",
+          "explanation": "'glücklich' means 'happy'."
+        },
+        {
+          "id": "DEU_W2_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am tired.",
+          "sentenceTemplate": "Ich bin müde.",
+          "answer": "Mir geht es + [Adverb] / Ich bin + [Adjective]",
+          "choices": [
+            "Mir geht es + [Adverb] / Ich bin + [Adjective]",
+            "[Subject] + komme / kommt + aus + [Place]",
+            "[Subject] + habe + [Past Participle]"
+          ],
+          "completedSentence": "Ich bin müde.",
+          "explanation": "Descriptive states use 'Ich bin + adjective'."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 2.3 (Past Tense Perfekt)", "target": "DEU_W2_M03" }]
+    },
+    {
+      "id": "DEU_W2_M03",
+      "title": "Lesson 2.3: Past Actions (Perfekt with haben)",
+      "tier": 2,
+      "wahanga": "Group 2: Actions & Wellbeing",
+      "kowae": "Unit 2.3: Conversational Past",
+      "canDo": "Talk about what you did yesterday using the Perfekt tense (haben + ge-...-t).",
+      "readerRole": "Time Shift",
+      "concept": "Spoken German forms the past tense with a 'sentence bracket': 'haben' stays in second position, while the past participle ('gelernt', 'gearbeitet') goes to the very end.",
+      "pattern": "[Subject] + habe + [Detail] + [ge-...-t]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun (Ich / Wir)", "type": "variable" },
+        { "label": "habe", "meaning": "have (V2 helper)", "type": "fixed" },
+        { "label": "[Detail]", "meaning": "time or object", "type": "variable" },
+        { "label": "[Partizip]", "meaning": "past participle at end", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "habe", "meaning": "have (helper verb)", "emoji": "⏪" },
+        { "word": "gestern", "meaning": "yesterday", "emoji": "📅" },
+        { "word": "gelernt", "meaning": "studied / learned", "emoji": "📖" },
+        { "word": "gearbeitet", "meaning": "worked", "emoji": "💼" },
+        { "word": "gekocht", "meaning": "cooked", "emoji": "🍳" },
+        { "word": "gespielt", "meaning": "played", "emoji": "🎲" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "geschrieben", "meaning": "wrote / written", "emoji": "✍️" },
+          { "word": "geplant", "meaning": "planned", "emoji": "📋" }
+        ],
+        "outside": [
+          { "word": "fotografiert", "meaning": "photographed", "emoji": "📷" },
+          { "word": "gesehen", "meaning": "saw / seen", "emoji": "👁️" }
+        ],
+        "community": [
+          { "word": "gehört", "meaning": "heard / listened", "emoji": "👂" },
+          { "word": "gefragt", "meaning": "asked", "emoji": "❓" }
+        ],
+        "social": [
+          { "word": "gegessen", "meaning": "ate / eaten", "emoji": "🍽️" },
+          { "word": "getrunken", "meaning": "drank / drunk", "emoji": "☕" }
+        ]
+      },
+      "model": {
+        "context": "Catching up after work:",
+        "en": "What did you do yesterday? — Yesterday I studied German.",
+        "target": "Ich habe gestern gelernt.",
+        "literal": "[I = Ich] + [have = habe] + [yesterday = gestern] + [studied = gelernt]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Was hast du gestern gemacht?", "en": "What did you do yesterday?" },
+          { "speaker": "Speaker B", "target": "Ich habe gestern Deutsch gelernt.", "en": "I studied German yesterday." }
+        ],
+        "check": {
+          "question": "Where does the past participle ('gelernt') go in a German Perfekt sentence?",
+          "options": [
+            { "text": "At the very end of the sentence", "correct": true },
+            { "text": "Before the subject", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W2_M03_P1",
+          "situation": "Say that you studied yesterday:",
+          "target": "I studied yesterday.",
+          "expected": ["Ich habe gestern gelernt", "Gestern habe ich gelernt"],
+          "hint": "Ich + habe + gestern + gelernt"
+        },
+        {
+          "id": "DEU_W2_M03_P2",
+          "situation": "Say that you worked yesterday:",
+          "target": "I worked yesterday.",
+          "expected": ["Ich habe gestern gearbeitet", "Gestern habe ich gearbeitet"],
+          "hint": "Ich + habe + gestern + gearbeitet"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W2_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the Perfekt helper verb",
+          "contextPrompt": "I worked yesterday.",
+          "sentenceTemplate": "Ich _____ gestern gearbeitet.",
+          "answer": "habe",
+          "choices": ["habe", "bin", "werde"],
+          "completedSentence": "Ich habe gestern gearbeitet.",
+          "explanation": "'arbeiten' forms the Perfekt with 'haben'."
+        },
+        {
+          "id": "DEU_W2_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a social past action",
+          "contextPrompt": "I cooked yesterday.",
+          "sentenceTemplate": "Ich habe gestern _____.",
+          "answer": "gekocht",
+          "choices": ["gekocht", "koche", "kochen"],
+          "completedSentence": "Ich habe gestern gekocht.",
+          "explanation": "The past participle of 'kochen' is 'gekocht'."
+        },
+        {
+          "id": "DEU_W2_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Add the time word for yesterday",
+          "contextPrompt": "I studied yesterday.",
+          "sentenceTemplate": "Ich habe _____ gelernt.",
+          "answer": "gestern",
+          "choices": ["gestern", "morgen", "wo"],
+          "completedSentence": "Ich habe gestern gelernt.",
+          "explanation": "'gestern' means 'yesterday'."
+        },
+        {
+          "id": "DEU_W2_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I worked yesterday.",
+          "sentenceTemplate": "Ich habe gestern gearbeitet.",
+          "answer": "[Subject] + habe + [Detail] + [ge-...-t]",
+          "choices": [
+            "[Subject] + habe + [Detail] + [ge-...-t]",
+            "[Subject] + [Verb-Ending] + [Object / Time]",
+            "[Subject] + bin + im / in der + [Place]"
+          ],
+          "completedSentence": "Ich habe gestern gearbeitet.",
+          "explanation": "Perfekt brackets the sentence with 'haben' in V2 and the participle at the end."
+        }
+      ],
+      "pathways": [{ "label": "Next: Group 3 · Current Location", "target": "DEU_W3_M01" }]
+    },
+    {
+      "id": "DEU_W3_M01",
+      "title": "Lesson 3.1: Static Locations (im / in der / zu Hause)",
+      "tier": 3,
+      "wahanga": "Group 3: Places & Movement",
+      "kowae": "Unit 3.1: Where Someone Is",
+      "canDo": "Ask and state where people are right now using im, in der, and zu Hause.",
+      "readerRole": "Orientation",
+      "concept": "For static location ('where?'), 'in' takes the dative: 'in dem' contracts to 'im' (masculine/neuter, e.g. 'im Büro'), and feminine nouns use 'in der' (e.g. 'in der Schule'). 'At home' is 'zu Hause'.",
+      "pattern": "[Subject] + bin / ist + im / in der + [Place]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun", "type": "variable" },
+        { "label": "bin / ist", "meaning": "am / is", "type": "fixed" },
+        { "label": "im / in der", "meaning": "in the (dative)", "type": "fixed" },
+        { "label": "[Ort]", "meaning": "place noun", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "wo", "meaning": "where?", "emoji": "❓" },
+        { "word": "im Büro", "meaning": "at / in the office", "emoji": "🏢" },
+        { "word": "zu Hause", "meaning": "at home", "emoji": "🏠" },
+        { "word": "in der Schule", "meaning": "at school", "emoji": "🏫" },
+        { "word": "hier", "meaning": "here", "emoji": "📍" },
+        { "word": "im Café", "meaning": "at the café", "emoji": "☕" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "im Meeting", "meaning": "in the meeting", "emoji": "🗓️" },
+          { "word": "in der Firma", "meaning": "at the company", "emoji": "🏛️" }
+        ],
+        "outside": [
+          { "word": "im Park", "meaning": "in the park", "emoji": "🌳" },
+          { "word": "am Meer", "meaning": "by the sea", "emoji": "🌊" }
+        ],
+        "community": [
+          { "word": "in der Bibliothek", "meaning": "at the library", "emoji": "📚" },
+          { "word": "im Bahnhof", "meaning": "at the train station", "emoji": "🚉" }
+        ],
+        "social": [
+          { "word": "in der Küche", "meaning": "in the kitchen", "emoji": "🍳" },
+          { "word": "im Garten", "meaning": "in the garden", "emoji": "🌻" }
+        ]
+      },
+      "model": {
+        "context": "Messaging a teammate before lunch:",
+        "en": "Where are you? — I am at the office.",
+        "target": "Ich bin im Büro.",
+        "literal": "[I = Ich] + [am = bin] + [in the = im] + [office = Büro]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Wo bist du gerade?", "en": "Where are you right now?" },
+          { "speaker": "Speaker B", "target": "Ich bin im Büro.", "en": "I am at the office." }
+        ],
+        "check": {
+          "question": "Why does 'in dem Büro' shorten to 'im Büro'?",
+          "options": [
+            { "text": "'in + dem' contracts naturally to 'im' in German", "correct": true },
+            { "text": "Büro is a plural noun", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W3_M01_P1",
+          "situation": "Tell a colleague you are at the office:",
+          "target": "I am at the office.",
+          "expected": ["Ich bin im Büro"],
+          "hint": "Ich + bin + im Büro"
+        },
+        {
+          "id": "DEU_W3_M01_P2",
+          "situation": "Say that you are at home:",
+          "target": "I am at home.",
+          "expected": ["Ich bin zu Hause", "Ich bin zuhause"],
+          "hint": "Ich + bin + zu Hause"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W3_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the dative contraction for 'das Büro'",
+          "contextPrompt": "I am at the office.",
+          "sentenceTemplate": "Ich bin _____ Büro.",
+          "answer": "im",
+          "choices": ["im", "in der", "aus"],
+          "completedSentence": "Ich bin im Büro.",
+          "explanation": "Neuter 'das Büro' becomes 'im Büro' (in + dem) for static location."
+        },
+        {
+          "id": "DEU_W3_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a community place",
+          "contextPrompt": "She is at the library.",
+          "sentenceTemplate": "Sie ist _____.",
+          "answer": "in der Bibliothek",
+          "choices": ["in der Bibliothek", "im Park", "am Meer"],
+          "completedSentence": "Sie ist in der Bibliothek.",
+          "explanation": "'die Bibliothek' is feminine → 'in der Bibliothek'."
+        },
+        {
+          "id": "DEU_W3_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the question word for static location",
+          "contextPrompt": "Where are you?",
+          "sentenceTemplate": "_____ bist du?",
+          "answer": "Wo",
+          "choices": ["Wo", "Woher", "Wann"],
+          "completedSentence": "Wo bist du?",
+          "explanation": "'Wo' asks 'where?' for static location."
+        },
+        {
+          "id": "DEU_W3_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am at the office.",
+          "sentenceTemplate": "Ich bin im Büro.",
+          "answer": "[Subject] + bin / ist + im / in der + [Place]",
+          "choices": [
+            "[Subject] + bin / ist + im / in der + [Place]",
+            "[Subject] + komme / kommt + aus + [Place]",
+            "[Subject] + gehe + nach / in + [Destination]"
+          ],
+          "completedSentence": "Ich bin im Büro.",
+          "explanation": "Static places use 'sein' + dative preposition ('im / in der')."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 3.2 (Spatial Prepositions)", "target": "DEU_W3_M02" }]
+    },
+    {
+      "id": "DEU_W3_M02",
+      "title": "Lesson 3.2: Relative Position (auf / unter / vor)",
+      "tier": 3,
+      "wahanga": "Group 3: Places & Movement",
+      "kowae": "Unit 3.2: Describing Where Objects Are",
+      "canDo": "Specify whether an object is on, under, next to, or in front of a landmark.",
+      "readerRole": "Precision",
+      "concept": "Spatial prepositions 'auf' (on), 'unter' (under), 'neben' (next to), and 'vor' (in front of) take the dative for static positions: 'auf dem Tisch' (on the table).",
+      "pattern": "[Object] + ist + [Preposition] + dem / der + [Landmark]",
+      "slots": [
+        { "label": "[Objekt]", "meaning": "item being located", "type": "variable" },
+        { "label": "ist", "meaning": "is", "type": "fixed" },
+        { "label": "[Präposition]", "meaning": "auf / unter / neben", "type": "fixed" },
+        { "label": "[Ort]", "meaning": "dative landmark", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "auf", "meaning": "on (top of)", "emoji": "⬆️" },
+        { "word": "unter", "meaning": "under / below", "emoji": "⬇️" },
+        { "word": "neben", "meaning": "next to", "emoji": "↔️" },
+        { "word": "Das Buch", "meaning": "the book", "emoji": "📘" },
+        { "word": "dem Tisch", "meaning": "the table (dative)", "emoji": "🪑" },
+        { "word": "der Tasche", "meaning": "the bag (dative)", "emoji": "🎒" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "der Laptop", "meaning": "the laptop", "emoji": "💻" },
+          { "word": "dem Schreibtisch", "meaning": "the desk (dative)", "emoji": "🖥️" }
+        ],
+        "outside": [
+          { "word": "dem Baum", "meaning": "the tree (dative)", "emoji": "🌳" },
+          { "word": "der Brücke", "meaning": "the bridge (dative)", "emoji": "🌉" }
+        ],
+        "community": [
+          { "word": "vor", "meaning": "in front of", "emoji": "⏩" },
+          { "word": "hinter", "meaning": "behind", "emoji": "⏪" }
+        ],
+        "social": [
+          { "word": "die Tasse", "meaning": "the cup", "emoji": "☕" },
+          { "word": "dem Stuhl", "meaning": "the chair (dative)", "emoji": "💺" }
+        ]
+      },
+      "model": {
+        "context": "Finding a book on a desk:",
+        "en": "Where is the book? — The book is on the table.",
+        "target": "Das Buch ist auf dem Tisch.",
+        "literal": "[The book = Das Buch] + [is = ist] + [on = auf] + [the table = dem Tisch]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Wo ist das Buch?", "en": "Where is the book?" },
+          { "speaker": "Speaker B", "target": "Das Buch ist auf dem Tisch.", "en": "The book is on the table." }
+        ],
+        "check": {
+          "question": "Which preposition means 'on top of'?",
+          "options": [
+            { "text": "auf (e.g. 'auf dem Tisch')", "correct": true },
+            { "text": "unter (e.g. 'unter dem Tisch')", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W3_M02_P1",
+          "situation": "Say that the book is on the table:",
+          "target": "The book is on the table.",
+          "expected": ["Das Buch ist auf dem Tisch"],
+          "hint": "Das Buch + ist + auf + dem Tisch"
+        },
+        {
+          "id": "DEU_W3_M02_P2",
+          "situation": "Say that the book is in the bag:",
+          "target": "The book is in the bag.",
+          "expected": ["Das Buch ist in der Tasche"],
+          "hint": "Das Buch + ist + in + der Tasche"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W3_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the preposition for 'on'",
+          "contextPrompt": "The book is on the table.",
+          "sentenceTemplate": "Das Buch ist _____ dem Tisch.",
+          "answer": "auf",
+          "choices": ["auf", "unter", "aus"],
+          "completedSentence": "Das Buch ist auf dem Tisch.",
+          "explanation": "'auf' indicates resting on a horizontal surface."
+        },
+        {
+          "id": "DEU_W3_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Locate a workplace item",
+          "contextPrompt": "The laptop is on the desk.",
+          "sentenceTemplate": "Der Laptop ist auf _____.",
+          "answer": "dem Schreibtisch",
+          "choices": ["dem Schreibtisch", "dem Baum", "der Brücke"],
+          "completedSentence": "Der Laptop ist auf dem Schreibtisch.",
+          "explanation": "'dem Schreibtisch' is dative for 'the desk'."
+        },
+        {
+          "id": "DEU_W3_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the preposition for 'under'",
+          "contextPrompt": "The bag is under the chair.",
+          "sentenceTemplate": "Die Tasche ist _____ dem Stuhl.",
+          "answer": "unter",
+          "choices": ["unter", "auf", "vor"],
+          "completedSentence": "Die Tasche ist unter dem Stuhl.",
+          "explanation": "'unter' means 'under / beneath'."
+        },
+        {
+          "id": "DEU_W3_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "The book is on the table.",
+          "sentenceTemplate": "Das Buch ist auf dem Tisch.",
+          "answer": "[Object] + ist + [Preposition] + dem / der + [Landmark]",
+          "choices": [
+            "[Object] + ist + [Preposition] + dem / der + [Landmark]",
+            "[Subject] + gehe + nach / in + [Destination]",
+            "[Subject] + muss + [Infinitive]"
+          ],
+          "completedSentence": "Das Buch ist auf dem Tisch.",
+          "explanation": "Static object positions use 'ist + preposition + dative landmark'."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 3.3 (Movement & Destinations)", "target": "DEU_W3_M03" }]
+    },
+    {
+      "id": "DEU_W3_M03",
+      "title": "Lesson 3.3: Movement & Destinations (nach / in / zu)",
+      "tier": 3,
+      "wahanga": "Group 3: Places & Movement",
+      "kowae": "Unit 3.3: Going Places",
+      "canDo": "Say where you are going using nach (cities/home), in (buildings), and zu (people/places).",
+      "readerRole": "Navigation",
+      "concept": "Use 'nach' for cities, most countries, and 'nach Hause' (homeward). Use 'ins' (in + das) or 'in die' when entering a building or space.",
+      "pattern": "[Subject] + gehe / fahre + nach / ins + [Destination]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun", "type": "variable" },
+        { "label": "gehe / fahre", "meaning": "go / travel", "type": "fixed" },
+        { "label": "nach / ins", "meaning": "to / into", "type": "fixed" },
+        { "label": "[Ziel]", "meaning": "destination", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "gehe", "meaning": "go / walk (ich)", "emoji": "🚶" },
+        { "word": "fahre", "meaning": "drive / ride / travel (ich)", "emoji": "🚆" },
+        { "word": "nach Hause", "meaning": "home (direction)", "emoji": "🏠" },
+        { "word": "nach Berlin", "meaning": "to Berlin", "emoji": "🏙️" },
+        { "word": "ins Büro", "meaning": "to / into the office", "emoji": "🏢" },
+        { "word": "wohin", "meaning": "where to?", "emoji": "➡️" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "zur Arbeit", "meaning": "to work", "emoji": "💼" },
+          { "word": "in den Termin", "meaning": "into the appointment", "emoji": "🗓️" }
+        ],
+        "outside": [
+          { "word": "in die Berge", "meaning": "into the mountains", "emoji": "⛰️" },
+          { "word": "ans Meer", "meaning": "to the sea", "emoji": "🌊" }
+        ],
+        "community": [
+          { "word": "in die Stadt", "meaning": "into town / downtown", "emoji": "🏙️" },
+          { "word": "zum Markt", "meaning": "to the market", "emoji": "🧺" }
+        ],
+        "social": [
+          { "word": "ins Kino", "meaning": "to the cinema", "emoji": "🎬" },
+          { "word": "zu Freunden", "meaning": "to friends' place", "emoji": "🤝" }
+        ]
+      },
+      "model": {
+        "context": "Heading out at the end of the day:",
+        "en": "Where are you going? — I am going home now.",
+        "target": "Ich gehe nach Hause.",
+        "literal": "[I = Ich] + [go = gehe] + [toward home = nach Hause]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Wohin gehst du jetzt?", "en": "Where are you going now?" },
+          { "speaker": "Speaker B", "target": "Ich gehe nach Hause. Morgen fahre ich nach Berlin.", "en": "I am going home. Tomorrow I travel to Berlin." }
+        ],
+        "check": {
+          "question": "Which phrase means 'going home' (movement), as opposed to 'at home'?",
+          "options": [
+            { "text": "nach Hause (movement)", "correct": true },
+            { "text": "zu Hause (static location)", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W3_M03_P1",
+          "situation": "Say that you are going home:",
+          "target": "I am going home.",
+          "expected": ["Ich gehe nach Hause"],
+          "hint": "Ich + gehe + nach Hause"
+        },
+        {
+          "id": "DEU_W3_M03_P2",
+          "situation": "Say that you are going to the office:",
+          "target": "I am going to the office.",
+          "expected": ["Ich gehe ins Büro", "Ich fahre ins Büro"],
+          "hint": "Ich + gehe + ins Büro"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W3_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the direction preposition for cities",
+          "contextPrompt": "I am traveling to Berlin.",
+          "sentenceTemplate": "Ich fahre _____ Berlin.",
+          "answer": "nach",
+          "choices": ["nach", "aus", "bei"],
+          "completedSentence": "Ich fahre nach Berlin.",
+          "explanation": "'nach' is used for movement toward cities and most countries."
+        },
+        {
+          "id": "DEU_W3_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Choose a social destination",
+          "contextPrompt": "We are going to the cinema.",
+          "sentenceTemplate": "Wir gehen _____.",
+          "answer": "ins Kino",
+          "choices": ["ins Kino", "zur Arbeit", "im Büro"],
+          "completedSentence": "Wir gehen ins Kino.",
+          "explanation": "'ins Kino' (in + das Kino) expresses motion into the cinema."
+        },
+        {
+          "id": "DEU_W3_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the question word for destination",
+          "contextPrompt": "Where are you going?",
+          "sentenceTemplate": "_____ gehst du?",
+          "answer": "Wohin",
+          "choices": ["Wohin", "Woher", "Wo"],
+          "completedSentence": "Wohin gehst du?",
+          "explanation": "'Wohin' asks 'where to?'."
+        },
+        {
+          "id": "DEU_W3_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am going home.",
+          "sentenceTemplate": "Ich gehe nach Hause.",
+          "answer": "[Subject] + gehe / fahre + nach / ins + [Destination]",
+          "choices": [
+            "[Subject] + gehe / fahre + nach / ins + [Destination]",
+            "[Subject] + bin / ist + im / in der + [Place]",
+            "[Subject] + ist + schon + [State]"
+          ],
+          "completedSentence": "Ich gehe nach Hause.",
+          "explanation": "Motion verbs pair with directional prepositions like 'nach' or 'ins'."
+        }
+      ],
+      "pathways": [{ "label": "Next: Group 4 · Completed States", "target": "DEU_W4_M01" }]
+    },
+    {
+      "id": "DEU_W4_M01",
+      "title": "Lesson 4.1: Completed States (schon fertig / bereit)",
+      "tier": 4,
+      "wahanga": "Group 4: Completion & Connected Speech",
+      "kowae": "Unit 4.1: Announcing Readiness",
+      "canDo": "Announce that tasks, meals, or plans are already finished or ready using schon + fertig / bereit.",
+      "readerRole": "Milestone",
+      "concept": "Combine 'ist / sind' with 'schon' (already) and a state adjective like 'fertig' (finished/ready) or 'bereit' (prepared).",
+      "pattern": "[Subject] + ist + schon + [fertig / bereit]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "task or person", "type": "variable" },
+        { "label": "ist schon", "meaning": "is already", "type": "fixed" },
+        { "label": "[Zustand]", "meaning": "fertig / bereit", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "schon", "meaning": "already", "emoji": "✅" },
+        { "word": "fertig", "meaning": "finished / ready", "emoji": "🏁" },
+        { "word": "bereit", "meaning": "ready / prepared", "emoji": "🔔" },
+        { "word": "Die Arbeit", "meaning": "the work", "emoji": "📋" },
+        { "word": "Das Essen", "meaning": "the food / meal", "emoji": "🍽️" },
+        { "word": "noch nicht", "meaning": "not yet", "emoji": "⏳" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "der Bericht", "meaning": "the report", "emoji": "📊" },
+          { "word": "das Projekt", "meaning": "the project", "emoji": "🗂️" }
+        ],
+        "outside": [
+          { "word": "die Reise", "meaning": "the trip", "emoji": "🚆" },
+          { "word": "gepackt", "meaning": "packed", "emoji": "🎒" }
+        ],
+        "community": [
+          { "word": "das Treffen", "meaning": "the meeting", "emoji": "🤝" },
+          { "word": "vorbei", "meaning": "over / ended", "emoji": "🛑" }
+        ],
+        "social": [
+          { "word": "der Kaffee", "meaning": "the coffee", "emoji": "☕" },
+          { "word": "alles", "meaning": "everything", "emoji": "✨" }
+        ]
+      },
+      "model": {
+        "context": "Wrapping up at the office:",
+        "en": "Is the work finished? — Yes, the work is already finished!",
+        "target": "Die Arbeit ist schon fertig.",
+        "literal": "[The work = Die Arbeit] + [is = ist] + [already = schon] + [finished = fertig]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Ist die Arbeit schon fertig?", "en": "Is the work already finished?" },
+          { "speaker": "Speaker B", "target": "Ja, die Arbeit ist schon fertig!", "en": "Yes, the work is already finished!" }
+        ],
+        "check": {
+          "question": "Which word emphasizes that something is 'already' done?",
+          "options": [
+            { "text": "schon", "correct": true },
+            { "text": "noch nicht", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W4_M01_P1",
+          "situation": "Announce that the work is already finished:",
+          "target": "The work is already finished.",
+          "expected": ["Die Arbeit ist schon fertig", "Die Arbeit ist fertig"],
+          "hint": "Die Arbeit + ist + schon + fertig"
+        },
+        {
+          "id": "DEU_W4_M01_P2",
+          "situation": "Call everyone because the food is ready:",
+          "target": "The food is ready.",
+          "expected": ["Das Essen ist fertig", "Das Essen ist schon fertig"],
+          "hint": "Das Essen + ist + fertig"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W4_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the word for 'already'",
+          "contextPrompt": "The work is already finished.",
+          "sentenceTemplate": "Die Arbeit ist _____ fertig.",
+          "answer": "schon",
+          "choices": ["schon", "wo", "aus"],
+          "completedSentence": "Die Arbeit ist schon fertig.",
+          "explanation": "'schon' means 'already'."
+        },
+        {
+          "id": "DEU_W4_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a workplace deliverable",
+          "contextPrompt": "The report is finished.",
+          "sentenceTemplate": "_____ ist fertig.",
+          "answer": "Der Bericht",
+          "choices": ["Der Bericht", "Der Kaffee", "Die Reise"],
+          "completedSentence": "Der Bericht ist fertig.",
+          "explanation": "'Der Bericht' means 'the report'."
+        },
+        {
+          "id": "DEU_W4_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Say that you are prepared",
+          "contextPrompt": "I am ready.",
+          "sentenceTemplate": "Ich bin _____.",
+          "answer": "bereit",
+          "choices": ["bereit", "gestern", "nach"],
+          "completedSentence": "Ich bin bereit.",
+          "explanation": "'bereit' means 'ready / prepared'."
+        },
+        {
+          "id": "DEU_W4_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "The work is already finished.",
+          "sentenceTemplate": "Die Arbeit ist schon fertig.",
+          "answer": "[Subject] + ist + schon + [fertig / bereit]",
+          "choices": [
+            "[Subject] + ist + schon + [fertig / bereit]",
+            "[Subject] + muss / müssen + [Infinitive]",
+            "[Clause 1] + weil + [Subject] + ... + [Verb]"
+          ],
+          "completedSentence": "Die Arbeit ist schon fertig.",
+          "explanation": "Resulting states combine 'ist + schon + fertig/bereit'."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 4.2 (Obligations with müssen)", "target": "DEU_W4_M02" }]
+    },
+    {
+      "id": "DEU_W4_M02",
+      "title": "Lesson 4.2: Obligations & Plans (müssen / wollen)",
+      "tier": 4,
+      "wahanga": "Group 4: Completion & Connected Speech",
+      "kowae": "Unit 4.2: Modal Verbs",
+      "canDo": "Express what you must, should, or want to do using German modal verb brackets.",
+      "readerRole": "Action Plan",
+      "concept": "Modal verbs ('muss' must, 'will' want, 'soll' should) stand in second position and send the main action verb in its infinitive form ('gehen', 'lernen') to the very end.",
+      "pattern": "[Subject] + muss / müssen + [Detail] + [Infinitive]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun (Ich / Wir)", "type": "variable" },
+        { "label": "muss / müssen", "meaning": "must / have to (V2)", "type": "fixed" },
+        { "label": "[Infinitiv]", "meaning": "main verb at the end", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "muss", "meaning": "must / have to (ich/er/sie)", "emoji": "⚖️" },
+        { "word": "müssen", "meaning": "must / have to (wir)", "emoji": "👥" },
+        { "word": "gehen", "meaning": "to go", "emoji": "🚶" },
+        { "word": "arbeiten", "meaning": "to work", "emoji": "💼" },
+        { "word": "lernen", "meaning": "to study", "emoji": "📖" },
+        { "word": "jetzt", "meaning": "now", "emoji": "⏰" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "anfangen", "meaning": "to start / begin", "emoji": "▶️" },
+          { "word": "helfen", "meaning": "to help", "emoji": "🤲" }
+        ],
+        "outside": [
+          { "word": "zurückfahren", "meaning": "to travel back", "emoji": "🔄" },
+          { "word": "Pause machen", "meaning": "to take a break", "emoji": "🌿" }
+        ],
+        "community": [
+          { "word": "sprechen", "meaning": "to speak", "emoji": "🗣️" },
+          { "word": "zuhören", "meaning": "to listen", "emoji": "👂" }
+        ],
+        "social": [
+          { "word": "will", "meaning": "want to (ich)", "emoji": "💭" },
+          { "word": "essen", "meaning": "to eat", "emoji": "🍽️" }
+        ]
+      },
+      "model": {
+        "context": "Deciding next steps with your group:",
+        "en": "We have to go now. — Yes, I must work tomorrow.",
+        "target": "Wir müssen jetzt gehen.",
+        "literal": "[We = Wir] + [must = müssen] + [now = jetzt] + [go = gehen]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Wir müssen jetzt gehen.", "en": "We have to go now." },
+          { "speaker": "Speaker B", "target": "Ja, ich muss morgen arbeiten.", "en": "Yes, I have to work tomorrow." }
+        ],
+        "check": {
+          "question": "In 'Wir müssen jetzt gehen', why is 'gehen' at the end?",
+          "options": [
+            { "text": "Modal verbs push the main infinitive verb to the end of the clause", "correct": true },
+            { "text": "'gehen' is an adjective", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W4_M02_P1",
+          "situation": "Tell the group that you all have to go now:",
+          "target": "We have to go now.",
+          "expected": ["Wir müssen jetzt gehen", "Jetzt müssen wir gehen"],
+          "hint": "Wir + müssen + jetzt + gehen"
+        },
+        {
+          "id": "DEU_W4_M02_P2",
+          "situation": "Say that you have to study:",
+          "target": "I have to study.",
+          "expected": ["Ich muss lernen"],
+          "hint": "Ich + muss + lernen"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W4_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the modal verb for 'wir'",
+          "contextPrompt": "We have to go now.",
+          "sentenceTemplate": "Wir _____ jetzt gehen.",
+          "answer": "müssen",
+          "choices": ["müssen", "muss", "bin"],
+          "completedSentence": "Wir müssen jetzt gehen.",
+          "explanation": "'wir' takes 'müssen'."
+        },
+        {
+          "id": "DEU_W4_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Express starting a task",
+          "contextPrompt": "We have to start now.",
+          "sentenceTemplate": "Wir müssen jetzt _____.",
+          "answer": "anfangen",
+          "choices": ["anfangen", "essen", "fertig"],
+          "completedSentence": "Wir müssen jetzt anfangen.",
+          "explanation": "'anfangen' means 'to start / begin'."
+        },
+        {
+          "id": "DEU_W4_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the infinitive form at the end",
+          "contextPrompt": "I have to work.",
+          "sentenceTemplate": "Ich muss _____.",
+          "answer": "arbeiten",
+          "choices": ["arbeiten", "arbeite", "gearbeitet"],
+          "completedSentence": "Ich muss arbeiten.",
+          "explanation": "After a modal verb, the final verb stays in the infinitive ('arbeiten')."
+        },
+        {
+          "id": "DEU_W4_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "We have to go now.",
+          "sentenceTemplate": "Wir müssen jetzt gehen.",
+          "answer": "[Subject] + muss / müssen + [Detail] + [Infinitive]",
+          "choices": [
+            "[Subject] + muss / müssen + [Detail] + [Infinitive]",
+            "[Subject] + habe + [Detail] + [ge-...-t]",
+            "[Clause 1] + weil + [Subject] + ... + [Verb]"
+          ],
+          "completedSentence": "Wir müssen jetzt gehen.",
+          "explanation": "Modal verb in V2 + infinitive at the end is the German modal bracket."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 4.3 (Giving Reasons with weil)", "target": "DEU_W4_M03" }]
+    },
+    {
+      "id": "DEU_W4_M03",
+      "title": "Lesson 4.3: Explaining Why (weil)",
+      "tier": 4,
+      "wahanga": "Group 4: Completion & Connected Speech",
+      "kowae": "Unit 4.3: Joining Clauses",
+      "canDo": "Give clear reasons by joining two clauses with weil (because) and verb-final word order.",
+      "readerRole": "Synthesis",
+      "concept": "'weil' ('because') kicks the conjugated verb of the second clause to the very end: 'Ich bin glücklich, weil die Arbeit fertig ist.'",
+      "pattern": "[Clause 1], weil + [Subject] + [Detail] + [Verb]",
+      "slots": [
+        { "label": "[Hauptsatz]", "meaning": "main statement", "type": "variable" },
+        { "label": "weil", "meaning": "because (verb-final)", "type": "fixed" },
+        { "label": "[Nebensatz + Verb]", "meaning": "reason with verb at end", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "weil", "meaning": "because", "emoji": "💡" },
+        { "word": "aber", "meaning": "but", "emoji": "⚖️" },
+        { "word": "und", "meaning": "and", "emoji": "➕" },
+        { "word": "Ich esse", "meaning": "I am eating", "emoji": "🍽️" },
+        { "word": "ich hungrig bin", "meaning": "I am hungry (verb-final)", "emoji": "🍲" },
+        { "word": "die Arbeit fertig ist", "meaning": "the work is finished (verb-final)", "emoji": "🏁" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "ich Zeit habe", "meaning": "I have time (verb-final)", "emoji": "⏰" },
+          { "word": "es wichtig ist", "meaning": "it is important (verb-final)", "emoji": "📌" }
+        ],
+        "outside": [
+          { "word": "das Wetter schön ist", "meaning": "the weather is nice", "emoji": "☀️" },
+          { "word": "es kalt ist", "meaning": "it is cold", "emoji": "❄️" }
+        ],
+        "community": [
+          { "word": "wir zusammen lernen", "meaning": "we learn together", "emoji": "🤝" },
+          { "word": "es Spaß macht", "meaning": "it is fun", "emoji": "✨" }
+        ],
+        "social": [
+          { "word": "ich müde bin", "meaning": "I am tired (verb-final)", "emoji": "😴" },
+          { "word": "ich glücklich bin", "meaning": "I am happy (verb-final)", "emoji": "😊" }
+        ]
+      },
+      "model": {
+        "context": "Explaining why you are smiling at the end of the day:",
+        "en": "I am happy because the work is finished.",
+        "target": "Ich bin glücklich, weil die Arbeit fertig ist.",
+        "literal": "[I am happy] + [because = weil] + [the work finished is]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Warum bist du so glücklich?", "en": "Why are you so happy?" },
+          { "speaker": "Speaker B", "target": "Ich bin glücklich, weil die Arbeit fertig ist.", "en": "I am happy because the work is finished." }
+        ],
+        "check": {
+          "question": "Where does the conjugated verb ('ist' / 'bin') go inside a 'weil' clause?",
+          "options": [
+            { "text": "At the very end of the 'weil' clause", "correct": true },
+            { "text": "Immediately after 'weil'", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "DEU_W4_M03_P1",
+          "situation": "Explain why you are eating:",
+          "target": "I am eating because I am hungry.",
+          "expected": ["Ich esse, weil ich hungrig bin", "Ich esse weil ich hungrig bin"],
+          "hint": "Ich esse, weil ich hungrig bin"
+        },
+        {
+          "id": "DEU_W4_M03_P2",
+          "situation": "Explain why you are happy:",
+          "target": "I am happy because the work is finished.",
+          "expected": [
+            "Ich bin glücklich, weil die Arbeit fertig ist",
+            "Ich bin glücklich weil die Arbeit fertig ist"
+          ],
+          "hint": "Ich bin glücklich, weil die Arbeit fertig ist"
+        }
+      ],
+      "drills": [
+        {
+          "id": "DEU_W4_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the conjunction for 'because'",
+          "contextPrompt": "I am eating because I am hungry.",
+          "sentenceTemplate": "Ich esse, _____ ich hungrig bin.",
+          "answer": "weil",
+          "choices": ["weil", "aber", "oder"],
+          "completedSentence": "Ich esse, weil ich hungrig bin.",
+          "explanation": "'weil' introduces a reason clause with the verb at the end."
+        },
+        {
+          "id": "DEU_W4_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Choose the grammatically valid 'weil' clause",
+          "contextPrompt": "I am going home because I am tired.",
+          "sentenceTemplate": "Ich gehe nach Hause, weil _____.",
+          "answer": "ich müde bin",
+          "choices": ["ich müde bin", "bin ich müde", "ich bin müde"],
+          "completedSentence": "Ich gehe nach Hause, weil ich müde bin.",
+          "explanation": "After 'weil', the conjugated verb ('bin') must move to the end."
+        },
+        {
+          "id": "DEU_W4_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the connector for 'but'",
+          "contextPrompt": "I am tired, but I am happy.",
+          "sentenceTemplate": "Ich bin müde, _____ ich bin glücklich.",
+          "answer": "aber",
+          "choices": ["aber", "weil", "woher"],
+          "completedSentence": "Ich bin müde, aber ich bin glücklich.",
+          "explanation": "'aber' ('but') keeps normal V2 word order."
+        },
+        {
+          "id": "DEU_W4_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am happy because the work is finished.",
+          "sentenceTemplate": "Ich bin glücklich, weil die Arbeit fertig ist.",
+          "answer": "[Clause 1], weil + [Subject] + [Detail] + [Verb]",
+          "choices": [
+            "[Clause 1], weil + [Subject] + [Detail] + [Verb]",
+            "[Subject] + muss / müssen + [Detail] + [Infinitive]",
+            "[Subject] + ist + schon + [fertig / bereit]"
+          ],
+          "completedSentence": "Ich bin glücklich, weil die Arbeit fertig ist.",
+          "explanation": "'weil' joins a main clause with a verb-final reason clause."
+        }
+      ],
+      "pathways": [{ "label": "Review from Lesson 1.1 (Self & Identity)", "target": "DEU_W1_M01" }]
+    }
+  ]
+}

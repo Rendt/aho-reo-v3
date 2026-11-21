@@ -1,0 +1,1538 @@
+{
+  "meta": {
+    "id": "AHO_FRA_A1",
+    "languageName": "Français (French)",
+    "bcp47": "fr-FR",
+    "baseLanguage": "English",
+    "curriculumLevel": "CEFR A1 · Beginner",
+    "author": "Aho Reo Educational Baseline",
+    "versionDate": "2026-11-21",
+    "version": "3.1",
+    "specialChars": ["é", "è", "ê", "à", "ç", "î", "ô", "ù", "œ"],
+    "packLabels": {
+      "workplace": "Travail & Bureau",
+      "outside": "Nature & Voyage",
+      "community": "Ville & Quartier",
+      "social": "Famille & Amis"
+    },
+    "praisePhrase": "Très bien !"
+  },
+  "modules": [
+    {
+      "id": "FRA_W1_M01",
+      "title": "Lesson 1.1: Self & Identity (Je m'appelle / Je suis)",
+      "tier": 1,
+      "wahanga": "Group 1: Identity & Connections",
+      "kowae": "Unit 1.1: Personal Identity",
+      "canDo": "Greet someone and introduce yourself using Je m'appelle or Je suis.",
+      "readerRole": "Foundation",
+      "concept": "In French, 'Je m'appelle' literally means 'I call myself' and is the most natural way to share your name. 'Je suis' means 'I am'.",
+      "pattern": "Je + m'appelle / suis + [Name]",
+      "slots": [
+        { "label": "Je", "meaning": "I (subject)", "type": "fixed" },
+        { "label": "m'appelle / suis", "meaning": "am called / am", "type": "fixed" },
+        { "label": "[Prénom]", "meaning": "first name", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "Bonjour", "meaning": "hello / good day", "emoji": "👋" },
+        { "word": "Salut", "meaning": "hi (informal)", "emoji": "✨" },
+        { "word": "Je", "meaning": "I", "emoji": "👤" },
+        { "word": "m'appelle", "meaning": "am called", "emoji": "🪪" },
+        { "word": "suis", "meaning": "am", "emoji": "🔗" },
+        { "word": "tu", "meaning": "you (informal)", "emoji": "🫵" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "le collègue", "meaning": "the colleague", "emoji": "💼" },
+          { "word": "l'équipe", "meaning": "the team", "emoji": "👥" }
+        ],
+        "outside": [
+          { "word": "le voyageur", "meaning": "the traveler", "emoji": "🧳" },
+          { "word": "le guide", "meaning": "the guide", "emoji": "🧭" }
+        ],
+        "community": [
+          { "word": "le voisin", "meaning": "the neighbor", "emoji": "🏘️" },
+          { "word": "enchanté", "meaning": "nice to meet you", "emoji": "🤝" }
+        ],
+        "social": [
+          { "word": "mon ami", "meaning": "my friend (m)", "emoji": "🤝" },
+          { "word": "ma famille", "meaning": "my family", "emoji": "👨‍👩‍👧‍👦" }
+        ]
+      },
+      "model": {
+        "context": "Meeting someone at a café in Lyon:",
+        "en": "Hello! What is your name? — Hello! My name is Claire.",
+        "target": "Bonjour ! Je m'appelle Claire.",
+        "literal": "[Hello = Bonjour] + [I = Je] + [call myself = m'appelle] + [Claire]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Bonjour ! Comment tu t'appelles ?", "en": "Hello! What is your name?" },
+          { "speaker": "Speaker B", "target": "Bonjour ! Je m'appelle Claire.", "en": "Hello! My name is Claire." }
+        ],
+        "check": {
+          "question": "Which phrase means 'My name is Claire'?",
+          "options": [
+            { "text": "Je m'appelle Claire.", "correct": true },
+            { "text": "Tu t'appelles Claire.", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W1_M01_P1",
+          "situation": "Introduce yourself as Claire:",
+          "target": "My name is Claire.",
+          "expected": ["Je m'appelle Claire", "Je suis Claire"],
+          "hint": "Je + m'appelle + Claire"
+        },
+        {
+          "id": "FRA_W1_M01_P2",
+          "situation": "Say hello and introduce yourself as Luc:",
+          "target": "Hello, I am Luc.",
+          "expected": ["Bonjour je suis Luc", "Bonjour je m'appelle Luc"],
+          "hint": "Bonjour, je suis Luc"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W1_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the verb phrase for 'Je'",
+          "contextPrompt": "My name is Claire.",
+          "sentenceTemplate": "Je _____ Claire.",
+          "answer": "m'appelle",
+          "choices": ["m'appelle", "t'appelles", "viens"],
+          "completedSentence": "Je m'appelle Claire.",
+          "explanation": "'Je' pairs with 'm'appelle' ('I am called')."
+        },
+        {
+          "id": "FRA_W1_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Choose a polite greeting",
+          "contextPrompt": "Hello, I am Luc.",
+          "sentenceTemplate": "_____, je suis Luc.",
+          "answer": "Bonjour",
+          "choices": ["Bonjour", "Merci", "Oui"],
+          "completedSentence": "Bonjour, je suis Luc.",
+          "explanation": "'Bonjour' is the universal polite greeting."
+        },
+        {
+          "id": "FRA_W1_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Complete the informal question",
+          "contextPrompt": "What is your name?",
+          "sentenceTemplate": "Comment _____ t'appelles ?",
+          "answer": "tu",
+          "choices": ["tu", "je", "nous"],
+          "completedSentence": "Comment tu t'appelles ?",
+          "explanation": "'tu' pairs with 't'appelles'."
+        },
+        {
+          "id": "FRA_W1_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "My name is Claire.",
+          "sentenceTemplate": "Je m'appelle Claire.",
+          "answer": "Je + m'appelle / suis + [Name]",
+          "choices": [
+            "Je + m'appelle / suis + [Name]",
+            "[Subject] + viens / vient + de + [Place]",
+            "Il faut + [Infinitive]"
+          ],
+          "completedSentence": "Je m'appelle Claire.",
+          "explanation": "Introductions follow 'Je m'appelle / suis + name'."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 1.2 (Professions & C'est)", "target": "FRA_W1_M02" }]
+    },
+    {
+      "id": "FRA_W1_M02",
+      "title": "Lesson 1.2: Professions & Identifying Things (Je suis / C'est)",
+      "tier": 1,
+      "wahanga": "Group 1: Identity & Connections",
+      "kowae": "Unit 1.2: Roles & Classification",
+      "canDo": "State professions without an article after être, and identify nouns with C'est un / une.",
+      "readerRole": "Contrast",
+      "concept": "In French, drop 'un/une' when stating a profession directly after 'être': 'Je suis étudiant' (I am a student). Use 'C'est un' (masculine) or 'C'est une' (feminine) to point out things.",
+      "pattern": "[Subject] + suis / est + [Profession]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun (Je / Il / Elle)", "type": "variable" },
+        { "label": "suis / est", "meaning": "am / is", "type": "fixed" },
+        { "label": "[Métier]", "meaning": "profession (no article)", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "étudiant", "meaning": "student (m)", "emoji": "📘" },
+        { "word": "étudiante", "meaning": "student (f)", "emoji": "📘" },
+        { "word": "professeur", "meaning": "teacher", "emoji": "🏫" },
+        { "word": "médecin", "meaning": "doctor", "emoji": "🩺" },
+        { "word": "est", "meaning": "is", "emoji": "🔗" },
+        { "word": "C'est", "meaning": "it is / that is", "emoji": "👉" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "ingénieur", "meaning": "engineer", "emoji": "⚙️" },
+          { "word": "directrice", "meaning": "director / manager (f)", "emoji": "📊" }
+        ],
+        "outside": [
+          { "word": "une montagne", "meaning": "a mountain", "emoji": "⛰️" },
+          { "word": "un arbre", "meaning": "a tree", "emoji": "🌳" }
+        ],
+        "community": [
+          { "word": "une école", "meaning": "a school", "emoji": "🏫" },
+          { "word": "un musée", "meaning": "a museum", "emoji": "🏛️" }
+        ],
+        "social": [
+          { "word": "artiste", "meaning": "artist", "emoji": "🎨" },
+          { "word": "elle", "meaning": "she", "emoji": "👩" }
+        ]
+      },
+      "model": {
+        "context": "Introducing classmates:",
+        "en": "I am a student. She is a teacher.",
+        "target": "Je suis étudiant.",
+        "literal": "[I = Je] + [am = suis] + [student = étudiant]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Tu es étudiant ?", "en": "Are you a student?" },
+          { "speaker": "Speaker B", "target": "Oui, je suis étudiant. Elle est professeur.", "en": "Yes, I am a student. She is a teacher." }
+        ],
+        "check": {
+          "question": "Which sentence naturally says 'I am a teacher' in French?",
+          "options": [
+            { "text": "Je suis professeur.", "correct": true },
+            { "text": "Je suis un le professeur.", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W1_M02_P1",
+          "situation": "Tell someone you are a student:",
+          "target": "I am a student.",
+          "expected": ["Je suis étudiant", "Je suis étudiante"],
+          "hint": "Je + suis + étudiant / étudiante"
+        },
+        {
+          "id": "FRA_W1_M02_P2",
+          "situation": "Say that she is a teacher:",
+          "target": "She is a teacher.",
+          "expected": ["Elle est professeur", "Elle est professeure"],
+          "hint": "Elle + est + professeur"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W1_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the right form of 'être' for 'Elle'",
+          "contextPrompt": "She is a teacher.",
+          "sentenceTemplate": "Elle _____ professeur.",
+          "answer": "est",
+          "choices": ["est", "suis", "es"],
+          "completedSentence": "Elle est professeur.",
+          "explanation": "'il / elle / on' takes 'est'."
+        },
+        {
+          "id": "FRA_W1_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a profession",
+          "contextPrompt": "He is a doctor.",
+          "sentenceTemplate": "Il est _____.",
+          "answer": "médecin",
+          "choices": ["médecin", "musée", "arbre"],
+          "completedSentence": "Il est médecin.",
+          "explanation": "'médecin' means 'doctor'."
+        },
+        {
+          "id": "FRA_W1_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the feminine article for 'école'",
+          "contextPrompt": "It is a school.",
+          "sentenceTemplate": "C'est _____ école.",
+          "answer": "une",
+          "choices": ["une", "un", "des"],
+          "completedSentence": "C'est une école.",
+          "explanation": "'école' is feminine, so it takes 'une'."
+        },
+        {
+          "id": "FRA_W1_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "She is a teacher.",
+          "sentenceTemplate": "Elle est professeur.",
+          "answer": "[Subject] + suis / est + [Profession]",
+          "choices": [
+            "[Subject] + suis / est + [Profession]",
+            "[Subject] + viens / vient + de + [Place]",
+            "[Subject] + ai + [Past Participle]"
+          ],
+          "completedSentence": "Elle est professeur.",
+          "explanation": "Professions follow 'être' directly without an article."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 1.3 (Origins with venir de)", "target": "FRA_W1_M03" }]
+    },
+    {
+      "id": "FRA_W1_M03",
+      "title": "Lesson 1.3: Origins & Cities (venir de)",
+      "tier": 1,
+      "wahanga": "Group 1: Identity & Connections",
+      "kowae": "Unit 1.3: Where You Are From",
+      "canDo": "Ask and say which city or country someone comes from using venir de.",
+      "readerRole": "Connection",
+      "concept": "Use 'venir de' (to come from) before cities: 'Je viens de Paris', 'Il vient de Lyon'. Before a vowel, 'de' becomes 'd'' ('d'Auckland').",
+      "pattern": "[Subject] + viens / vient + de + [Place]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun (Je / Il / Nous)", "type": "variable" },
+        { "label": "viens de", "meaning": "come from", "type": "fixed" },
+        { "label": "[Lieu]", "meaning": "city or country", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "viens", "meaning": "come (je / tu)", "emoji": "📍" },
+        { "word": "de", "meaning": "from / of", "emoji": "🧭" },
+        { "word": "d'où", "meaning": "from where?", "emoji": "❓" },
+        { "word": "Paris", "meaning": "Paris", "emoji": "🗼" },
+        { "word": "Lyon", "meaning": "Lyon", "emoji": "🏙️" },
+        { "word": "France", "meaning": "France", "emoji": "🇫🇷" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "Nouvelle-Zélande", "meaning": "New Zealand", "emoji": "🌏" },
+          { "word": "Montréal", "meaning": "Montreal", "emoji": "🍁" }
+        ],
+        "outside": [
+          { "word": "Marseille", "meaning": "Marseille", "emoji": "⚓" },
+          { "word": "la côte", "meaning": "the coast", "emoji": "🏖️" }
+        ],
+        "community": [
+          { "word": "Bruxelles", "meaning": "Brussels", "emoji": "🏛️" },
+          { "word": "Genève", "meaning": "Geneva", "emoji": "🏞️" }
+        ],
+        "social": [
+          { "word": "nous", "meaning": "we", "emoji": "👥" },
+          { "word": "il", "meaning": "he", "emoji": "🧑" }
+        ]
+      },
+      "model": {
+        "context": "Chatting with a new neighbor:",
+        "en": "Where are you from? — I come from Paris.",
+        "target": "Je viens de Paris.",
+        "literal": "[I = Je] + [come = viens] + [from = de] + [Paris]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Tu viens d'où ?", "en": "Where are you from?" },
+          { "speaker": "Speaker B", "target": "Je viens de Paris.", "en": "I come from Paris." }
+        ],
+        "check": {
+          "question": "Which preposition links 'viens' to a city name like Paris?",
+          "options": [
+            { "text": "de (Je viens de Paris)", "correct": true },
+            { "text": "sur (Je viens sur Paris)", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W1_M03_P1",
+          "situation": "Tell someone you come from Paris:",
+          "target": "I come from Paris.",
+          "expected": ["Je viens de Paris"],
+          "hint": "Je + viens + de + Paris"
+        },
+        {
+          "id": "FRA_W1_M03_P2",
+          "situation": "Say that he comes from Lyon:",
+          "target": "He comes from Lyon.",
+          "expected": ["Il vient de Lyon"],
+          "hint": "Il + vient + de + Lyon"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W1_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the origin preposition",
+          "contextPrompt": "I come from Paris.",
+          "sentenceTemplate": "Je viens _____ Paris.",
+          "answer": "de",
+          "choices": ["de", "à", "dans"],
+          "completedSentence": "Je viens de Paris.",
+          "explanation": "'venir de' expresses place of origin."
+        },
+        {
+          "id": "FRA_W1_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in another French-speaking city",
+          "contextPrompt": "I come from Montreal.",
+          "sentenceTemplate": "Je viens de _____.",
+          "answer": "Montréal",
+          "choices": ["Montréal", "professeur", "bureau"],
+          "completedSentence": "Je viens de Montréal.",
+          "explanation": "'Montréal' uses an acute accent on 'é'."
+        },
+        {
+          "id": "FRA_W1_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the third-person form of 'venir'",
+          "contextPrompt": "He comes from Lyon.",
+          "sentenceTemplate": "Il _____ de Lyon.",
+          "answer": "vient",
+          "choices": ["vient", "viens", "venons"],
+          "completedSentence": "Il vient de Lyon.",
+          "explanation": "'il / elle' takes 'vient'."
+        },
+        {
+          "id": "FRA_W1_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "He comes from Lyon.",
+          "sentenceTemplate": "Il vient de Lyon.",
+          "answer": "[Subject] + viens / vient + de + [Place]",
+          "choices": [
+            "[Subject] + viens / vient + de + [Place]",
+            "[Subject] + suis / est + [Profession]",
+            "[Subject] + vais + à / au + [Destination]"
+          ],
+          "completedSentence": "Il vient de Lyon.",
+          "explanation": "'venir de + place' states where someone comes from."
+        }
+      ],
+      "pathways": [{ "label": "Next: Group 2 · Everyday Present Actions", "target": "FRA_W2_M01" }]
+    },
+    {
+      "id": "FRA_W2_M01",
+      "title": "Lesson 2.1: Everyday Present Actions (-er Verbs)",
+      "tier": 2,
+      "wahanga": "Group 2: Actions & Wellbeing",
+      "kowae": "Unit 2.1: Regular Present Tense",
+      "canDo": "Describe what you do or are doing right now using high-frequency -er verbs.",
+      "readerRole": "Action",
+      "concept": "French uses one present tense for both 'I work' and 'I am working'. Regular '-er' verbs take: je -e, tu -es, il/elle -e, nous -ons.",
+      "pattern": "[Subject] + [Verb] + [Object / Time]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun (Je / Nous)", "type": "variable" },
+        { "label": "[Verbe]", "meaning": "conjugated verb", "type": "fixed" },
+        { "label": "[Détail]", "meaning": "object or time word", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "travaille", "meaning": "work (je)", "emoji": "💼" },
+        { "word": "étudie", "meaning": "study (je)", "emoji": "📖" },
+        { "word": "parle", "meaning": "speak (je)", "emoji": "🗣️" },
+        { "word": "le français", "meaning": "French (language)", "emoji": "🇫🇷" },
+        { "word": "mange", "meaning": "eat (je)", "emoji": "🍽️" },
+        { "word": "aujourd'hui", "meaning": "today", "emoji": "📅" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "prépare", "meaning": "prepare (je)", "emoji": "📋" },
+          { "word": "écoute", "meaning": "listen (je)", "emoji": "👂" }
+        ],
+        "outside": [
+          { "word": "marche", "meaning": "walk (je)", "emoji": "🥾" },
+          { "word": "nage", "meaning": "swim (je)", "emoji": "🏊" }
+        ],
+        "community": [
+          { "word": "chante", "meaning": "sing (je)", "emoji": "🎵" },
+          { "word": "partage", "meaning": "share (je)", "emoji": "🤝" }
+        ],
+        "social": [
+          { "word": "cuisine", "meaning": "cook (je)", "emoji": "🍳" },
+          { "word": "regarde", "meaning": "watch (je)", "emoji": "🎬" }
+        ]
+      },
+      "model": {
+        "context": "Checking in with a colleague:",
+        "en": "What are you doing today? — I am studying French and working.",
+        "target": "J'étudie le français.",
+        "literal": "[I = J'] + [study = étudie] + [French = le français]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Qu'est-ce que tu fais aujourd'hui ?", "en": "What are you doing today?" },
+          { "speaker": "Speaker B", "target": "Je travaille et j'étudie le français.", "en": "I am working and studying French." }
+        ],
+        "check": {
+          "question": "Why does 'Je étudie' contract to 'J'étudie'?",
+          "options": [
+            { "text": "'Je' contracts to 'J'' before a vowel sound", "correct": true },
+            { "text": "Because 'étudie' is in the past tense", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W2_M01_P1",
+          "situation": "Tell a friend you speak French:",
+          "target": "I speak French.",
+          "expected": ["Je parle français", "Je parle le français"],
+          "hint": "Je + parle + français"
+        },
+        {
+          "id": "FRA_W2_M01_P2",
+          "situation": "Say that you are working today:",
+          "target": "I am working today.",
+          "expected": ["Je travaille aujourd'hui", "Aujourd'hui je travaille"],
+          "hint": "Je + travaille + aujourd'hui"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W2_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the right conjugation for 'Je'",
+          "contextPrompt": "I speak French.",
+          "sentenceTemplate": "Je _____ français.",
+          "answer": "parle",
+          "choices": ["parle", "parlons", "parlez"],
+          "completedSentence": "Je parle français.",
+          "explanation": "'je' takes '-e': 'je parle'."
+        },
+        {
+          "id": "FRA_W2_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a cooking verb",
+          "contextPrompt": "I am cooking today.",
+          "sentenceTemplate": "Je _____ aujourd'hui.",
+          "answer": "cuisine",
+          "choices": ["cuisine", "suis", "viens"],
+          "completedSentence": "Je cuisine aujourd'hui.",
+          "explanation": "'cuisine' means 'cook / am cooking'."
+        },
+        {
+          "id": "FRA_W2_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the 'nous' ending for 'travailler'",
+          "contextPrompt": "We are working today.",
+          "sentenceTemplate": "Nous _____ aujourd'hui.",
+          "answer": "travaillons",
+          "choices": ["travaillons", "travaille", "travailles"],
+          "completedSentence": "Nous travaillons aujourd'hui.",
+          "explanation": "'nous' takes '-ons': 'nous travaillons'."
+        },
+        {
+          "id": "FRA_W2_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am working today.",
+          "sentenceTemplate": "Je travaille aujourd'hui.",
+          "answer": "[Subject] + [Verb] + [Object / Time]",
+          "choices": [
+            "[Subject] + [Verb] + [Object / Time]",
+            "Ça va + [Adverb] / Je suis + [Adjective]",
+            "[Subject] + ai + [Past Participle]"
+          ],
+          "completedSentence": "Je travaille aujourd'hui.",
+          "explanation": "Present actions follow subject + conjugated verb + detail."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 2.2 (Feelings & Ça va)", "target": "FRA_W2_M02" }]
+    },
+    {
+      "id": "FRA_W2_M02",
+      "title": "Lesson 2.2: Wellbeing & Feelings (Ça va / Je suis)",
+      "tier": 2,
+      "wahanga": "Group 2: Actions & Wellbeing",
+      "kowae": "Unit 2.2: States & Feelings",
+      "canDo": "Ask how someone is doing with Ça va and express feelings like happy, tired, or hungry.",
+      "readerRole": "Expression",
+      "concept": "Ask 'Ça va ?' and answer 'Ça va bien, merci !'. Use 'Je suis' + adjective ('content', 'fatigué'), but note French uses 'avoir' (to have) for hunger and thirst: 'J'ai faim' (I am hungry).",
+      "pattern": "Ça va + [Adverb] / Je suis + [Adjective]",
+      "slots": [
+        { "label": "Je suis", "meaning": "I am", "type": "fixed" },
+        { "label": "[Adjectif]", "meaning": "feeling (content / fatigué)", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "Ça va", "meaning": "how is it going / it's going", "emoji": "💬" },
+        { "word": "bien", "meaning": "well / good", "emoji": "👍" },
+        { "word": "fatigué", "meaning": "tired (m; fatiguée f)", "emoji": "😴" },
+        { "word": "content", "meaning": "happy (m; contente f)", "emoji": "😊" },
+        { "word": "J'ai faim", "meaning": "I am hungry", "emoji": "🍲" },
+        { "word": "J'ai soif", "meaning": "I am thirsty", "emoji": "💧" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "occupé", "meaning": "busy", "emoji": "🐝" },
+          { "word": "calme", "meaning": "calm", "emoji": "🌿" }
+        ],
+        "outside": [
+          { "word": "J'ai froid", "meaning": "I am cold", "emoji": "❄️" },
+          { "word": "J'ai chaud", "meaning": "I am hot", "emoji": "☀️" }
+        ],
+        "community": [
+          { "word": "en forme", "meaning": "in great shape / well", "emoji": "🌱" },
+          { "word": "merci", "meaning": "thank you", "emoji": "🙏" }
+        ],
+        "social": [
+          { "word": "triste", "meaning": "sad", "emoji": "🌧️" },
+          { "word": "heureux", "meaning": "joyful / happy (m)", "emoji": "🎉" }
+        ]
+      },
+      "model": {
+        "context": "Greeting a friend in the morning:",
+        "en": "How are you? — I am doing well, thanks! I am happy.",
+        "target": "Ça va bien, merci !",
+        "literal": "[It goes = Ça va] + [well = bien] + [thanks = merci]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Salut ! Ça va ?", "en": "Hi! How is it going?" },
+          { "speaker": "Speaker B", "target": "Ça va bien, merci ! Je suis content.", "en": "I am doing well, thanks! I am happy." }
+        ],
+        "check": {
+          "question": "How do you say 'I am hungry' in idiomatic French?",
+          "options": [
+            { "text": "J'ai faim. (literally 'I have hunger')", "correct": true },
+            { "text": "Je suis faim.", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W2_M02_P1",
+          "situation": "Reply that you are doing well:",
+          "target": "I am doing well.",
+          "expected": ["Ça va bien", "Je vais bien"],
+          "hint": "Ça va + bien"
+        },
+        {
+          "id": "FRA_W2_M02_P2",
+          "situation": "Say that you are tired:",
+          "target": "I am tired.",
+          "expected": ["Je suis fatigué", "Je suis fatiguée"],
+          "hint": "Je + suis + fatigué"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W2_M02_D1",
+          "kind": "cloze",
+          "instruction": "Complete the everyday wellbeing response",
+          "contextPrompt": "It is going well.",
+          "sentenceTemplate": "_____ va bien.",
+          "answer": "Ça",
+          "choices": ["Ça", "Je", "De"],
+          "completedSentence": "Ça va bien.",
+          "explanation": "'Ça' uses the cedilla ('ç') to make a soft 's' sound."
+        },
+        {
+          "id": "FRA_W2_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Express being busy at work",
+          "contextPrompt": "I am busy.",
+          "sentenceTemplate": "Je suis _____.",
+          "answer": "occupé",
+          "choices": ["occupé", "faim", "soif"],
+          "completedSentence": "Je suis occupé.",
+          "explanation": "'occupé' is an adjective paired with 'être'."
+        },
+        {
+          "id": "FRA_W2_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the right verb for hunger",
+          "contextPrompt": "I am hungry.",
+          "sentenceTemplate": "_____ faim.",
+          "answer": "J'ai",
+          "choices": ["J'ai", "Je suis", "Je vais"],
+          "completedSentence": "J'ai faim.",
+          "explanation": "French uses 'avoir' ('J'ai') for hunger, thirst, cold, and heat."
+        },
+        {
+          "id": "FRA_W2_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am tired.",
+          "sentenceTemplate": "Je suis fatigué.",
+          "answer": "Ça va + [Adverb] / Je suis + [Adjective]",
+          "choices": [
+            "Ça va + [Adverb] / Je suis + [Adjective]",
+            "[Subject] + ai + [Past Participle]",
+            "Il faut + [Infinitive]"
+          ],
+          "completedSentence": "Je suis fatigué.",
+          "explanation": "Feelings like 'fatigué' and 'content' follow 'Je suis'."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 2.3 (Passé Composé)", "target": "FRA_W2_M03" }]
+    },
+    {
+      "id": "FRA_W2_M03",
+      "title": "Lesson 2.3: Past Actions (Passé Composé with avoir)",
+      "tier": 2,
+      "wahanga": "Group 2: Actions & Wellbeing",
+      "kowae": "Unit 2.3: Talking About Yesterday",
+      "canDo": "Describe completed past actions using J'ai + -é past participles.",
+      "readerRole": "Time Shift",
+      "concept": "In spoken French, form the past with 'avoir' ('J'ai') plus the past participle. For '-er' verbs, simply replace '-er' with '-é': 'travailler' → 'J'ai travaillé'.",
+      "pattern": "[Subject] + ai / a + [Verb-é] + [Time]",
+      "slots": [
+        { "label": "J'ai", "meaning": "I have (past helper)", "type": "fixed" },
+        { "label": "[Participe -é]", "meaning": "past participle", "type": "variable" },
+        { "label": "[Temps]", "meaning": "time word (hier)", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "J'ai", "meaning": "I have (past helper)", "emoji": "⏪" },
+        { "word": "hier", "meaning": "yesterday", "emoji": "📅" },
+        { "word": "travaillé", "meaning": "worked", "emoji": "💼" },
+        { "word": "étudié", "meaning": "studied", "emoji": "📖" },
+        { "word": "mangé", "meaning": "ate / eaten", "emoji": "🍽️" },
+        { "word": "parlé", "meaning": "spoke / spoken", "emoji": "🗣️" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "préparé", "meaning": "prepared", "emoji": "📋" },
+          { "word": "terminé", "meaning": "finished", "emoji": "✅" }
+        ],
+        "outside": [
+          { "word": "marché", "meaning": "walked", "emoji": "🥾" },
+          { "word": "voyagé", "meaning": "traveled", "emoji": "🚆" }
+        ],
+        "community": [
+          { "word": "écouté", "meaning": "listened", "emoji": "👂" },
+          { "word": "visité", "meaning": "visited", "emoji": "🏛️" }
+        ],
+        "social": [
+          { "word": "cuisiné", "meaning": "cooked", "emoji": "🍳" },
+          { "word": "regardé", "meaning": "watched", "emoji": "🎬" }
+        ]
+      },
+      "model": {
+        "context": "Catching up on Monday morning:",
+        "en": "Did you work yesterday? — No, I studied French yesterday.",
+        "target": "J'ai étudié hier.",
+        "literal": "[I have = J'ai] + [studied = étudié] + [yesterday = hier]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Tu as travaillé hier ?", "en": "Did you work yesterday?" },
+          { "speaker": "Speaker B", "target": "Non, j'ai étudié le français hier.", "en": "No, I studied French yesterday." }
+        ],
+        "check": {
+          "question": "How do regular '-er' verbs form their past participle in passé composé?",
+          "options": [
+            { "text": "Replace '-er' with '-é' (e.g. 'travaillé')", "correct": true },
+            { "text": "Add '-ing' to the verb", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W2_M03_P1",
+          "situation": "Say that you studied yesterday:",
+          "target": "I studied yesterday.",
+          "expected": ["J'ai étudié hier", "Hier j'ai étudié"],
+          "hint": "J'ai + étudié + hier"
+        },
+        {
+          "id": "FRA_W2_M03_P2",
+          "situation": "Say that you worked yesterday:",
+          "target": "I worked yesterday.",
+          "expected": ["J'ai travaillé hier", "Hier j'ai travaillé"],
+          "hint": "J'ai + travaillé + hier"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W2_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the past participle with acute accent",
+          "contextPrompt": "I worked yesterday.",
+          "sentenceTemplate": "J'ai _____ hier.",
+          "answer": "travaillé",
+          "choices": ["travaillé", "travaille", "travaillons"],
+          "completedSentence": "J'ai travaillé hier.",
+          "explanation": "The past participle of 'travailler' ends in '-é': 'travaillé'."
+        },
+        {
+          "id": "FRA_W2_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in an outdoor past action",
+          "contextPrompt": "I walked yesterday.",
+          "sentenceTemplate": "J'ai _____ hier.",
+          "answer": "marché",
+          "choices": ["marché", "marche", "mange"],
+          "completedSentence": "J'ai marché hier.",
+          "explanation": "'marché' is the past participle of 'marcher'."
+        },
+        {
+          "id": "FRA_W2_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Add the word for yesterday",
+          "contextPrompt": "I studied yesterday.",
+          "sentenceTemplate": "J'ai étudié _____.",
+          "answer": "hier",
+          "choices": ["hier", "demain", "où"],
+          "completedSentence": "J'ai étudié hier.",
+          "explanation": "'hier' means 'yesterday'."
+        },
+        {
+          "id": "FRA_W2_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I worked yesterday.",
+          "sentenceTemplate": "J'ai travaillé hier.",
+          "answer": "[Subject] + ai / a + [Verb-é] + [Time]",
+          "choices": [
+            "[Subject] + ai / a + [Verb-é] + [Time]",
+            "[Subject] + [Verb] + [Object / Time]",
+            "[Subject] + suis / est + au / à la + [Place]"
+          ],
+          "completedSentence": "J'ai travaillé hier.",
+          "explanation": "'J'ai + -é' forms the conversational past tense."
+        }
+      ],
+      "pathways": [{ "label": "Next: Group 3 · Current Location", "target": "FRA_W3_M01" }]
+    },
+    {
+      "id": "FRA_W3_M01",
+      "title": "Lesson 3.1: Current Location (au / à la / ici)",
+      "tier": 3,
+      "wahanga": "Group 3: Places & Movement",
+      "kowae": "Unit 3.1: Static Location",
+      "canDo": "Ask and state where people are located right now using au, à la, and à l'.",
+      "readerRole": "Orientation",
+      "concept": "'à' means 'at / in'. Before masculine 'le', 'à + le' always contracts to 'au' ('au bureau'). Before feminine 'la', it stays 'à la' ('à la maison').",
+      "pattern": "[Subject] + suis / est + au / à la + [Place]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun", "type": "variable" },
+        { "label": "suis / est", "meaning": "am / is", "type": "fixed" },
+        { "label": "au / à la", "meaning": "at the", "type": "fixed" },
+        { "label": "[Lieu]", "meaning": "place noun", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "où", "meaning": "where?", "emoji": "❓" },
+        { "word": "au bureau", "meaning": "at the office", "emoji": "🏢" },
+        { "word": "à la maison", "meaning": "at home", "emoji": "🏠" },
+        { "word": "à l'école", "meaning": "at school", "emoji": "🏫" },
+        { "word": "ici", "meaning": "here", "emoji": "📍" },
+        { "word": "au café", "meaning": "at the café", "emoji": "☕" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "en réunion", "meaning": "in a meeting", "emoji": "🗓️" },
+          { "word": "au travail", "meaning": "at work", "emoji": "💼" }
+        ],
+        "outside": [
+          { "word": "au parc", "meaning": "at the park", "emoji": "🌳" },
+          { "word": "à la plage", "meaning": "at the beach", "emoji": "🏖️" }
+        ],
+        "community": [
+          { "word": "à la bibliothèque", "meaning": "at the library", "emoji": "📚" },
+          { "word": "à la gare", "meaning": "at the train station", "emoji": "🚉" }
+        ],
+        "social": [
+          { "word": "dans la cuisine", "meaning": "in the kitchen", "emoji": "🍳" },
+          { "word": "au restaurant", "meaning": "at the restaurant", "emoji": "🍽️" }
+        ]
+      },
+      "model": {
+        "context": "Texting a colleague before a call:",
+        "en": "Where are you? — I am at the office.",
+        "target": "Je suis au bureau.",
+        "literal": "[I = Je] + [am = suis] + [at the = au] + [office = bureau]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Tu es où ?", "en": "Where are you?" },
+          { "speaker": "Speaker B", "target": "Je suis au bureau.", "en": "I am at the office." }
+        ],
+        "check": {
+          "question": "Why do we say 'au bureau' instead of 'à le bureau'?",
+          "options": [
+            { "text": "'à + le' always contracts to 'au' in French", "correct": true },
+            { "text": "'bureau' is a feminine noun", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W3_M01_P1",
+          "situation": "Tell a teammate you are at the office:",
+          "target": "I am at the office.",
+          "expected": ["Je suis au bureau"],
+          "hint": "Je + suis + au bureau"
+        },
+        {
+          "id": "FRA_W3_M01_P2",
+          "situation": "Say that she is at home:",
+          "target": "She is at home.",
+          "expected": ["Elle est à la maison"],
+          "hint": "Elle + est + à la maison"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W3_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the contraction of 'à + le'",
+          "contextPrompt": "I am at the office.",
+          "sentenceTemplate": "Je suis _____ bureau.",
+          "answer": "au",
+          "choices": ["au", "à la", "de"],
+          "completedSentence": "Je suis au bureau.",
+          "explanation": "Masculine 'le bureau' takes 'au' (à + le)."
+        },
+        {
+          "id": "FRA_W3_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a community location",
+          "contextPrompt": "She is at the library.",
+          "sentenceTemplate": "Elle est _____.",
+          "answer": "à la bibliothèque",
+          "choices": ["à la bibliothèque", "au parc", "à la plage"],
+          "completedSentence": "Elle est à la bibliothèque.",
+          "explanation": "'la bibliothèque' is feminine → 'à la bibliothèque'."
+        },
+        {
+          "id": "FRA_W3_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the question word for 'where'",
+          "contextPrompt": "Where are you?",
+          "sentenceTemplate": "Tu es _____ ?",
+          "answer": "où",
+          "choices": ["où", "ou", "qui"],
+          "completedSentence": "Tu es où ?",
+          "explanation": "'où' (with grave accent) means 'where', while 'ou' means 'or'."
+        },
+        {
+          "id": "FRA_W3_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "She is at home.",
+          "sentenceTemplate": "Elle est à la maison.",
+          "answer": "[Subject] + suis / est + au / à la + [Place]",
+          "choices": [
+            "[Subject] + suis / est + au / à la + [Place]",
+            "[Subject] + viens / vient + de + [Place]",
+            "[Subject] + vais + au / à la + [Destination]"
+          ],
+          "completedSentence": "Elle est à la maison.",
+          "explanation": "Static locations use 'être' + 'au / à la'."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 3.2 (Spatial Positions)", "target": "FRA_W3_M02" }]
+    },
+    {
+      "id": "FRA_W3_M02",
+      "title": "Lesson 3.2: Relative Position (dans / sur / sous)",
+      "tier": 3,
+      "wahanga": "Group 3: Places & Movement",
+      "kowae": "Unit 3.2: Locating Objects",
+      "canDo": "Describe whether an object is inside, on top of, under, or in front of a landmark.",
+      "readerRole": "Precision",
+      "concept": "French spatial prepositions link directly to the landmark noun: 'sur la table' (on the table), 'dans le sac' (in the bag), 'sous la chaise' (under the chair).",
+      "pattern": "[Object] + est + [sur / dans / sous] + [Landmark]",
+      "slots": [
+        { "label": "[Objet]", "meaning": "item being located", "type": "variable" },
+        { "label": "est", "meaning": "is", "type": "fixed" },
+        { "label": "sur / dans / sous", "meaning": "on / in / under", "type": "fixed" },
+        { "label": "[Repère]", "meaning": "landmark noun", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "sur", "meaning": "on (top of)", "emoji": "⬆️" },
+        { "word": "dans", "meaning": "in / inside", "emoji": "📥" },
+        { "word": "sous", "meaning": "under / beneath", "emoji": "⬇️" },
+        { "word": "Le livre", "meaning": "the book", "emoji": "📘" },
+        { "word": "la table", "meaning": "the table", "emoji": "🪑" },
+        { "word": "le sac", "meaning": "the bag", "emoji": "🎒" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "l'ordinateur", "meaning": "the computer", "emoji": "💻" },
+          { "word": "le bureau", "meaning": "the desk", "emoji": "🖥️" }
+        ],
+        "outside": [
+          { "word": "devant", "meaning": "in front of", "emoji": "⏩" },
+          { "word": "derrière", "meaning": "behind", "emoji": "⏪" }
+        ],
+        "community": [
+          { "word": "la place", "meaning": "the town square", "emoji": "🏛️" },
+          { "word": "la porte", "meaning": "the door", "emoji": "🚪" }
+        ],
+        "social": [
+          { "word": "la tasse", "meaning": "the cup", "emoji": "☕" },
+          { "word": "la chaise", "meaning": "the chair", "emoji": "💺" }
+        ]
+      },
+      "model": {
+        "context": "Looking for a book at home:",
+        "en": "Where is the book? — The book is on the table.",
+        "target": "Le livre est sur la table.",
+        "literal": "[The book = Le livre] + [is = est] + [on = sur] + [the table = la table]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Où est le livre ?", "en": "Where is the book?" },
+          { "speaker": "Speaker B", "target": "Le livre est sur la table.", "en": "The book is on the table." }
+        ],
+        "check": {
+          "question": "Which preposition means 'inside'?",
+          "options": [
+            { "text": "dans (e.g. 'dans le sac')", "correct": true },
+            { "text": "sous (e.g. 'sous le sac')", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W3_M02_P1",
+          "situation": "Say that the book is on the table:",
+          "target": "The book is on the table.",
+          "expected": ["Le livre est sur la table"],
+          "hint": "Le livre + est + sur + la table"
+        },
+        {
+          "id": "FRA_W3_M02_P2",
+          "situation": "Say that the book is in the bag:",
+          "target": "The book is in the bag.",
+          "expected": ["Le livre est dans le sac"],
+          "hint": "Le livre + est + dans + le sac"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W3_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the preposition for 'on'",
+          "contextPrompt": "The book is on the table.",
+          "sentenceTemplate": "Le livre est _____ la table.",
+          "answer": "sur",
+          "choices": ["sur", "sous", "de"],
+          "completedSentence": "Le livre est sur la table.",
+          "explanation": "'sur' means 'on / on top of'."
+        },
+        {
+          "id": "FRA_W3_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Locate a workplace item",
+          "contextPrompt": "The computer is on the desk.",
+          "sentenceTemplate": "L'ordinateur est sur _____.",
+          "answer": "le bureau",
+          "choices": ["le bureau", "la chaise", "la porte"],
+          "completedSentence": "L'ordinateur est sur le bureau.",
+          "explanation": "'le bureau' means both 'the office' and 'the desk'."
+        },
+        {
+          "id": "FRA_W3_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the preposition for 'under'",
+          "contextPrompt": "The bag is under the chair.",
+          "sentenceTemplate": "Le sac est _____ la chaise.",
+          "answer": "sous",
+          "choices": ["sous", "sur", "dans"],
+          "completedSentence": "Le sac est sous la chaise.",
+          "explanation": "'sous' means 'under / beneath'."
+        },
+        {
+          "id": "FRA_W3_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "The book is in the bag.",
+          "sentenceTemplate": "Le livre est dans le sac.",
+          "answer": "[Object] + est + [sur / dans / sous] + [Landmark]",
+          "choices": [
+            "[Object] + est + [sur / dans / sous] + [Landmark]",
+            "[Subject] + vais + au / à la + [Destination]",
+            "Il faut + [Infinitive]"
+          ],
+          "completedSentence": "Le livre est dans le sac.",
+          "explanation": "Object positions pair 'est' with spatial prepositions."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 3.3 (Movement with aller)", "target": "FRA_W3_M03" }]
+    },
+    {
+      "id": "FRA_W3_M03",
+      "title": "Lesson 3.3: Movement & Destinations (aller à / chez)",
+      "tier": 3,
+      "wahanga": "Group 3: Places & Movement",
+      "kowae": "Unit 3.3: Going Places",
+      "canDo": "Say where you are going using aller + au / à la / chez.",
+      "readerRole": "Navigation",
+      "concept": "'Je vais' (I go / I am going) uses 'au / à la / à' for places ('Je vais au bureau', 'Je vais à Paris') and 'chez' for a person's home ('chez moi' = to my place).",
+      "pattern": "[Subject] + vais / allons + au / à la / chez + [Destination]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "pronoun (Je / Nous)", "type": "variable" },
+        { "label": "vais / allons", "meaning": "go / are going", "type": "fixed" },
+        { "label": "au / à la / chez", "meaning": "to / to someone's place", "type": "fixed" },
+        { "label": "[Destination]", "meaning": "place", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "vais", "meaning": "go / am going (je)", "emoji": "🚶" },
+        { "word": "allons", "meaning": "go / are going (nous)", "emoji": "👥" },
+        { "word": "chez moi", "meaning": "to my home", "emoji": "🏠" },
+        { "word": "à Paris", "meaning": "to Paris", "emoji": "🗼" },
+        { "word": "au marché", "meaning": "to the market", "emoji": "🧺" },
+        { "word": "maintenant", "meaning": "now", "emoji": "⏰" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "au bureau", "meaning": "to the office", "emoji": "🏢" },
+          { "word": "en ville", "meaning": "downtown / into town", "emoji": "🏙️" }
+        ],
+        "outside": [
+          { "word": "à la montagne", "meaning": "to the mountains", "emoji": "⛰️" },
+          { "word": "à la mer", "meaning": "to the sea", "emoji": "🌊" }
+        ],
+        "community": [
+          { "word": "au cinéma", "meaning": "to the cinema", "emoji": "🎬" },
+          { "word": "à la gare", "meaning": "to the station", "emoji": "🚉" }
+        ],
+        "social": [
+          { "word": "chez des amis", "meaning": "to friends' place", "emoji": "🤝" },
+          { "word": "demain", "meaning": "tomorrow", "emoji": "📅" }
+        ]
+      },
+      "model": {
+        "context": "Wrapping up the afternoon:",
+        "en": "Where are you going now? — I am going home. Tomorrow I am going to Paris.",
+        "target": "Je vais chez moi.",
+        "literal": "[I = Je] + [go = vais] + [to my place = chez moi]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Tu vas où maintenant ?", "en": "Where are you going now?" },
+          { "speaker": "Speaker B", "target": "Je vais chez moi. Demain je vais à Paris.", "en": "I am going home. Tomorrow I am going to Paris." }
+        ],
+        "check": {
+          "question": "Which preposition is used before a person or pronoun like 'moi' ('to my place')?",
+          "options": [
+            { "text": "chez (e.g. 'chez moi')", "correct": true },
+            { "text": "sur (e.g. 'sur moi')", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W3_M03_P1",
+          "situation": "Say that you are going home:",
+          "target": "I am going home.",
+          "expected": ["Je vais chez moi", "Je vais à la maison"],
+          "hint": "Je + vais + chez moi"
+        },
+        {
+          "id": "FRA_W3_M03_P2",
+          "situation": "Say that you are going to the market:",
+          "target": "I am going to the market.",
+          "expected": ["Je vais au marché"],
+          "hint": "Je + vais + au marché"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W3_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the preposition for going to someone's home",
+          "contextPrompt": "I am going home.",
+          "sentenceTemplate": "Je vais _____ moi.",
+          "answer": "chez",
+          "choices": ["chez", "dans", "sous"],
+          "completedSentence": "Je vais chez moi.",
+          "explanation": "'chez' means 'at / to the home of'."
+        },
+        {
+          "id": "FRA_W3_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Choose a community destination",
+          "contextPrompt": "We are going to the cinema.",
+          "sentenceTemplate": "Nous allons _____.",
+          "answer": "au cinéma",
+          "choices": ["au cinéma", "sur la table", "de Paris"],
+          "completedSentence": "Nous allons au cinéma.",
+          "explanation": "'le cinéma' is masculine → 'au cinéma'."
+        },
+        {
+          "id": "FRA_W3_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the preposition before a city name",
+          "contextPrompt": "I am going to Paris.",
+          "sentenceTemplate": "Je vais _____ Paris.",
+          "answer": "à",
+          "choices": ["à", "au", "de"],
+          "completedSentence": "Je vais à Paris.",
+          "explanation": "Cities take 'à' directly: 'à Paris'."
+        },
+        {
+          "id": "FRA_W3_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am going to the market.",
+          "sentenceTemplate": "Je vais au marché.",
+          "answer": "[Subject] + vais / allons + au / à la / chez + [Destination]",
+          "choices": [
+            "[Subject] + vais / allons + au / à la / chez + [Destination]",
+            "[Subject] + suis / est + au / à la + [Place]",
+            "[Subject] + est + déjà + [fini / prêt]"
+          ],
+          "completedSentence": "Je vais au marché.",
+          "explanation": "'aller' + destination preposition expresses movement."
+        }
+      ],
+      "pathways": [{ "label": "Next: Group 4 · Completed States", "target": "FRA_W4_M01" }]
+    },
+    {
+      "id": "FRA_W4_M01",
+      "title": "Lesson 4.1: Completed States (déjà fini / prêt)",
+      "tier": 4,
+      "wahanga": "Group 4: Completion & Connected Speech",
+      "kowae": "Unit 4.1: Announcing Readiness",
+      "canDo": "Announce that work or meals are already finished or ready using déjà + fini / prêt.",
+      "readerRole": "Milestone",
+      "concept": "Pair 'est' with 'déjà' (already) and 'fini' (finished) or 'prêt' / 'prête' (ready) to announce completed milestones.",
+      "pattern": "[Subject] + est + déjà + [fini / prêt]",
+      "slots": [
+        { "label": "[Subject]", "meaning": "task or meal", "type": "variable" },
+        { "label": "est déjà", "meaning": "is already", "type": "fixed" },
+        { "label": "[État]", "meaning": "fini / prêt", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "déjà", "meaning": "already", "emoji": "✅" },
+        { "word": "fini", "meaning": "finished", "emoji": "🏁" },
+        { "word": "prêt", "meaning": "ready (m; prête f)", "emoji": "🔔" },
+        { "word": "Le travail", "meaning": "the work", "emoji": "📋" },
+        { "word": "Le repas", "meaning": "the meal", "emoji": "🍽️" },
+        { "word": "pas encore", "meaning": "not yet", "emoji": "⏳" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "le rapport", "meaning": "the report", "emoji": "📊" },
+          { "word": "le projet", "meaning": "the project", "emoji": "🗂️" }
+        ],
+        "outside": [
+          { "word": "le voyage", "meaning": "the journey", "emoji": "🚆" },
+          { "word": "ouvert", "meaning": "open", "emoji": "🚪" }
+        ],
+        "community": [
+          { "word": "la réunion", "meaning": "the meeting", "emoji": "🤝" },
+          { "word": "commencé", "meaning": "started", "emoji": "▶️" }
+        ],
+        "social": [
+          { "word": "le café", "meaning": "the coffee", "emoji": "☕" },
+          { "word": "tout", "meaning": "everything", "emoji": "✨" }
+        ]
+      },
+      "model": {
+        "context": "Finishing up a project:",
+        "en": "Is the work finished? — Yes, the work is already finished!",
+        "target": "Le travail est déjà fini.",
+        "literal": "[The work = Le travail] + [is = est] + [already = déjà] + [finished = fini]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Le travail est fini ?", "en": "Is the work finished?" },
+          { "speaker": "Speaker B", "target": "Oui, le travail est déjà fini !", "en": "Yes, the work is already finished!" }
+        ],
+        "check": {
+          "question": "Which word means 'already'?",
+          "options": [
+            { "text": "déjà", "correct": true },
+            { "text": "pas encore", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W4_M01_P1",
+          "situation": "Announce that the work is already finished:",
+          "target": "The work is already finished.",
+          "expected": ["Le travail est déjà fini", "Le travail est fini"],
+          "hint": "Le travail + est + déjà + fini"
+        },
+        {
+          "id": "FRA_W4_M01_P2",
+          "situation": "Call everyone because the meal is ready:",
+          "target": "The meal is ready.",
+          "expected": ["Le repas est prêt", "Le repas est déjà prêt"],
+          "hint": "Le repas + est + prêt"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W4_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the word for 'already'",
+          "contextPrompt": "The work is already finished.",
+          "sentenceTemplate": "Le travail est _____ fini.",
+          "answer": "déjà",
+          "choices": ["déjà", "hier", "où"],
+          "completedSentence": "Le travail est déjà fini.",
+          "explanation": "'déjà' means 'already'."
+        },
+        {
+          "id": "FRA_W4_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a workplace deliverable",
+          "contextPrompt": "The report is finished.",
+          "sentenceTemplate": "_____ est fini.",
+          "answer": "Le rapport",
+          "choices": ["Le rapport", "Le café", "Le voyage"],
+          "completedSentence": "Le rapport est fini.",
+          "explanation": "'Le rapport' means 'the report'."
+        },
+        {
+          "id": "FRA_W4_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the word for 'ready'",
+          "contextPrompt": "The coffee is ready.",
+          "sentenceTemplate": "Le café est _____.",
+          "answer": "prêt",
+          "choices": ["prêt", "faim", "chez"],
+          "completedSentence": "Le café est prêt.",
+          "explanation": "'prêt' (with circumflex 'ê') means 'ready'."
+        },
+        {
+          "id": "FRA_W4_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "The work is already finished.",
+          "sentenceTemplate": "Le travail est déjà fini.",
+          "answer": "[Subject] + est + déjà + [fini / prêt]",
+          "choices": [
+            "[Subject] + est + déjà + [fini / prêt]",
+            "Il faut + [Infinitive]",
+            "[Clause 1] + parce que + [Clause 2]"
+          ],
+          "completedSentence": "Le travail est déjà fini.",
+          "explanation": "Completed states combine 'est + déjà + fini / prêt'."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 4.2 (Obligations with Il faut)", "target": "FRA_W4_M02" }]
+    },
+    {
+      "id": "FRA_W4_M02",
+      "title": "Lesson 4.2: Suggestions & Obligations (Il faut / On doit)",
+      "tier": 4,
+      "wahanga": "Group 4: Completion & Connected Speech",
+      "kowae": "Unit 4.2: What Needs To Be Done",
+      "canDo": "State what must or should be done using Il faut + infinitive or On doit + infinitive.",
+      "readerRole": "Action Plan",
+      "concept": "'Il faut' ('it is necessary / we must') is followed directly by an infinitive verb ('partir', 'travailler', 'écouter')—no conjugation needed on the second verb!",
+      "pattern": "Il faut / On doit + [Infinitive]",
+      "slots": [
+        { "label": "Il faut", "meaning": "we must / it is necessary", "type": "fixed" },
+        { "label": "[Infinitif]", "meaning": "base action verb", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "Il faut", "meaning": "it is necessary / we must", "emoji": "⚖️" },
+        { "word": "On doit", "meaning": "we have to / must", "emoji": "👥" },
+        { "word": "partir", "meaning": "to leave", "emoji": "🚶" },
+        { "word": "travailler", "meaning": "to work", "emoji": "💼" },
+        { "word": "étudier", "meaning": "to study", "emoji": "📖" },
+        { "word": "écouter", "meaning": "to listen", "emoji": "👂" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "commencer", "meaning": "to begin", "emoji": "▶️" },
+          { "word": "aider", "meaning": "to help", "emoji": "🤲" }
+        ],
+        "outside": [
+          { "word": "rentrer", "meaning": "to head back home", "emoji": "🔄" },
+          { "word": "se reposer", "meaning": "to rest", "emoji": "🌿" }
+        ],
+        "community": [
+          { "word": "parler", "meaning": "to speak", "emoji": "🗣️" },
+          { "word": "continuer", "meaning": "to continue", "emoji": "➡️" }
+        ],
+        "social": [
+          { "word": "manger", "meaning": "to eat", "emoji": "🍽️" },
+          { "word": "essayer", "meaning": "to try", "emoji": "✨" }
+        ]
+      },
+      "model": {
+        "context": "Heading out with friends:",
+        "en": "We have to leave now. — Yes, we must begin tomorrow.",
+        "target": "Il faut partir maintenant.",
+        "literal": "[It is necessary = Il faut] + [to leave = partir] + [now = maintenant]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Tu es prêt ? Il faut partir maintenant.", "en": "Are you ready? We have to leave now." },
+          { "speaker": "Speaker B", "target": "Oui, on doit partir !", "en": "Yes, we have to leave!" }
+        ],
+        "check": {
+          "question": "What form of the verb follows 'Il faut'?",
+          "options": [
+            { "text": "The infinitive (e.g. 'partir', 'travailler')", "correct": true },
+            { "text": "The past participle (e.g. 'travaillé')", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W4_M02_P1",
+          "situation": "Say that we have to leave now:",
+          "target": "We have to leave now.",
+          "expected": ["Il faut partir maintenant", "On doit partir maintenant"],
+          "hint": "Il faut + partir + maintenant"
+        },
+        {
+          "id": "FRA_W4_M02_P2",
+          "situation": "Say that we must study:",
+          "target": "We must study.",
+          "expected": ["Il faut étudier", "On doit étudier"],
+          "hint": "Il faut + étudier"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W4_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the obligation phrase",
+          "contextPrompt": "We must leave now.",
+          "sentenceTemplate": "_____ partir maintenant.",
+          "answer": "Il faut",
+          "choices": ["Il faut", "J'ai", "C'est"],
+          "completedSentence": "Il faut partir maintenant.",
+          "explanation": "'Il faut + infinitive' expresses necessity."
+        },
+        {
+          "id": "FRA_W4_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Suggest starting a task",
+          "contextPrompt": "We must begin now.",
+          "sentenceTemplate": "Il faut _____ maintenant.",
+          "answer": "commencer",
+          "choices": ["commencer", "fini", "prêt"],
+          "completedSentence": "Il faut commencer maintenant.",
+          "explanation": "'commencer' is the infinitive 'to begin'."
+        },
+        {
+          "id": "FRA_W4_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the infinitive form after 'On doit'",
+          "contextPrompt": "We must listen.",
+          "sentenceTemplate": "On doit _____.",
+          "answer": "écouter",
+          "choices": ["écouter", "écouté", "écoute"],
+          "completedSentence": "On doit écouter.",
+          "explanation": "Modal verbs like 'devoir' ('on doit') are followed by an infinitive."
+        },
+        {
+          "id": "FRA_W4_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "We must study.",
+          "sentenceTemplate": "Il faut étudier.",
+          "answer": "Il faut / On doit + [Infinitive]",
+          "choices": [
+            "Il faut / On doit + [Infinitive]",
+            "[Subject] + est + déjà + [fini / prêt]",
+            "[Clause 1] + parce que + [Clause 2]"
+          ],
+          "completedSentence": "Il faut étudier.",
+          "explanation": "'Il faut / On doit + infinitive' expresses obligation."
+        }
+      ],
+      "pathways": [{ "label": "Next: Lesson 4.3 (Explaining Why with parce que)", "target": "FRA_W4_M03" }]
+    },
+    {
+      "id": "FRA_W4_M03",
+      "title": "Lesson 4.3: Explaining Why (parce que)",
+      "tier": 4,
+      "wahanga": "Group 4: Completion & Connected Speech",
+      "kowae": "Unit 4.3: Joining Clauses",
+      "canDo": "Join two complete sentences to give a reason using parce que (because).",
+      "readerRole": "Synthesis",
+      "concept": "Connect any two statements with 'parce que' ('because'). Before a vowel sound (like 'il' or 'elle'), 'parce que' shortens to 'parce qu''.",
+      "pattern": "[Clause 1] + parce que + [Clause 2]",
+      "slots": [
+        { "label": "[Phrase 1]", "meaning": "main statement", "type": "variable" },
+        { "label": "parce que", "meaning": "because", "type": "fixed" },
+        { "label": "[Phrase 2]", "meaning": "reason statement", "type": "variable" }
+      ],
+      "vocab": [
+        { "word": "parce que", "meaning": "because", "emoji": "💡" },
+        { "word": "mais", "meaning": "but", "emoji": "⚖️" },
+        { "word": "donc", "meaning": "so / therefore", "emoji": "🎯" },
+        { "word": "Je mange", "meaning": "I am eating", "emoji": "🍽️" },
+        { "word": "j'ai faim", "meaning": "I am hungry", "emoji": "🍲" },
+        { "word": "le travail est fini", "meaning": "the work is finished", "emoji": "🏁" }
+      ],
+      "packs": {
+        "workplace": [
+          { "word": "j'ai du temps", "meaning": "I have time", "emoji": "⏰" },
+          { "word": "c'est important", "meaning": "it is important", "emoji": "📌" }
+        ],
+        "outside": [
+          { "word": "il fait beau", "meaning": "the weather is nice", "emoji": "☀️" },
+          { "word": "j'ai froid", "meaning": "I am cold", "emoji": "❄️" }
+        ],
+        "community": [
+          { "word": "nous apprenons ensemble", "meaning": "we learn together", "emoji": "🤝" },
+          { "word": "c'est utile", "meaning": "it is useful", "emoji": "✨" }
+        ],
+        "social": [
+          { "word": "je suis fatigué", "meaning": "I am tired", "emoji": "😴" },
+          { "word": "je suis content", "meaning": "I am happy", "emoji": "😊" }
+        ]
+      },
+      "model": {
+        "context": "Celebrating at the end of the day:",
+        "en": "I am happy because the work is finished.",
+        "target": "Je suis content parce que le travail est fini.",
+        "literal": "[I am happy] + [because = parce que] + [the work is finished]",
+        "turns": [
+          { "speaker": "Speaker A", "target": "Pourquoi tu es si content ?", "en": "Why are you so happy?" },
+          { "speaker": "Speaker B", "target": "Je suis content parce que le travail est fini.", "en": "I am happy because the work is finished." }
+        ],
+        "check": {
+          "question": "Which phrase connects a statement to its reason ('because')?",
+          "options": [
+            { "text": "parce que", "correct": true },
+            { "text": "mais", "correct": false }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "FRA_W4_M03_P1",
+          "situation": "Explain why you are eating:",
+          "target": "I am eating because I am hungry.",
+          "expected": ["Je mange parce que j'ai faim"],
+          "hint": "Je mange + parce que + j'ai faim"
+        },
+        {
+          "id": "FRA_W4_M03_P2",
+          "situation": "Explain why you are happy:",
+          "target": "I am happy because the work is finished.",
+          "expected": [
+            "Je suis content parce que le travail est fini",
+            "Je suis contente parce que le travail est fini"
+          ],
+          "hint": "Je suis content + parce que + le travail est fini"
+        }
+      ],
+      "drills": [
+        {
+          "id": "FRA_W4_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the connector for 'because'",
+          "contextPrompt": "I am eating because I am hungry.",
+          "sentenceTemplate": "Je mange _____ j'ai faim.",
+          "answer": "parce que",
+          "choices": ["parce que", "mais", "où"],
+          "completedSentence": "Je mange parce que j'ai faim.",
+          "explanation": "'parce que' means 'because'."
+        },
+        {
+          "id": "FRA_W4_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Choose the matching reason clause",
+          "contextPrompt": "I am going home because I am tired.",
+          "sentenceTemplate": "Je vais chez moi parce que _____.",
+          "answer": "je suis fatigué",
+          "choices": ["je suis fatigué", "le repas est prêt", "il fait beau"],
+          "completedSentence": "Je vais chez moi parce que je suis fatigué.",
+          "explanation": "'je suis fatigué' explains why you are heading home."
+        },
+        {
+          "id": "FRA_W4_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the connector for 'but'",
+          "contextPrompt": "I am tired, but I am happy.",
+          "sentenceTemplate": "Je suis fatigué, _____ je suis content.",
+          "answer": "mais",
+          "choices": ["mais", "parce que", "donc"],
+          "completedSentence": "Je suis fatigué, mais je suis content.",
+          "explanation": "'mais' introduces a contrast ('but')."
+        },
+        {
+          "id": "FRA_W4_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am eating because I am hungry.",
+          "sentenceTemplate": "Je mange parce que j'ai faim.",
+          "answer": "[Clause 1] + parce que + [Clause 2]",
+          "choices": [
+            "[Clause 1] + parce que + [Clause 2]",
+            "Il faut / On doit + [Infinitive]",
+            "[Subject] + est + déjà + [fini / prêt]"
+          ],
+          "completedSentence": "Je mange parce que j'ai faim.",
+          "explanation": "'parce que' joins two complete French clauses smoothly."
+        }
+      ],
+      "pathways": [{ "label": "Review from Lesson 1.1 (Self & Identity)", "target": "FRA_W1_M01" }]
+    }
+  ]
+}

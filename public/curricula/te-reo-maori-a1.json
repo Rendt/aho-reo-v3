@@ -1,0 +1,2819 @@
+{
+  "meta": {
+    "id": "AHO_MRA_TAUMATA_1",
+    "languageName": "Te Reo Māori",
+    "bcp47": "mi-NZ",
+    "baseLanguage": "English",
+    "curriculumLevel": "Taumata 1 · CEFR A1",
+    "author": "Aho Reo Educational Baseline",
+    "versionDate": "2026-11-20",
+    "version": "3.1",
+    "specialChars": [
+      "ā",
+      "ē",
+      "ī",
+      "ō",
+      "ū"
+    ],
+    "packLabels": {
+      "workplace": "Workplace",
+      "outside": "Nature & Outdoors",
+      "community": "Community & Marae",
+      "social": "Whānau & Friends"
+    },
+    "praisePhrase": "Ka rawe!"
+  },
+  "modules": [
+    {
+      "id": "MRA_W1_M01",
+      "title": "Lesson 1.1: Self & Identity (Ko)",
+      "tier": 1,
+      "wahanga": "Group 1: Identity & Connections",
+      "kowae": "Unit 1.1: Personal Identity",
+      "canDo": "Introduce yourself and state your name or specific role using Ko.",
+      "readerRole": "Foundation",
+      "concept": "'Ko' introduces a specific identity—such as a proper name or a definite role ('the teacher'). The identity comes first, followed by the pronoun.",
+      "pattern": "Ko + [Name / Definite Role] + [Pronoun]",
+      "slots": [
+        {
+          "label": "Ko",
+          "meaning": "identity marker",
+          "type": "fixed"
+        },
+        {
+          "label": "[Ingoa]",
+          "meaning": "name or definite role",
+          "type": "variable"
+        },
+        {
+          "label": "[Tūpou]",
+          "meaning": "pronoun (ahau / koe / ia)",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "Ko",
+          "meaning": "identity marker",
+          "emoji": "🪪"
+        },
+        {
+          "word": "ahau",
+          "meaning": "I / me (also au)",
+          "emoji": "👤"
+        },
+        {
+          "word": "koe",
+          "meaning": "you (singular)",
+          "emoji": "🫵"
+        },
+        {
+          "word": "kia ora",
+          "meaning": "hello / thank you",
+          "emoji": "👋"
+        },
+        {
+          "word": "te kaiako",
+          "meaning": "the teacher",
+          "emoji": "🏫"
+        },
+        {
+          "word": "Mere",
+          "meaning": "Mere (name)",
+          "emoji": "✨"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "te kaiwhakahaere",
+            "meaning": "the manager",
+            "emoji": "📊"
+          },
+          {
+            "word": "te kaimahi",
+            "meaning": "the worker",
+            "emoji": "💼"
+          }
+        ],
+        "outside": [
+          {
+            "word": "te kaiārahi",
+            "meaning": "the guide",
+            "emoji": "🧭"
+          },
+          {
+            "word": "te maunga",
+            "meaning": "the mountain",
+            "emoji": "⛰️"
+          }
+        ],
+        "community": [
+          {
+            "word": "te kaumātua",
+            "meaning": "the elder",
+            "emoji": "🌿"
+          },
+          {
+            "word": "te marae",
+            "meaning": "the meeting grounds",
+            "emoji": "🏛️"
+          }
+        ],
+        "social": [
+          {
+            "word": "tōku hoa",
+            "meaning": "my friend",
+            "emoji": "🤝"
+          },
+          {
+            "word": "tōku whānau",
+            "meaning": "my family",
+            "emoji": "👨‍👩‍👧‍👦"
+          }
+        ]
+      },
+      "model": {
+        "context": "First greeting at a morning hui:",
+        "en": "Hello! Who are you? — Hello! I am Mere.",
+        "target": "Kia ora! Ko Mere ahau.",
+        "literal": "[Identity = Ko] + [Name = Mere] + [Pronoun = ahau]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Kia ora! Ko wai koe?",
+            "en": "Hello! Who are you?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Kia ora! Ko Mere ahau.",
+            "en": "Hello! I am Mere."
+          }
+        ],
+        "check": {
+          "question": "Which word signals a specific name or identity at the start of the sentence?",
+          "options": [
+            {
+              "text": "The opening marker 'Ko'",
+              "correct": true
+            },
+            {
+              "text": "The pronoun 'ahau' at the end",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W1_M01_P1",
+          "situation": "Introduce yourself as Mere:",
+          "target": "I am Mere.",
+          "expected": [
+            "Ko Mere ahau",
+            "Ko Mere au"
+          ],
+          "hint": "Ko + Mere + ahau"
+        },
+        {
+          "id": "MRA_W1_M01_P2",
+          "situation": "Identify yourself as the teacher:",
+          "target": "I am the teacher.",
+          "expected": [
+            "Ko te kaiako ahau",
+            "Ko te kaiako au"
+          ],
+          "hint": "Ko + te kaiako + ahau"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W1_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the missing sentence marker",
+          "contextPrompt": "I am Mere.",
+          "sentenceTemplate": "_____ Mere ahau.",
+          "answer": "Ko",
+          "choices": [
+            "Ko",
+            "Kei te",
+            "Kua"
+          ],
+          "completedSentence": "Ko Mere ahau.",
+          "explanation": "'Ko' marks specific identity before a name."
+        },
+        {
+          "id": "MRA_W1_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a workplace role",
+          "contextPrompt": "I am the manager.",
+          "sentenceTemplate": "Ko _____ ahau.",
+          "answer": "te kaiwhakahaere",
+          "choices": [
+            "te kaiwhakahaere",
+            "te maunga",
+            "te marae"
+          ],
+          "completedSentence": "Ko te kaiwhakahaere ahau.",
+          "explanation": "'te kaiwhakahaere' means 'the manager'."
+        },
+        {
+          "id": "MRA_W1_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Complete the pronoun slot",
+          "contextPrompt": "You are the teacher.",
+          "sentenceTemplate": "Ko te kaiako _____.",
+          "answer": "koe",
+          "choices": [
+            "koe",
+            "ahau",
+            "kia ora"
+          ],
+          "completedSentence": "Ko te kaiako koe.",
+          "explanation": "'koe' means 'you (singular)'."
+        },
+        {
+          "id": "MRA_W1_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am the teacher.",
+          "sentenceTemplate": "Ko te kaiako ahau.",
+          "answer": "Ko + [Name / Definite Role] + [Pronoun]",
+          "choices": [
+            "Ko + [Name / Definite Role] + [Pronoun]",
+            "Kei te + [Verb] + [Pronoun]",
+            "Nō + [Place] + [Pronoun]"
+          ],
+          "completedSentence": "Ko te kaiako ahau.",
+          "explanation": "'Ko' followed by a definite role and pronoun is the identity pattern."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Lesson 1.2 (Classifying with He)",
+          "target": "MRA_W1_M02"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W1_M02",
+      "title": "Lesson 1.2: Classifying Roles & Things (He)",
+      "tier": 1,
+      "wahanga": "Group 1: Identity & Connections",
+      "kowae": "Unit 1.2: Indefinite Classification",
+      "canDo": "Describe what someone or something is ('a student', 'a worker') using He.",
+      "readerRole": "Contrast",
+      "concept": "While 'Ko' names a specific person or 'the' role, 'He' classifies someone as 'a' member of a group (e.g. 'a student', 'a friend'). Notice 'te' is never used after 'He'.",
+      "pattern": "He + [Noun / Role] + [Pronoun]",
+      "slots": [
+        {
+          "label": "He",
+          "meaning": "indefinite classifier (a / an)",
+          "type": "fixed"
+        },
+        {
+          "label": "[Tūingoa]",
+          "meaning": "noun or role (no \"te\")",
+          "type": "variable"
+        },
+        {
+          "label": "[Tūpou]",
+          "meaning": "pronoun (ahau / ia / tātou)",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "He",
+          "meaning": "a / an (classifier)",
+          "emoji": "🏷️"
+        },
+        {
+          "word": "tauira",
+          "meaning": "student / learner",
+          "emoji": "📘"
+        },
+        {
+          "word": "kaiako",
+          "meaning": "teacher",
+          "emoji": "🏫"
+        },
+        {
+          "word": "kaimahi",
+          "meaning": "worker",
+          "emoji": "👷"
+        },
+        {
+          "word": "hoa",
+          "meaning": "friend",
+          "emoji": "🤝"
+        },
+        {
+          "word": "ia",
+          "meaning": "he / she / they (singular)",
+          "emoji": "🧑"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "kaihautū",
+            "meaning": "leader / coordinator",
+            "emoji": "🧭"
+          },
+          {
+            "word": "tākuta",
+            "meaning": "doctor",
+            "emoji": "🩺"
+          }
+        ],
+        "outside": [
+          {
+            "word": "manu",
+            "meaning": "bird",
+            "emoji": "🐦"
+          },
+          {
+            "word": "rākau",
+            "meaning": "tree",
+            "emoji": "🌳"
+          }
+        ],
+        "community": [
+          {
+            "word": "tangata",
+            "meaning": "person",
+            "emoji": "🧑"
+          },
+          {
+            "word": "manuhiri",
+            "meaning": "visitor / guest",
+            "emoji": "🚪"
+          }
+        ],
+        "social": [
+          {
+            "word": "tamariki",
+            "meaning": "children",
+            "emoji": "🎈"
+          },
+          {
+            "word": "tātou",
+            "meaning": "we (all of us)",
+            "emoji": "👥"
+          }
+        ]
+      },
+      "model": {
+        "context": "Introducing a new teammate:",
+        "en": "I am a student. They are a teacher.",
+        "target": "He tauira ahau.",
+        "literal": "[A = He] + [Role = tauira] + [Subject = ahau]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "He tauira koe?",
+            "en": "Are you a student?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Āe, he tauira ahau. He kaiako ia.",
+            "en": "Yes, I am a student. They are a teacher."
+          }
+        ],
+        "check": {
+          "question": "Which sentence correctly says 'I am a student'?",
+          "options": [
+            {
+              "text": "He tauira ahau.",
+              "correct": true
+            },
+            {
+              "text": "He te tauira ahau.",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W1_M02_P1",
+          "situation": "Tell a classmate that you are a student:",
+          "target": "I am a student.",
+          "expected": [
+            "He tauira ahau",
+            "He tauira au"
+          ],
+          "hint": "He + tauira + ahau"
+        },
+        {
+          "id": "MRA_W1_M02_P2",
+          "situation": "Introduce someone as a teacher:",
+          "target": "They are a teacher.",
+          "expected": [
+            "He kaiako ia"
+          ],
+          "hint": "He + kaiako + ia"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W1_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the indefinite classifier",
+          "contextPrompt": "I am a student.",
+          "sentenceTemplate": "_____ tauira ahau.",
+          "answer": "He",
+          "choices": [
+            "He",
+            "Ko",
+            "Nō"
+          ],
+          "completedSentence": "He tauira ahau.",
+          "explanation": "'He' means 'a / an' and classifies a role without 'te'."
+        },
+        {
+          "id": "MRA_W1_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a workplace profession",
+          "contextPrompt": "They are a doctor.",
+          "sentenceTemplate": "He _____ ia.",
+          "answer": "tākuta",
+          "choices": [
+            "tākuta",
+            "manu",
+            "rākau"
+          ],
+          "completedSentence": "He tākuta ia.",
+          "explanation": "'tākuta' means 'doctor'."
+        },
+        {
+          "id": "MRA_W1_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the inclusive pronoun",
+          "contextPrompt": "We (all of us) are friends.",
+          "sentenceTemplate": "He hoa _____.",
+          "answer": "tātou",
+          "choices": [
+            "tātou",
+            "ahau",
+            "ia"
+          ],
+          "completedSentence": "He hoa tātou.",
+          "explanation": "'tātou' means 'we (three or more, including the listener)'."
+        },
+        {
+          "id": "MRA_W1_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Distinguish He vs Ko",
+          "contextPrompt": "They are a teacher.",
+          "sentenceTemplate": "He kaiako ia.",
+          "answer": "He + [Noun / Role] + [Pronoun]",
+          "choices": [
+            "He + [Noun / Role] + [Pronoun]",
+            "Ko + [Name / Definite Role] + [Pronoun]",
+            "Kua + [State] + [Subject]"
+          ],
+          "completedSentence": "He kaiako ia.",
+          "explanation": "'He + noun + pronoun' classifies someone as a member of a category."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Lesson 1.3 (Origins with Nō)",
+          "target": "MRA_W1_M03"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W1_M03",
+      "title": "Lesson 1.3: Origins & Homeland (Nō)",
+      "tier": 1,
+      "wahanga": "Group 1: Identity & Connections",
+      "kowae": "Unit 1.3: Where You Are From",
+      "canDo": "Ask and state where you and others are from using Nō.",
+      "readerRole": "Connection",
+      "concept": "'Nō' links a person to their home region, town, or country. Place names follow 'Nō' directly, followed by the pronoun.",
+      "pattern": "Nō + [Place] + [Pronoun]",
+      "slots": [
+        {
+          "label": "Nō",
+          "meaning": "from / belonging to",
+          "type": "fixed"
+        },
+        {
+          "label": "[Wāhi]",
+          "meaning": "place or region",
+          "type": "variable"
+        },
+        {
+          "label": "[Tūpou]",
+          "meaning": "pronoun (ahau / koe / ia)",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "Nō",
+          "meaning": "from (origin)",
+          "emoji": "📍"
+        },
+        {
+          "word": "hea",
+          "meaning": "where?",
+          "emoji": "❓"
+        },
+        {
+          "word": "Tāmaki Makaurau",
+          "meaning": "Auckland",
+          "emoji": "🏙️"
+        },
+        {
+          "word": "Te Whanganui-a-Tara",
+          "meaning": "Wellington",
+          "emoji": "🌊"
+        },
+        {
+          "word": "Ōtautahi",
+          "meaning": "Christchurch",
+          "emoji": "🏡"
+        },
+        {
+          "word": "Waikato",
+          "meaning": "Waikato region",
+          "emoji": "🏞️"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "Aotearoa",
+            "meaning": "New Zealand",
+            "emoji": "🗺️"
+          },
+          {
+            "word": "Ahitereiria",
+            "meaning": "Australia",
+            "emoji": "🌏"
+          }
+        ],
+        "outside": [
+          {
+            "word": "te tai tokerau",
+            "meaning": "Northland",
+            "emoji": "🏖️"
+          },
+          {
+            "word": "te motu",
+            "meaning": "the island",
+            "emoji": "🏝️"
+          }
+        ],
+        "community": [
+          {
+            "word": "tēnei kāinga",
+            "meaning": "this home / village",
+            "emoji": "🏘️"
+          },
+          {
+            "word": "te whenua",
+            "meaning": "the land",
+            "emoji": "🌱"
+          }
+        ],
+        "social": [
+          {
+            "word": "rātou",
+            "meaning": "they (3+)",
+            "emoji": "👥"
+          },
+          {
+            "word": "mātou",
+            "meaning": "we (excluding listener)",
+            "emoji": "🤝"
+          }
+        ]
+      },
+      "model": {
+        "context": "Getting to know someone at a workshop:",
+        "en": "Where are you from? — I am from Auckland.",
+        "target": "Nō Tāmaki Makaurau ahau.",
+        "literal": "[From = Nō] + [Place = Tāmaki Makaurau] + [Subject = ahau]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Nō hea koe?",
+            "en": "Where are you from?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Nō Tāmaki Makaurau ahau.",
+            "en": "I am from Auckland."
+          }
+        ],
+        "check": {
+          "question": "Which particle asks or states a person's place of origin?",
+          "options": [
+            {
+              "text": "Nō (e.g. 'Nō hea koe?')",
+              "correct": true
+            },
+            {
+              "text": "Kei te (e.g. 'Kei te aha koe?')",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W1_M03_P1",
+          "situation": "Tell someone you are from Auckland:",
+          "target": "I am from Auckland.",
+          "expected": [
+            "Nō Tāmaki Makaurau ahau",
+            "Nō Tāmaki Makaurau au"
+          ],
+          "hint": "Nō + Tāmaki Makaurau + ahau"
+        },
+        {
+          "id": "MRA_W1_M03_P2",
+          "situation": "Say that they are from Waikato:",
+          "target": "They are from Waikato.",
+          "expected": [
+            "Nō Waikato ia"
+          ],
+          "hint": "Nō + Waikato + ia"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W1_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the origin marker",
+          "contextPrompt": "I am from Waikato.",
+          "sentenceTemplate": "_____ Waikato ahau.",
+          "answer": "Nō",
+          "choices": [
+            "Nō",
+            "Ko",
+            "Kei"
+          ],
+          "completedSentence": "Nō Waikato ahau.",
+          "explanation": "'Nō' expresses place of origin."
+        },
+        {
+          "id": "MRA_W1_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in another city",
+          "contextPrompt": "I am from Christchurch.",
+          "sentenceTemplate": "Nō _____ ahau.",
+          "answer": "Ōtautahi",
+          "choices": [
+            "Ōtautahi",
+            "Tāmaki Makaurau",
+            "Waikato"
+          ],
+          "completedSentence": "Nō Ōtautahi ahau.",
+          "explanation": "'Ōtautahi' is the Māori name for Christchurch."
+        },
+        {
+          "id": "MRA_W1_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Complete the question word",
+          "contextPrompt": "Where are you from?",
+          "sentenceTemplate": "Nō _____ koe?",
+          "answer": "hea",
+          "choices": [
+            "hea",
+            "wai",
+            "aha"
+          ],
+          "completedSentence": "Nō hea koe?",
+          "explanation": "'hea' means 'where' — 'Nō hea koe?' asks where you are from."
+        },
+        {
+          "id": "MRA_W1_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "They are from Waikato.",
+          "sentenceTemplate": "Nō Waikato ia.",
+          "answer": "Nō + [Place] + [Pronoun]",
+          "choices": [
+            "Nō + [Place] + [Pronoun]",
+            "Kei + [Place] + [Pronoun]",
+            "He + [Noun / Role] + [Pronoun]"
+          ],
+          "completedSentence": "Nō Waikato ia.",
+          "explanation": "'Nō' states origin, whereas 'Kei' states current location."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Group 2 · Real-Time Actions (Kei te)",
+          "target": "MRA_W2_M01"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W2_M01",
+      "title": "Lesson 2.1: Actions Happening Now (Kei te)",
+      "tier": 2,
+      "wahanga": "Group 2: Actions & Wellbeing",
+      "kowae": "Unit 2.1: Present Continuous",
+      "canDo": "Ask and describe what someone is doing right now using Kei te.",
+      "readerRole": "Action",
+      "concept": "'Kei te' places an ongoing action at the front of the clause, followed by the verb and then the person doing it.",
+      "pattern": "Kei te + [Verb] + [Pronoun]",
+      "slots": [
+        {
+          "label": "Kei te",
+          "meaning": "present continuous marker",
+          "type": "fixed"
+        },
+        {
+          "label": "[Mahi]",
+          "meaning": "action verb",
+          "type": "variable"
+        },
+        {
+          "label": "[Tūpou]",
+          "meaning": "pronoun (au / koe / ia)",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "Kei te",
+          "meaning": "am / is / are (...ing)",
+          "emoji": "⚡"
+        },
+        {
+          "word": "mahi",
+          "meaning": "work / working",
+          "emoji": "💼"
+        },
+        {
+          "word": "ako",
+          "meaning": "learn / study",
+          "emoji": "📖"
+        },
+        {
+          "word": "kōrero",
+          "meaning": "speak / talk",
+          "emoji": "🗣️"
+        },
+        {
+          "word": "pānui",
+          "meaning": "read / reading",
+          "emoji": "📑"
+        },
+        {
+          "word": "tuhituhi",
+          "meaning": "write / writing",
+          "emoji": "✍️"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "whakarite",
+            "meaning": "prepare / organize",
+            "emoji": "📋"
+          },
+          {
+            "word": "hui",
+            "meaning": "meet / gather",
+            "emoji": "🗓️"
+          }
+        ],
+        "outside": [
+          {
+            "word": "hīkoi",
+            "meaning": "walk / walking",
+            "emoji": "🥾"
+          },
+          {
+            "word": "oma",
+            "meaning": "run / running",
+            "emoji": "🏃"
+          }
+        ],
+        "community": [
+          {
+            "word": "whakarongo",
+            "meaning": "listen / listening",
+            "emoji": "👂"
+          },
+          {
+            "word": "waiata",
+            "meaning": "sing / singing",
+            "emoji": "🎵"
+          }
+        ],
+        "social": [
+          {
+            "word": "kai",
+            "meaning": "eat / eating",
+            "emoji": "🍽️"
+          },
+          {
+            "word": "inu",
+            "meaning": "drink / drinking",
+            "emoji": "☕"
+          }
+        ]
+      },
+      "model": {
+        "context": "Checking in with a colleague:",
+        "en": "What are you doing? — I am working.",
+        "target": "Kei te mahi au.",
+        "literal": "[Ongoing = Kei te] + [Verb = mahi] + [Subject = au]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Kei te aha koe?",
+            "en": "What are you doing?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Kei te mahi au.",
+            "en": "I am working."
+          }
+        ],
+        "check": {
+          "question": "Which marker shows the action is happening right now?",
+          "options": [
+            {
+              "text": "The opening marker 'Kei te'",
+              "correct": true
+            },
+            {
+              "text": "The verb 'mahi' alone",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W2_M01_P1",
+          "situation": "Tell a colleague you are working:",
+          "target": "I am working.",
+          "expected": [
+            "Kei te mahi au",
+            "Kei te mahi ahau"
+          ],
+          "hint": "Kei te + mahi + au"
+        },
+        {
+          "id": "MRA_W2_M01_P2",
+          "situation": "Tell someone you are studying:",
+          "target": "I am studying.",
+          "expected": [
+            "Kei te ako au",
+            "Kei te ako ahau"
+          ],
+          "hint": "Kei te + ako + au"
+        },
+        {
+          "id": "MRA_W2_M01_P3",
+          "situation": "Say that they are reading:",
+          "target": "They are reading.",
+          "expected": [
+            "Kei te pānui ia"
+          ],
+          "hint": "Kei te + pānui + ia"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W2_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the present continuous marker",
+          "contextPrompt": "I am working.",
+          "sentenceTemplate": "_____ mahi au.",
+          "answer": "Kei te",
+          "choices": [
+            "Kei te",
+            "Ko",
+            "Nō"
+          ],
+          "completedSentence": "Kei te mahi au.",
+          "explanation": "'Kei te' marks ongoing present action."
+        },
+        {
+          "id": "MRA_W2_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in an outdoor action",
+          "contextPrompt": "I am walking.",
+          "sentenceTemplate": "Kei te _____ au.",
+          "answer": "hīkoi",
+          "choices": [
+            "hīkoi",
+            "kai",
+            "pānui"
+          ],
+          "completedSentence": "Kei te hīkoi au.",
+          "explanation": "'hīkoi' means 'walk / walking'."
+        },
+        {
+          "id": "MRA_W2_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the right action verb",
+          "contextPrompt": "They are speaking.",
+          "sentenceTemplate": "Kei te _____ ia.",
+          "answer": "kōrero",
+          "choices": [
+            "kōrero",
+            "tuhituhi",
+            "mahi"
+          ],
+          "completedSentence": "Kei te kōrero ia.",
+          "explanation": "'kōrero' means 'speak / talk'."
+        },
+        {
+          "id": "MRA_W2_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am studying.",
+          "sentenceTemplate": "Kei te ako au.",
+          "answer": "Kei te + [Verb] + [Pronoun]",
+          "choices": [
+            "Kei te + [Verb] + [Pronoun]",
+            "I + [Verb] + [Pronoun]",
+            "Me + [Verb] + [Pronoun]"
+          ],
+          "completedSentence": "Kei te ako au.",
+          "explanation": "'Kei te + verb + pronoun' describes an action happening now."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Lesson 2.2 (Feelings & Wellbeing)",
+          "target": "MRA_W2_M02"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W2_M02",
+      "title": "Lesson 2.2: Wellbeing & Feelings (Kei te)",
+      "tier": 2,
+      "wahanga": "Group 2: Actions & Wellbeing",
+      "kowae": "Unit 2.2: States & Feelings",
+      "canDo": "Ask how someone is feeling and describe your own wellbeing.",
+      "readerRole": "Expression",
+      "concept": "The same 'Kei te' frame works with descriptive state words like 'pai' (good), 'ngenge' (tired), or 'harikoa' (happy).",
+      "pattern": "Kei te + [State] + [Pronoun]",
+      "slots": [
+        {
+          "label": "Kei te",
+          "meaning": "present state marker",
+          "type": "fixed"
+        },
+        {
+          "label": "[Āhua]",
+          "meaning": "feeling or state",
+          "type": "variable"
+        },
+        {
+          "label": "[Tūpou]",
+          "meaning": "pronoun (au / koe / ia)",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "pēhea",
+          "meaning": "how?",
+          "emoji": "💬"
+        },
+        {
+          "word": "pai",
+          "meaning": "good / well",
+          "emoji": "👍"
+        },
+        {
+          "word": "ngenge",
+          "meaning": "tired",
+          "emoji": "😴"
+        },
+        {
+          "word": "hiakai",
+          "meaning": "hungry",
+          "emoji": "🍲"
+        },
+        {
+          "word": "hiainu",
+          "meaning": "thirsty",
+          "emoji": "💧"
+        },
+        {
+          "word": "harikoa",
+          "meaning": "happy",
+          "emoji": "😊"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "pukumahi",
+            "meaning": "busy / hardworking",
+            "emoji": "🐝"
+          },
+          {
+            "word": "tau",
+            "meaning": "settled / calm",
+            "emoji": "🌿"
+          }
+        ],
+        "outside": [
+          {
+            "word": "makariri",
+            "meaning": "cold",
+            "emoji": "❄️"
+          },
+          {
+            "word": "wera",
+            "meaning": "hot / warm",
+            "emoji": "☀️"
+          }
+        ],
+        "community": [
+          {
+            "word": "ora",
+            "meaning": "well / thriving",
+            "emoji": "🌱"
+          },
+          {
+            "word": "koa",
+            "meaning": "glad / joyful",
+            "emoji": "✨"
+          }
+        ],
+        "social": [
+          {
+            "word": "pōuri",
+            "meaning": "sad",
+            "emoji": "🌧️"
+          },
+          {
+            "word": "māharahara",
+            "meaning": "worried",
+            "emoji": "💭"
+          }
+        ]
+      },
+      "model": {
+        "context": "Greeting a friend in the morning:",
+        "en": "How are you? — I am good, thank you.",
+        "target": "Kei te pai ahau.",
+        "literal": "[Present = Kei te] + [State = pai] + [Subject = ahau]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Kei te pēhea koe?",
+            "en": "How are you?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Kei te pai ahau, kia ora!",
+            "en": "I am good, thank you!"
+          }
+        ],
+        "check": {
+          "question": "How do you ask 'How are you?' in Te Reo Māori?",
+          "options": [
+            {
+              "text": "Kei te pēhea koe?",
+              "correct": true
+            },
+            {
+              "text": "Ko wai koe?",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W2_M02_P1",
+          "situation": "Reply that you are feeling good:",
+          "target": "I am good.",
+          "expected": [
+            "Kei te pai au",
+            "Kei te pai ahau"
+          ],
+          "hint": "Kei te + pai + au"
+        },
+        {
+          "id": "MRA_W2_M02_P2",
+          "situation": "Say that you are hungry:",
+          "target": "I am hungry.",
+          "expected": [
+            "Kei te hiakai au",
+            "Kei te hiakai ahau"
+          ],
+          "hint": "Kei te + hiakai + au"
+        },
+        {
+          "id": "MRA_W2_M02_P3",
+          "situation": "Say that they are happy:",
+          "target": "They are happy.",
+          "expected": [
+            "Kei te harikoa ia"
+          ],
+          "hint": "Kei te + harikoa + ia"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W2_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the question word for wellbeing",
+          "contextPrompt": "How are you?",
+          "sentenceTemplate": "Kei te _____ koe?",
+          "answer": "pēhea",
+          "choices": [
+            "pēhea",
+            "hea",
+            "wai"
+          ],
+          "completedSentence": "Kei te pēhea koe?",
+          "explanation": "'pēhea' means 'how'."
+        },
+        {
+          "id": "MRA_W2_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Describe a weather sensation",
+          "contextPrompt": "I am cold.",
+          "sentenceTemplate": "Kei te _____ au.",
+          "answer": "makariri",
+          "choices": [
+            "makariri",
+            "wera",
+            "hiainu"
+          ],
+          "completedSentence": "Kei te makariri au.",
+          "explanation": "'makariri' means 'cold'."
+        },
+        {
+          "id": "MRA_W2_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the right feeling word",
+          "contextPrompt": "I am tired.",
+          "sentenceTemplate": "Kei te _____ au.",
+          "answer": "ngenge",
+          "choices": [
+            "ngenge",
+            "harikoa",
+            "pai"
+          ],
+          "completedSentence": "Kei te ngenge au.",
+          "explanation": "'ngenge' means 'tired'."
+        },
+        {
+          "id": "MRA_W2_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am happy.",
+          "sentenceTemplate": "Kei te harikoa au.",
+          "answer": "Kei te + [State] + [Pronoun]",
+          "choices": [
+            "Kei te + [State] + [Pronoun]",
+            "Nō + [Place] + [Pronoun]",
+            "Ko + [Name / Definite Role] + [Pronoun]"
+          ],
+          "completedSentence": "Kei te harikoa au.",
+          "explanation": "'Kei te + state + pronoun' describes how someone feels right now."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Lesson 2.3 (Past Actions with I)",
+          "target": "MRA_W2_M03"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W2_M03",
+      "title": "Lesson 2.3: Past Actions (I)",
+      "tier": 2,
+      "wahanga": "Group 2: Actions & Wellbeing",
+      "kowae": "Unit 2.3: Talking About the Past",
+      "canDo": "Describe actions that already happened using the past tense marker I.",
+      "readerRole": "Time Shift",
+      "concept": "Swap 'Kei te' for 'I' at the beginning of a verb clause to move the exact same sentence into the simple past tense—verbs themselves do not change form.",
+      "pattern": "I + [Verb] + [Pronoun]",
+      "slots": [
+        {
+          "label": "I",
+          "meaning": "past tense marker",
+          "type": "fixed"
+        },
+        {
+          "label": "[Mahi]",
+          "meaning": "action verb",
+          "type": "variable"
+        },
+        {
+          "label": "[Tūpou]",
+          "meaning": "pronoun (au / koe / tātou)",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "I",
+          "meaning": "past tense marker",
+          "emoji": "⏪"
+        },
+        {
+          "word": "haere",
+          "meaning": "go / went",
+          "emoji": "🚶"
+        },
+        {
+          "word": "kai",
+          "meaning": "eat / ate",
+          "emoji": "🍽️"
+        },
+        {
+          "word": "ako",
+          "meaning": "study / studied",
+          "emoji": "📖"
+        },
+        {
+          "word": "mahi",
+          "meaning": "work / worked",
+          "emoji": "💼"
+        },
+        {
+          "word": "inanahi",
+          "meaning": "yesterday",
+          "emoji": "📅"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "tuhi",
+            "meaning": "write / wrote",
+            "emoji": "✍️"
+          },
+          {
+            "word": "karanga",
+            "meaning": "call / called",
+            "emoji": "📞"
+          }
+        ],
+        "outside": [
+          {
+            "word": "kaukau",
+            "meaning": "swim / swam",
+            "emoji": "🏊"
+          },
+          {
+            "word": "hīkoi",
+            "meaning": "walk / walked",
+            "emoji": "🥾"
+          }
+        ],
+        "community": [
+          {
+            "word": "waiata",
+            "meaning": "sing / sang",
+            "emoji": "🎵"
+          },
+          {
+            "word": "whakarongo",
+            "meaning": "listen / listened",
+            "emoji": "👂"
+          }
+        ],
+        "social": [
+          {
+            "word": "kōrero",
+            "meaning": "talk / talked",
+            "emoji": "🗣️"
+          },
+          {
+            "word": "kata",
+            "meaning": "laugh / laughed",
+            "emoji": "😄"
+          }
+        ]
+      },
+      "model": {
+        "context": "Catching up after the weekend:",
+        "en": "I walked yesterday. We ate together.",
+        "target": "I hīkoi au inanahi.",
+        "literal": "[Past = I] + [Verb = hīkoi] + [Subject = au] + [Time = inanahi]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "I mahi koe inanahi?",
+            "en": "Did you work yesterday?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Kāo, i hīkoi au inanahi.",
+            "en": "No, I walked yesterday."
+          }
+        ],
+        "check": {
+          "question": "How do you change 'Kei te ako au' (I am studying) to 'I studied'?",
+          "options": [
+            {
+              "text": "Replace 'Kei te' with 'I' → 'I ako au'",
+              "correct": true
+            },
+            {
+              "text": "Add '-ed' to the verb 'ako'",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W2_M03_P1",
+          "situation": "Say that you studied:",
+          "target": "I studied.",
+          "expected": [
+            "I ako au",
+            "I ako ahau"
+          ],
+          "hint": "I + ako + au"
+        },
+        {
+          "id": "MRA_W2_M03_P2",
+          "situation": "Say that you worked yesterday:",
+          "target": "I worked yesterday.",
+          "expected": [
+            "I mahi au inanahi",
+            "I mahi ahau inanahi"
+          ],
+          "hint": "I + mahi + au + inanahi"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W2_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the past tense marker",
+          "contextPrompt": "I studied.",
+          "sentenceTemplate": "_____ ako au.",
+          "answer": "I",
+          "choices": [
+            "I",
+            "Kei te",
+            "Me"
+          ],
+          "completedSentence": "I ako au.",
+          "explanation": "'I' marks completed past action."
+        },
+        {
+          "id": "MRA_W2_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in an outdoor activity",
+          "contextPrompt": "They swam.",
+          "sentenceTemplate": "I _____ ia.",
+          "answer": "kaukau",
+          "choices": [
+            "kaukau",
+            "tuhi",
+            "kata"
+          ],
+          "completedSentence": "I kaukau ia.",
+          "explanation": "'kaukau' means 'swim / swam'."
+        },
+        {
+          "id": "MRA_W2_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Add the time word",
+          "contextPrompt": "I worked yesterday.",
+          "sentenceTemplate": "I mahi au _____.",
+          "answer": "inanahi",
+          "choices": [
+            "inanahi",
+            "hea",
+            "pai"
+          ],
+          "completedSentence": "I mahi au inanahi.",
+          "explanation": "'inanahi' means 'yesterday'."
+        },
+        {
+          "id": "MRA_W2_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Contrast Past vs Present",
+          "contextPrompt": "I studied.",
+          "sentenceTemplate": "I ako au.",
+          "answer": "I + [Verb] + [Pronoun]",
+          "choices": [
+            "I + [Verb] + [Pronoun]",
+            "Kei te + [Verb] + [Pronoun]",
+            "Kua + [State] + [Subject]"
+          ],
+          "completedSentence": "I ako au.",
+          "explanation": "'I + verb + pronoun' places the action in the past."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Group 3 · Current Location (Kei)",
+          "target": "MRA_W3_M01"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W3_M01",
+      "title": "Lesson 3.1: Current Location (Kei)",
+      "tier": 3,
+      "wahanga": "Group 3: Places & Movement",
+      "kowae": "Unit 3.1: Static Location",
+      "canDo": "Ask and state where people and things are located right now using Kei.",
+      "readerRole": "Orientation",
+      "concept": "'Kei' followed by a place (like 'te tari' or 'konei') tells where someone is right now. Unlike 'Kei te + verb', here 'te' belongs to the place noun ('the office').",
+      "pattern": "Kei + [Place] + [Pronoun]",
+      "slots": [
+        {
+          "label": "Kei",
+          "meaning": "at / in (present location)",
+          "type": "fixed"
+        },
+        {
+          "label": "[Wāhi]",
+          "meaning": "place noun (e.g. te tari)",
+          "type": "variable"
+        },
+        {
+          "label": "[Tūpou]",
+          "meaning": "pronoun (au / koe / ia)",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "Kei",
+          "meaning": "at / in (location)",
+          "emoji": "📍"
+        },
+        {
+          "word": "hea",
+          "meaning": "where?",
+          "emoji": "❓"
+        },
+        {
+          "word": "konei",
+          "meaning": "here (near me)",
+          "emoji": "👇"
+        },
+        {
+          "word": "te tari",
+          "meaning": "the office",
+          "emoji": "🏢"
+        },
+        {
+          "word": "te whare",
+          "meaning": "the house",
+          "emoji": "🏠"
+        },
+        {
+          "word": "te kura",
+          "meaning": "the school",
+          "emoji": "🏫"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "te rōpū",
+            "meaning": "the team / group",
+            "emoji": "👥"
+          },
+          {
+            "word": "te rūma hui",
+            "meaning": "the meeting room",
+            "emoji": "🪑"
+          }
+        ],
+        "outside": [
+          {
+            "word": "te moana",
+            "meaning": "the ocean",
+            "emoji": "🌊"
+          },
+          {
+            "word": "te ngahere",
+            "meaning": "the forest",
+            "emoji": "🌲"
+          }
+        ],
+        "community": [
+          {
+            "word": "te whare pukapuka",
+            "meaning": "the library",
+            "emoji": "📚"
+          },
+          {
+            "word": "te marae",
+            "meaning": "the marae",
+            "emoji": "🏛️"
+          }
+        ],
+        "social": [
+          {
+            "word": "te kīhini",
+            "meaning": "the kitchen",
+            "emoji": "🍳"
+          },
+          {
+            "word": "te kāinga",
+            "meaning": "home",
+            "emoji": "🏡"
+          }
+        ]
+      },
+      "model": {
+        "context": "Texting a colleague before a meeting:",
+        "en": "Where are you? — I am at the office.",
+        "target": "Kei te tari au.",
+        "literal": "[At = Kei] + [Place = te tari] + [Subject = au]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Kei hea koe?",
+            "en": "Where are you?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Kei te tari au.",
+            "en": "I am at the office."
+          }
+        ],
+        "check": {
+          "question": "How is 'Kei te tari au' (location) different from 'Kei te mahi au' (action)?",
+          "options": [
+            {
+              "text": "'te tari' is a place ('the office'), while 'mahi' is a verb ('working')",
+              "correct": true
+            },
+            {
+              "text": "They have the exact same meaning",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W3_M01_P1",
+          "situation": "Tell a teammate you are at the office:",
+          "target": "I am at the office.",
+          "expected": [
+            "Kei te tari au",
+            "Kei te tari ahau"
+          ],
+          "hint": "Kei + te tari + au"
+        },
+        {
+          "id": "MRA_W3_M01_P2",
+          "situation": "Say that they are at the house:",
+          "target": "They are at the house.",
+          "expected": [
+            "Kei te whare ia"
+          ],
+          "hint": "Kei + te whare + ia"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W3_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the present location marker",
+          "contextPrompt": "I am at the office.",
+          "sentenceTemplate": "_____ te tari au.",
+          "answer": "Kei",
+          "choices": [
+            "Kei",
+            "Ko",
+            "Nō"
+          ],
+          "completedSentence": "Kei te tari au.",
+          "explanation": "'Kei' marks current physical location."
+        },
+        {
+          "id": "MRA_W3_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a community location",
+          "contextPrompt": "I am at the library.",
+          "sentenceTemplate": "Kei _____ au.",
+          "answer": "te whare pukapuka",
+          "choices": [
+            "te whare pukapuka",
+            "te moana",
+            "te kīhini"
+          ],
+          "completedSentence": "Kei te whare pukapuka au.",
+          "explanation": "'te whare pukapuka' means 'the library'."
+        },
+        {
+          "id": "MRA_W3_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Use the local place word (no \"te\" needed)",
+          "contextPrompt": "I am here.",
+          "sentenceTemplate": "Kei _____ au.",
+          "answer": "konei",
+          "choices": [
+            "konei",
+            "te konei",
+            "hea"
+          ],
+          "completedSentence": "Kei konei au.",
+          "explanation": "Location words like 'konei' (here) follow 'Kei' directly without 'te'."
+        },
+        {
+          "id": "MRA_W3_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "They are at the house.",
+          "sentenceTemplate": "Kei te whare ia.",
+          "answer": "Kei + [Place] + [Pronoun]",
+          "choices": [
+            "Kei + [Place] + [Pronoun]",
+            "Nō + [Place] + [Pronoun]",
+            "Kei te + [Verb] + [Pronoun]"
+          ],
+          "completedSentence": "Kei te whare ia.",
+          "explanation": "'Kei + place + pronoun' states where someone is right now."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Lesson 3.2 (Inside, Outside & Above)",
+          "target": "MRA_W3_M02"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W3_M02",
+      "title": "Lesson 3.2: Relative Position (roto / waho / runga)",
+      "tier": 3,
+      "wahanga": "Group 3: Places & Movement",
+      "kowae": "Unit 3.2: Spatial Relationships",
+      "canDo": "Specify whether something is inside, outside, on top of, or underneath a landmark.",
+      "readerRole": "Precision",
+      "concept": "Position nouns ('roto' inside, 'waho' outside, 'runga' on/above, 'raro' under) follow 'Kei' directly and link to the landmark with 'i'.",
+      "pattern": "Kei + [Position] + i + [Landmark]",
+      "slots": [
+        {
+          "label": "Kei",
+          "meaning": "at / in",
+          "type": "fixed"
+        },
+        {
+          "label": "[Tūwāhi]",
+          "meaning": "position (roto / waho / runga)",
+          "type": "variable"
+        },
+        {
+          "label": "i",
+          "meaning": "connecting particle",
+          "type": "fixed"
+        },
+        {
+          "label": "[Wāhi]",
+          "meaning": "landmark noun",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "roto",
+          "meaning": "inside",
+          "emoji": "📥"
+        },
+        {
+          "word": "waho",
+          "meaning": "outside",
+          "emoji": "📤"
+        },
+        {
+          "word": "runga",
+          "meaning": "on / above / top",
+          "emoji": "⬆️"
+        },
+        {
+          "word": "raro",
+          "meaning": "under / below",
+          "emoji": "⬇️"
+        },
+        {
+          "word": "te tēpu",
+          "meaning": "the table / desk",
+          "emoji": "🪑"
+        },
+        {
+          "word": "te pukapuka",
+          "meaning": "the book",
+          "emoji": "📘"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "te rorohiko",
+            "meaning": "the computer",
+            "emoji": "💻"
+          },
+          {
+            "word": "te peke",
+            "meaning": "the bag",
+            "emoji": "🎒"
+          }
+        ],
+        "outside": [
+          {
+            "word": "te waka",
+            "meaning": "the car / canoe",
+            "emoji": "🛶"
+          },
+          {
+            "word": "te rākau",
+            "meaning": "the tree",
+            "emoji": "🌳"
+          }
+        ],
+        "community": [
+          {
+            "word": "te wharenui",
+            "meaning": "the meeting house",
+            "emoji": "🏛️"
+          },
+          {
+            "word": "muri",
+            "meaning": "behind",
+            "emoji": "⏪"
+          }
+        ],
+        "social": [
+          {
+            "word": "te motokā",
+            "meaning": "the car",
+            "emoji": "🚗"
+          },
+          {
+            "word": "mua",
+            "meaning": "in front",
+            "emoji": "⏩"
+          }
+        ]
+      },
+      "model": {
+        "context": "Looking for a book in the office:",
+        "en": "Where is the book? — On the desk.",
+        "target": "Kei runga i te tēpu.",
+        "literal": "[At = Kei] + [Top = runga] + [Link = i] + [Desk = te tēpu]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Kei hea te pukapuka?",
+            "en": "Where is the book?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Kei runga i te tēpu.",
+            "en": "On the desk."
+          }
+        ],
+        "check": {
+          "question": "Which small linking particle connects 'roto / runga' to the landmark?",
+          "options": [
+            {
+              "text": "i (e.g. 'Kei runga i te tēpu')",
+              "correct": true
+            },
+            {
+              "text": "Ko (e.g. 'Kei runga Ko te tēpu')",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W3_M02_P1",
+          "situation": "Say that it is on the desk:",
+          "target": "On the desk.",
+          "expected": [
+            "Kei runga i te tēpu"
+          ],
+          "hint": "Kei + runga + i + te tēpu"
+        },
+        {
+          "id": "MRA_W3_M02_P2",
+          "situation": "Say that it is inside the house:",
+          "target": "Inside the house.",
+          "expected": [
+            "Kei roto i te whare"
+          ],
+          "hint": "Kei + roto + i + te whare"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W3_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the linking particle",
+          "contextPrompt": "On the desk.",
+          "sentenceTemplate": "Kei runga _____ te tēpu.",
+          "answer": "i",
+          "choices": [
+            "i",
+            "ko",
+            "kua"
+          ],
+          "completedSentence": "Kei runga i te tēpu.",
+          "explanation": "'i' links the spatial noun ('runga') to the landmark ('te tēpu')."
+        },
+        {
+          "id": "MRA_W3_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a workplace item",
+          "contextPrompt": "Inside the bag.",
+          "sentenceTemplate": "Kei roto i _____.",
+          "answer": "te peke",
+          "choices": [
+            "te peke",
+            "te waka",
+            "te rākau"
+          ],
+          "completedSentence": "Kei roto i te peke.",
+          "explanation": "'te peke' means 'the bag'."
+        },
+        {
+          "id": "MRA_W3_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the opposite of inside",
+          "contextPrompt": "Outside the house.",
+          "sentenceTemplate": "Kei _____ i te whare.",
+          "answer": "waho",
+          "choices": [
+            "waho",
+            "roto",
+            "raro"
+          ],
+          "completedSentence": "Kei waho i te whare.",
+          "explanation": "'waho' means 'outside'."
+        },
+        {
+          "id": "MRA_W3_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "Inside the house.",
+          "sentenceTemplate": "Kei roto i te whare.",
+          "answer": "Kei + [Position] + i + [Landmark]",
+          "choices": [
+            "Kei + [Position] + i + [Landmark]",
+            "Haere + [Direction] + ki + [Destination]",
+            "Nō + [Place] + [Pronoun]"
+          ],
+          "completedSentence": "Kei roto i te whare.",
+          "explanation": "Relative locations combine 'Kei + position + i + landmark'."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Lesson 3.3 (Movement & Direction)",
+          "target": "MRA_W3_M03"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W3_M03",
+      "title": "Lesson 3.3: Movement & Direction (mai / atu)",
+      "tier": 3,
+      "wahanga": "Group 3: Places & Movement",
+      "kowae": "Unit 3.3: Directional Particles",
+      "canDo": "Give welcoming directions and describe movement towards or away from the speaker.",
+      "readerRole": "Navigation",
+      "concept": "Directional particles follow the motion verb: 'mai' means towards the speaker ('come'), and 'atu' means away from the speaker ('go'). Use 'ki' for 'to / towards' a destination.",
+      "pattern": "[Motion Verb] + [Direction] + ki + [Destination]",
+      "slots": [
+        {
+          "label": "[Mahi]",
+          "meaning": "motion verb (haere / hoki)",
+          "type": "variable"
+        },
+        {
+          "label": "[Ahunga]",
+          "meaning": "direction (mai / atu)",
+          "type": "fixed"
+        },
+        {
+          "label": "ki",
+          "meaning": "to / towards",
+          "type": "fixed"
+        },
+        {
+          "label": "[Wāhi]",
+          "meaning": "destination",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "Haere mai",
+          "meaning": "come here / welcome",
+          "emoji": "👋"
+        },
+        {
+          "word": "Haere atu",
+          "meaning": "go away / head out",
+          "emoji": "🚶"
+        },
+        {
+          "word": "Hoki mai",
+          "meaning": "return / come back",
+          "emoji": "🔄"
+        },
+        {
+          "word": "ki",
+          "meaning": "to / towards",
+          "emoji": "➡️"
+        },
+        {
+          "word": "te whare",
+          "meaning": "the house",
+          "emoji": "🏠"
+        },
+        {
+          "word": "te kura",
+          "meaning": "the school",
+          "emoji": "🏫"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "te tari",
+            "meaning": "the office",
+            "emoji": "🏢"
+          },
+          {
+            "word": "uru mai",
+            "meaning": "enter (towards speaker)",
+            "emoji": "🚪"
+          }
+        ],
+        "outside": [
+          {
+            "word": "piki ake",
+            "meaning": "climb upwards",
+            "emoji": "⛰️"
+          },
+          {
+            "word": "heke iho",
+            "meaning": "descend downwards",
+            "emoji": "⬇️"
+          }
+        ],
+        "community": [
+          {
+            "word": "te marae",
+            "meaning": "the marae",
+            "emoji": "🏛️"
+          },
+          {
+            "word": "te hui",
+            "meaning": "the gathering",
+            "emoji": "🤝"
+          }
+        ],
+        "social": [
+          {
+            "word": "konei",
+            "meaning": "here",
+            "emoji": "📍"
+          },
+          {
+            "word": "te kāinga",
+            "meaning": "home",
+            "emoji": "🏡"
+          }
+        ]
+      },
+      "model": {
+        "context": "Welcoming guests into the house:",
+        "en": "Come into the house! — Thank you, we are coming.",
+        "target": "Haere mai ki te whare.",
+        "literal": "[Go = Haere] + [Towards speaker = mai] + [To = ki] + [House = te whare]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Haere mai ki te whare!",
+            "en": "Come to the house!"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Kia ora, kei te haere atu mātou.",
+            "en": "Thank you, we are heading over."
+          }
+        ],
+        "check": {
+          "question": "Which directional particle signals movement towards the speaker?",
+          "options": [
+            {
+              "text": "mai (e.g. 'Haere mai')",
+              "correct": true
+            },
+            {
+              "text": "atu (e.g. 'Haere atu')",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W3_M03_P1",
+          "situation": "Invite someone to the house:",
+          "target": "Come to the house.",
+          "expected": [
+            "Haere mai ki te whare"
+          ],
+          "hint": "Haere mai + ki + te whare"
+        },
+        {
+          "id": "MRA_W3_M03_P2",
+          "situation": "Ask someone to come back here:",
+          "target": "Come back here.",
+          "expected": [
+            "Hoki mai ki konei"
+          ],
+          "hint": "Hoki mai + ki + konei"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W3_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the destination preposition",
+          "contextPrompt": "Come to the house.",
+          "sentenceTemplate": "Haere mai _____ te whare.",
+          "answer": "ki",
+          "choices": [
+            "ki",
+            "nō",
+            "ko"
+          ],
+          "completedSentence": "Haere mai ki te whare.",
+          "explanation": "'ki' means 'to / towards' a destination."
+        },
+        {
+          "id": "MRA_W3_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Direct someone to the office",
+          "contextPrompt": "Come to the office.",
+          "sentenceTemplate": "Haere mai ki _____.",
+          "answer": "te tari",
+          "choices": [
+            "te tari",
+            "te moana",
+            "te pukapuka"
+          ],
+          "completedSentence": "Haere mai ki te tari.",
+          "explanation": "'te tari' means 'the office'."
+        },
+        {
+          "id": "MRA_W3_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose movement towards the speaker",
+          "contextPrompt": "Come back here.",
+          "sentenceTemplate": "Hoki _____ ki konei.",
+          "answer": "mai",
+          "choices": [
+            "mai",
+            "atu",
+            "iho"
+          ],
+          "completedSentence": "Hoki mai ki konei.",
+          "explanation": "'mai' indicates movement towards the speaker."
+        },
+        {
+          "id": "MRA_W3_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "Come to the house.",
+          "sentenceTemplate": "Haere mai ki te whare.",
+          "answer": "[Motion Verb] + [Direction] + ki + [Destination]",
+          "choices": [
+            "[Motion Verb] + [Direction] + ki + [Destination]",
+            "Kei + [Place] + [Pronoun]",
+            "Me + [Verb] + [Pronoun]"
+          ],
+          "completedSentence": "Haere mai ki te whare.",
+          "explanation": "Motion verb + directional + 'ki' + destination directs movement."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Group 4 · Completed States (Kua)",
+          "target": "MRA_W4_M01"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W4_M01",
+      "title": "Lesson 4.1: Completed States (Kua)",
+      "tier": 4,
+      "wahanga": "Group 4: Completion & Connected Speech",
+      "kowae": "Unit 4.1: Resulting States",
+      "canDo": "Announce when tasks are finished, ready, or underway using Kua.",
+      "readerRole": "Milestone",
+      "concept": "'Kua' signals that a change has taken place and a new state now holds—such as work being finished ('kua oti') or a meal being ready ('kua rite').",
+      "pattern": "Kua + [State] + [Subject]",
+      "slots": [
+        {
+          "label": "Kua",
+          "meaning": "has / have become",
+          "type": "fixed"
+        },
+        {
+          "label": "[Āhua]",
+          "meaning": "resulting state (oti / rite / tīmata)",
+          "type": "variable"
+        },
+        {
+          "label": "[Tūingoa]",
+          "meaning": "subject noun",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "Kua",
+          "meaning": "has / have (completed)",
+          "emoji": "✅"
+        },
+        {
+          "word": "oti",
+          "meaning": "finished / complete",
+          "emoji": "🏁"
+        },
+        {
+          "word": "rite",
+          "meaning": "ready / prepared",
+          "emoji": "🔔"
+        },
+        {
+          "word": "tīmata",
+          "meaning": "started / begun",
+          "emoji": "▶️"
+        },
+        {
+          "word": "te mahi",
+          "meaning": "the work / task",
+          "emoji": "📋"
+        },
+        {
+          "word": "te kai",
+          "meaning": "the food / meal",
+          "emoji": "🍽️"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "te pūrongo",
+            "meaning": "the report",
+            "emoji": "📊"
+          },
+          {
+            "word": "te hui",
+            "meaning": "the meeting",
+            "emoji": "🗓️"
+          }
+        ],
+        "outside": [
+          {
+            "word": "te haerenga",
+            "meaning": "the journey",
+            "emoji": "⛵"
+          },
+          {
+            "word": "mutu",
+            "meaning": "ended / stopped",
+            "emoji": "🛑"
+          }
+        ],
+        "community": [
+          {
+            "word": "te hākari",
+            "meaning": "the feast",
+            "emoji": "🍲"
+          },
+          {
+            "word": "tae mai",
+            "meaning": "arrived",
+            "emoji": "🎉"
+          }
+        ],
+        "social": [
+          {
+            "word": "te kawhe",
+            "meaning": "the coffee",
+            "emoji": "☕"
+          },
+          {
+            "word": "te whakatau",
+            "meaning": "the welcome",
+            "emoji": "✨"
+          }
+        ]
+      },
+      "model": {
+        "context": "Wrapping up a team project:",
+        "en": "Is the work finished? — Yes, the work is finished!",
+        "target": "Kua oti te mahi.",
+        "literal": "[Completed = Kua] + [Finished = oti] + [Subject = te mahi]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Kua oti te mahi?",
+            "en": "Is the work finished?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Āe, kua oti te mahi!",
+            "en": "Yes, the work is finished!"
+          }
+        ],
+        "check": {
+          "question": "Which marker announces that something has reached completion?",
+          "options": [
+            {
+              "text": "Kua (e.g. 'Kua oti te mahi')",
+              "correct": true
+            },
+            {
+              "text": "Kei te (e.g. 'Kei te mahi au')",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W4_M01_P1",
+          "situation": "Announce that the work is finished:",
+          "target": "The work is finished.",
+          "expected": [
+            "Kua oti te mahi"
+          ],
+          "hint": "Kua + oti + te mahi"
+        },
+        {
+          "id": "MRA_W4_M01_P2",
+          "situation": "Call everyone because the food is ready:",
+          "target": "The food is ready.",
+          "expected": [
+            "Kua rite te kai"
+          ],
+          "hint": "Kua + rite + te kai"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W4_M01_D1",
+          "kind": "cloze",
+          "instruction": "Choose the completed-state marker",
+          "contextPrompt": "The work is finished.",
+          "sentenceTemplate": "_____ oti te mahi.",
+          "answer": "Kua",
+          "choices": [
+            "Kua",
+            "Kei te",
+            "Ko"
+          ],
+          "completedSentence": "Kua oti te mahi.",
+          "explanation": "'Kua' signals a completed transition into a new state."
+        },
+        {
+          "id": "MRA_W4_M01_D2",
+          "kind": "context-swap",
+          "instruction": "Swap in a workplace deliverable",
+          "contextPrompt": "The report is finished.",
+          "sentenceTemplate": "Kua oti _____.",
+          "answer": "te pūrongo",
+          "choices": [
+            "te pūrongo",
+            "te kai",
+            "te haerenga"
+          ],
+          "completedSentence": "Kua oti te pūrongo.",
+          "explanation": "'te pūrongo' means 'the report'."
+        },
+        {
+          "id": "MRA_W4_M01_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the right state word",
+          "contextPrompt": "The meeting has started.",
+          "sentenceTemplate": "Kua _____ te hui.",
+          "answer": "tīmata",
+          "choices": [
+            "tīmata",
+            "oti",
+            "rite"
+          ],
+          "completedSentence": "Kua tīmata te hui.",
+          "explanation": "'tīmata' means 'started / begun'."
+        },
+        {
+          "id": "MRA_W4_M01_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "The food is ready.",
+          "sentenceTemplate": "Kua rite te kai.",
+          "answer": "Kua + [State] + [Subject]",
+          "choices": [
+            "Kua + [State] + [Subject]",
+            "Kei te + [Verb] + [Pronoun]",
+            "Me + [Verb] + [Pronoun]"
+          ],
+          "completedSentence": "Kua rite te kai.",
+          "explanation": "'Kua + state + subject' reports a completed result."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Lesson 4.2 (Should & Suggestions with Me)",
+          "target": "MRA_W4_M02"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W4_M02",
+      "title": "Lesson 4.2: Suggestions & Obligations (Me)",
+      "tier": 4,
+      "wahanga": "Group 4: Completion & Connected Speech",
+      "kowae": "Unit 4.2: What We Should Do",
+      "canDo": "Make polite suggestions and state what should be done using Me.",
+      "readerRole": "Action Plan",
+      "concept": "'Me' before a verb expresses 'should' or 'ought to'. It is widely used for collaborative suggestions like 'Me haere tātou' (We should go).",
+      "pattern": "Me + [Verb] + [Pronoun]",
+      "slots": [
+        {
+          "label": "Me",
+          "meaning": "should / ought to",
+          "type": "fixed"
+        },
+        {
+          "label": "[Mahi]",
+          "meaning": "action verb",
+          "type": "variable"
+        },
+        {
+          "label": "[Tūpou]",
+          "meaning": "pronoun (tātou / koe / au)",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "Me",
+          "meaning": "should / ought to",
+          "emoji": "⚖️"
+        },
+        {
+          "word": "haere",
+          "meaning": "go",
+          "emoji": "🚶"
+        },
+        {
+          "word": "mahi",
+          "meaning": "work",
+          "emoji": "💼"
+        },
+        {
+          "word": "ako",
+          "meaning": "study / learn",
+          "emoji": "📖"
+        },
+        {
+          "word": "whakarongo",
+          "meaning": "listen",
+          "emoji": "👂"
+        },
+        {
+          "word": "tātou",
+          "meaning": "we (all of us)",
+          "emoji": "👥"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "tīmata",
+            "meaning": "start / begin",
+            "emoji": "▶️"
+          },
+          {
+            "word": "āwhina",
+            "meaning": "help / assist",
+            "emoji": "🤲"
+          }
+        ],
+        "outside": [
+          {
+            "word": "hoki",
+            "meaning": "return",
+            "emoji": "🔄"
+          },
+          {
+            "word": "whakatā",
+            "meaning": "rest / take a break",
+            "emoji": "🌿"
+          }
+        ],
+        "community": [
+          {
+            "word": "kōrero",
+            "meaning": "speak / discuss",
+            "emoji": "🗣️"
+          },
+          {
+            "word": "waiata",
+            "meaning": "sing",
+            "emoji": "🎵"
+          }
+        ],
+        "social": [
+          {
+            "word": "kai",
+            "meaning": "eat",
+            "emoji": "🍽️"
+          },
+          {
+            "word": "tūtaki",
+            "meaning": "meet up",
+            "emoji": "🤝"
+          }
+        ]
+      },
+      "model": {
+        "context": "Deciding next steps with your group:",
+        "en": "We should go now. — Yes, we should start.",
+        "target": "Me haere tātou.",
+        "literal": "[Should = Me] + [Go = haere] + [We all = tātou]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Kua rite koe? Me haere tātou.",
+            "en": "Are you ready? We should go."
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Āe, me haere tātou!",
+            "en": "Yes, let us go!"
+          }
+        ],
+        "check": {
+          "question": "What does 'Me' communicate at the start of a verb sentence?",
+          "options": [
+            {
+              "text": "That an action should or ought to happen",
+              "correct": true
+            },
+            {
+              "text": "That an action happened yesterday",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W4_M02_P1",
+          "situation": "Suggest to the group that you should all go:",
+          "target": "We should go.",
+          "expected": [
+            "Me haere tātou"
+          ],
+          "hint": "Me + haere + tātou"
+        },
+        {
+          "id": "MRA_W4_M02_P2",
+          "situation": "Advise someone that they should study:",
+          "target": "You should study.",
+          "expected": [
+            "Me ako koe"
+          ],
+          "hint": "Me + ako + koe"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W4_M02_D1",
+          "kind": "cloze",
+          "instruction": "Choose the obligation / suggestion marker",
+          "contextPrompt": "We should go.",
+          "sentenceTemplate": "_____ haere tātou.",
+          "answer": "Me",
+          "choices": [
+            "Me",
+            "I",
+            "Nō"
+          ],
+          "completedSentence": "Me haere tātou.",
+          "explanation": "'Me' expresses 'should / ought to'."
+        },
+        {
+          "id": "MRA_W4_M02_D2",
+          "kind": "context-swap",
+          "instruction": "Suggest taking a break",
+          "contextPrompt": "We should rest.",
+          "sentenceTemplate": "Me _____ tātou.",
+          "answer": "whakatā",
+          "choices": [
+            "whakatā",
+            "tīmata",
+            "kōrero"
+          ],
+          "completedSentence": "Me whakatā tātou.",
+          "explanation": "'whakatā' means 'rest / take a break'."
+        },
+        {
+          "id": "MRA_W4_M02_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the right verb",
+          "contextPrompt": "We should listen.",
+          "sentenceTemplate": "Me _____ tātou.",
+          "answer": "whakarongo",
+          "choices": [
+            "whakarongo",
+            "haere",
+            "kai"
+          ],
+          "completedSentence": "Me whakarongo tātou.",
+          "explanation": "'whakarongo' means 'listen'."
+        },
+        {
+          "id": "MRA_W4_M02_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "You should study.",
+          "sentenceTemplate": "Me ako koe.",
+          "answer": "Me + [Verb] + [Pronoun]",
+          "choices": [
+            "Me + [Verb] + [Pronoun]",
+            "I + [Verb] + [Pronoun]",
+            "Kei te + [Verb] + [Pronoun]"
+          ],
+          "completedSentence": "Me ako koe.",
+          "explanation": "'Me + verb + pronoun' expresses polite obligation or advice."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Next: Lesson 4.3 (Connected Speech with nā te mea)",
+          "target": "MRA_W4_M03"
+        }
+      ]
+    },
+    {
+      "id": "MRA_W4_M03",
+      "title": "Lesson 4.3: Explaining Why (nā te mea)",
+      "tier": 4,
+      "wahanga": "Group 4: Completion & Connected Speech",
+      "kowae": "Unit 4.3: Joining Clauses",
+      "canDo": "Join two complete ideas to give a reason using nā te mea (because).",
+      "readerRole": "Synthesis",
+      "concept": "Combine any two patterns you have already learned by placing 'nā te mea' ('because') between them: e.g., action + 'nā te mea' + feeling or completed state.",
+      "pattern": "[Clause 1] + nā te mea + [Clause 2]",
+      "slots": [
+        {
+          "label": "[Kōrero 1]",
+          "meaning": "first statement",
+          "type": "variable"
+        },
+        {
+          "label": "nā te mea",
+          "meaning": "because",
+          "type": "fixed"
+        },
+        {
+          "label": "[Kōrero 2]",
+          "meaning": "reason statement",
+          "type": "variable"
+        }
+      ],
+      "vocab": [
+        {
+          "word": "nā te mea",
+          "meaning": "because",
+          "emoji": "💡"
+        },
+        {
+          "word": "engari",
+          "meaning": "but / however",
+          "emoji": "⚖️"
+        },
+        {
+          "word": "nā reira",
+          "meaning": "therefore / so",
+          "emoji": "🎯"
+        },
+        {
+          "word": "Kei te kai au",
+          "meaning": "I am eating",
+          "emoji": "🍽️"
+        },
+        {
+          "word": "kei te hiakai au",
+          "meaning": "I am hungry",
+          "emoji": "🍲"
+        },
+        {
+          "word": "kua oti te mahi",
+          "meaning": "the work is finished",
+          "emoji": "🏁"
+        }
+      ],
+      "packs": {
+        "workplace": [
+          {
+            "word": "kei te mahi au",
+            "meaning": "I am working",
+            "emoji": "💼"
+          },
+          {
+            "word": "kua tīmata te hui",
+            "meaning": "the meeting has started",
+            "emoji": "🗓️"
+          }
+        ],
+        "outside": [
+          {
+            "word": "kei te makariri au",
+            "meaning": "I am cold",
+            "emoji": "❄️"
+          },
+          {
+            "word": "me hoki tātou",
+            "meaning": "we should return",
+            "emoji": "🔄"
+          }
+        ],
+        "community": [
+          {
+            "word": "kei te harikoa au",
+            "meaning": "I am happy",
+            "emoji": "😊"
+          },
+          {
+            "word": "kua tae mai rātou",
+            "meaning": "they have arrived",
+            "emoji": "🎉"
+          }
+        ],
+        "social": [
+          {
+            "word": "kei te ngenge au",
+            "meaning": "I am tired",
+            "emoji": "😴"
+          },
+          {
+            "word": "me whakatā tātou",
+            "meaning": "we should rest",
+            "emoji": "🌿"
+          }
+        ]
+      },
+      "model": {
+        "context": "Explaining why you are smiling at the end of the day:",
+        "en": "I am happy because the work is finished.",
+        "target": "Kei te harikoa au nā te mea kua oti te mahi.",
+        "literal": "[I am happy] + [because = nā te mea] + [the work is finished]",
+        "turns": [
+          {
+            "speaker": "Speaker A",
+            "target": "Kei te pēhea koe?",
+            "en": "How are you?"
+          },
+          {
+            "speaker": "Speaker B",
+            "target": "Kei te harikoa au nā te mea kua oti te mahi.",
+            "en": "I am happy because the work is finished."
+          }
+        ],
+        "check": {
+          "question": "Which phrase joins a statement to its reason ('because')?",
+          "options": [
+            {
+              "text": "nā te mea",
+              "correct": true
+            },
+            {
+              "text": "engari",
+              "correct": false
+            }
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "id": "MRA_W4_M03_P1",
+          "situation": "Explain why you are eating:",
+          "target": "I am eating because I am hungry.",
+          "expected": [
+            "Kei te kai au nā te mea kei te hiakai au",
+            "Kei te kai ahau nā te mea kei te hiakai ahau",
+            "Kei te kai au nā te mea kei te hiakai ahau",
+            "Kei te kai ahau nā te mea kei te hiakai au"
+          ],
+          "hint": "Kei te kai au + nā te mea + kei te hiakai au"
+        },
+        {
+          "id": "MRA_W4_M03_P2",
+          "situation": "Explain why you are happy:",
+          "target": "I am happy because the work is finished.",
+          "expected": [
+            "Kei te harikoa au nā te mea kua oti te mahi",
+            "Kei te harikoa ahau nā te mea kua oti te mahi"
+          ],
+          "hint": "Kei te harikoa au + nā te mea + kua oti te mahi"
+        }
+      ],
+      "drills": [
+        {
+          "id": "MRA_W4_M03_D1",
+          "kind": "cloze",
+          "instruction": "Choose the connector for 'because'",
+          "contextPrompt": "I am eating because I am hungry.",
+          "sentenceTemplate": "Kei te kai au _____ kei te hiakai au.",
+          "answer": "nā te mea",
+          "choices": [
+            "nā te mea",
+            "engari",
+            "kua"
+          ],
+          "completedSentence": "Kei te kai au nā te mea kei te hiakai au.",
+          "explanation": "'nā te mea' means 'because'."
+        },
+        {
+          "id": "MRA_W4_M03_D2",
+          "kind": "context-swap",
+          "instruction": "Choose the matching reason clause",
+          "contextPrompt": "I am happy because the work is finished.",
+          "sentenceTemplate": "Kei te harikoa au nā te mea _____.",
+          "answer": "kua oti te mahi",
+          "choices": [
+            "kua oti te mahi",
+            "kei te makariri au",
+            "kei te ngenge au"
+          ],
+          "completedSentence": "Kei te harikoa au nā te mea kua oti te mahi.",
+          "explanation": "'kua oti te mahi' means 'the work is finished'."
+        },
+        {
+          "id": "MRA_W4_M03_D3",
+          "kind": "slot-fill",
+          "instruction": "Choose the connector for 'but'",
+          "contextPrompt": "I am tired, but I am happy.",
+          "sentenceTemplate": "Kei te ngenge au, _____ kei te harikoa au.",
+          "answer": "engari",
+          "choices": [
+            "engari",
+            "nā te mea",
+            "nā reira"
+          ],
+          "completedSentence": "Kei te ngenge au, engari kei te harikoa au.",
+          "explanation": "'engari' introduces a contrast ('but / however')."
+        },
+        {
+          "id": "MRA_W4_M03_D4",
+          "kind": "pattern-match",
+          "instruction": "Match the sentence to its pattern",
+          "contextPrompt": "I am eating because I am hungry.",
+          "sentenceTemplate": "Kei te kai au nā te mea kei te hiakai au.",
+          "answer": "[Clause 1] + nā te mea + [Clause 2]",
+          "choices": [
+            "[Clause 1] + nā te mea + [Clause 2]",
+            "Kua + [State] + [Subject]",
+            "Kei + [Position] + i + [Landmark]"
+          ],
+          "completedSentence": "Kei te kai au nā te mea kei te hiakai au.",
+          "explanation": "'nā te mea' joins two full clauses into one reasoned sentence."
+        }
+      ],
+      "pathways": [
+        {
+          "label": "Review from Lesson 1.1 (Self & Identity)",
+          "target": "MRA_W1_M01"
+        }
+      ]
+    }
+  ]
+}

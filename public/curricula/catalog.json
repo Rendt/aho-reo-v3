@@ -1,0 +1,35 @@
+{
+  "version": "3.1",
+  "courses": [
+    {
+      "id": "AHO_MRA_TAUMATA_1",
+      "languageName": "Te Reo Māori",
+      "bcp47": "mi-NZ",
+      "curriculumLevel": "Taumata 1 · CEFR A1",
+      "description": "12 foundational lessons covering identity (Ko/He/Nō), present & past actions, locations, completed states (Kua), and connected speech.",
+      "lessonCount": 12,
+      "path": "/curricula/te-reo-maori-a1.json",
+      "default": true
+    },
+    {
+      "id": "AHO_DEU_A1",
+      "languageName": "Deutsch (German)",
+      "bcp47": "de-DE",
+      "curriculumLevel": "CEFR A1 · Beginner",
+      "description": "12 foundational lessons covering introductions, professions, origins, everyday verbs, Perfekt past tense, locations, modals, and weil-clauses.",
+      "lessonCount": 12,
+      "path": "/curricula/german-a1.json",
+      "default": false
+    },
+    {
+      "id": "AHO_FRA_A1",
+      "languageName": "Français (French)",
+      "bcp47": "fr-FR",
+      "curriculumLevel": "CEFR A1 · Beginner",
+      "description": "12 foundational lessons covering introductions, c'est, origins, -er verbs, passé composé, places, movement, il faut, and parce que.",
+      "lessonCount": 12,
+      "path": "/curricula/french-a1.json",
+      "default": false
+    }
+  ]
+}

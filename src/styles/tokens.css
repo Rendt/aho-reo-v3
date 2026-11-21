@@ -1,0 +1,74 @@
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Grotesk', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+
+  /* Light Theme — Warm Paper & Pounamu Jade */
+  --bg: #f4f6f4;
+  --surface: #ffffff;
+  --surface-subtle: #edf2ee;
+  --surface-hover: #e3ece6;
+  --border: #d2dfd6;
+  --border-strong: #b6cabd;
+
+  --text: #13211a;
+  --text-secondary: #41584c;
+  --text-muted: #5a7064;
+
+  --accent: #187a4e;
+  --accent-hover: #13643f;
+  --accent-soft: #e4f4ec;
+  --accent-text: #0f5c39;
+
+  --warm: #b5541a;
+  --warm-hover: #974413;
+  --warm-soft: #fdf0e7;
+  --warm-text: #8c3f11;
+
+  --danger: #b91c1c;
+  --danger-soft: #fee2e2;
+  --danger-text: #991b1b;
+
+  --shadow-sm: 0 1px 2px rgba(15, 32, 24, 0.05);
+  --shadow-md: 0 6px 20px rgba(15, 32, 24, 0.07);
+  --shadow-lg: 0 16px 40px rgba(15, 32, 24, 0.14);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --focus-ring: 0 0 0 3px rgba(24, 122, 78, 0.35);
+}
+
+html[data-theme='dark'] {
+  --bg: #0c1410;
+  --surface: #132019;
+  --surface-subtle: #1a2c22;
+  --surface-hover: #21372b;
+  --border: #263f32;
+  --border-strong: #355746;
+
+  --text: #f0f5f2;
+  --text-secondary: #c2d4ca;
+  --text-muted: #93aba0;
+
+  --accent: #32be7c;
+  --accent-hover: #42cf8c;
+  --accent-soft: rgba(50, 190, 124, 0.14);
+  --accent-text: #6de0a8;
+
+  --warm: #e68243;
+  --warm-hover: #ef955c;
+  --warm-soft: rgba(230, 130, 67, 0.16);
+  --warm-text: #f6b081;
+
+  --danger: #f87171;
+  --danger-soft: rgba(248, 113, 113, 0.16);
+  --danger-text: #fca5a5;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+
+  --focus-ring: 0 0 0 3px rgba(50, 190, 124, 0.4);
+}
