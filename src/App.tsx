@@ -43,7 +43,6 @@ const DEFAULT_PREFS: UserPreferences = {
   audioMuted: false,
   activeCurriculumId: '',
   onboardingSeen: false,
-  notes: '',
 };
 
 export function App() {
@@ -455,12 +454,10 @@ export function App() {
             catalog={catalog}
             curricula={curricula}
             activeCurriculum={activeCurriculum}
-            notes={prefs.notes}
             onInstallFromCatalog={(entry) => void handleInstallFromCatalog(entry)}
             onSelectCurriculum={(id) => void handleSelectCurriculum(id)}
             onInstallCurriculum={(c) => void handleInstallCurriculum(c)}
             onDeleteCurriculum={(id) => void handleDeleteCurriculum(id)}
-            onSaveNotes={(notes) => updatePrefs({ notes })}
             onFactoryReset={() => void handleFactoryReset()}
             onNotify={notify}
           />

@@ -5,7 +5,6 @@ import {
   FileJson,
   FolderOpen,
   Globe,
-  NotebookPen,
   Sparkles,
   Trash2,
   Wand2,
@@ -22,12 +21,10 @@ interface StudioViewProps {
   catalog: CatalogEntry[];
   curricula: Curriculum[];
   activeCurriculum: Curriculum | null;
-  notes: string;
   onInstallFromCatalog: (entry: CatalogEntry) => void;
   onSelectCurriculum: (curriculumId: string) => void;
   onInstallCurriculum: (curriculum: Curriculum) => void;
   onDeleteCurriculum: (curriculumId: string) => void;
-  onSaveNotes: (notes: string) => void;
   onFactoryReset: () => void;
   onNotify: (msg: string, tone?: 'success' | 'warning') => void;
 }
@@ -39,12 +36,10 @@ export function StudioView({
   catalog,
   curricula,
   activeCurriculum,
-  notes,
   onInstallFromCatalog,
   onSelectCurriculum,
   onInstallCurriculum,
   onDeleteCurriculum,
-  onSaveNotes,
   onFactoryReset,
   onNotify,
 }: StudioViewProps) {
@@ -480,31 +475,6 @@ export function StudioView({
         )}
       </section>
 
-      {/* Study Notes */}
-      <section className="panel stack-sm">
-        <div className="row-between">
-          <h2
-            className="step-title"
-            style={{ fontSize: '1.05rem', display: 'flex', alignItems: 'center', gap: 8 }}
-          >
-            <NotebookPen size={17} />
-            <span>Study Notes</span>
-          </h2>
-          <span className="vocab-meaning">Saved automatically to IndexedDB</span>
-        </div>
-        <label htmlFor="studyNotesTextarea" className="sr-only">
-          Personal study notes
-        </label>
-        <textarea
-          id="studyNotesTextarea"
-          className="textarea-input"
-          rows={5}
-          value={notes}
-          onChange={(e) => onSaveNotes(e.target.value)}
-          placeholder="Jot down vocabulary reminders, pronunciation tips, or draft lesson ideas..."
-        />
-      </section>
-
       {/* Advanced JSON Editor & Factory Reset */}
       <details className="details-box">
         <summary className="details-summary">
@@ -568,8 +538,8 @@ export function StudioView({
         title="Reset all local data?"
       >
         <p className="page-lead">
-          This clears all saved progress, installed courses, and study notes from IndexedDB and
-          reloads the default course from the external catalog.
+          This clears all saved progress and installed courses from IndexedDB and reloads the
+          default course from the external catalog.
         </p>
         <div className="row-between">
           <button type="button" className="btn btn-secondary" onClick={() => setResetOpen(false)}>

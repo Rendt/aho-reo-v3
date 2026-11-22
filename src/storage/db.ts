@@ -7,7 +7,6 @@ export interface UserPreferences {
   audioMuted: boolean;
   activeCurriculumId: string;
   onboardingSeen: boolean;
-  notes: string;
 }
 
 interface AhoReoDBSchema extends DBSchema {
