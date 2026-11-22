@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/generate-curriculum.ts": {
+      "maxDuration": 60
+    }
+  },
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/curricula/(.*)", "destination": "/curricula/$1" },

@@ -167,12 +167,15 @@ export function StudioView({
       const payload = (await res.json().catch(() => ({}))) as {
         curriculum?: unknown;
         error?: string;
+        detail?: string;
       };
       if (!res.ok) {
-        throw new Error(
-          payload.error ||
-            `AI proxy returned HTTP ${res.status}. Configure GEMINI_API_KEY on your server or use "Copy Prompt" to generate externally.`,
-        );
+        const errorText = payload.error
+          ? payload.detail
+            ? `${payload.error}: ${payload.detail}`
+            : payload.error
+          : `AI proxy returned HTTP ${res.status}. Configure GEMINI_API_KEY on your server or use "Copy Prompt" to generate externally.`;
+        throw new Error(errorText);
       }
       const validated = normalizeAndValidateCurriculum(payload.curriculum);
       if (!validated.success) {

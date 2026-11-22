@@ -103,10 +103,38 @@ const CURRICULUM_RESPONSE_SCHEMA = {
           packs: {
             type: 'OBJECT',
             properties: {
-              workplace: { type: 'ARRAY', items: { type: 'OBJECT', properties: { word: { type: 'STRING' }, meaning: { type: 'STRING' }, emoji: { type: 'STRING' } } } },
-              outside: { type: 'ARRAY', items: { type: 'OBJECT', properties: { word: { type: 'STRING' }, meaning: { type: 'STRING' }, emoji: { type: 'STRING' } } } },
-              community: { type: 'ARRAY', items: { type: 'OBJECT', properties: { word: { type: 'STRING' }, meaning: { type: 'STRING' }, emoji: { type: 'STRING' } } } },
-              social: { type: 'ARRAY', items: { type: 'OBJECT', properties: { word: { type: 'STRING' }, meaning: { type: 'STRING' }, emoji: { type: 'STRING' } } } },
+              workplace: {
+                type: 'ARRAY',
+                items: {
+                  type: 'OBJECT',
+                  required: ['word', 'meaning'],
+                  properties: { word: { type: 'STRING' }, meaning: { type: 'STRING' }, emoji: { type: 'STRING' } },
+                },
+              },
+              outside: {
+                type: 'ARRAY',
+                items: {
+                  type: 'OBJECT',
+                  required: ['word', 'meaning'],
+                  properties: { word: { type: 'STRING' }, meaning: { type: 'STRING' }, emoji: { type: 'STRING' } },
+                },
+              },
+              community: {
+                type: 'ARRAY',
+                items: {
+                  type: 'OBJECT',
+                  required: ['word', 'meaning'],
+                  properties: { word: { type: 'STRING' }, meaning: { type: 'STRING' }, emoji: { type: 'STRING' } },
+                },
+              },
+              social: {
+                type: 'ARRAY',
+                items: {
+                  type: 'OBJECT',
+                  required: ['word', 'meaning'],
+                  properties: { word: { type: 'STRING' }, meaning: { type: 'STRING' }, emoji: { type: 'STRING' } },
+                },
+              },
             },
           },
           model: {
@@ -187,12 +215,12 @@ const CURRICULUM_RESPONSE_SCHEMA = {
   },
 };
 
-export default async function handler(req: Request): Promise<Response> {
-  if (req.method !== 'POST') {
-    return Response.json({ error: 'Method not allowed' }, { status: 405 });
-  }
+export function GET(): Response {
+  return Response.json({ error: 'Method not allowed. Use POST.' }, { status: 405 });
+}
 
-  const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+export async function POST(request: Request): Promise<Response> {
+  const clientIp = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
   if (!checkRateLimit(clientIp)) {
     return Response.json(
       { error: 'Rate limit exceeded. Please wait a minute before generating another curriculum.' },
@@ -210,7 +238,7 @@ export default async function handler(req: Request): Promise<Response> {
 
   let body: GenerateRequestBody;
   try {
-    body = (await req.json()) as GenerateRequestBody;
+    body = (await request.json()) as GenerateRequestBody;
   } catch {
     return Response.json({ error: 'Invalid JSON request body.' }, { status: 400 });
   }
@@ -259,9 +287,23 @@ export default async function handler(req: Request): Promise<Response> {
     }
 
     const payload = (await geminiRes.json()) as {
-      candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }>;
+      candidates?: Array<{
+        finishReason?: string;
+        content?: { parts?: Array<{ text?: string }> };
+      }>;
     };
-    const rawJson = payload.candidates?.[0]?.content?.parts?.[0]?.text;
+    const candidate = payload.candidates?.[0];
+    if (candidate?.finishReason === 'MAX_TOKENS') {
+      return Response.json(
+        {
+          error:
+            'Gemini response was truncated (MAX_TOKENS). Try a narrower scope or use "Copy AI Prompt" for very large vocabularies.',
+        },
+        { status: 502 },
+      );
+    }
+
+    const rawJson = candidate?.content?.parts?.[0]?.text;
     if (!rawJson) {
       return Response.json({ error: 'Gemini returned an empty response.' }, { status: 502 });
     }
