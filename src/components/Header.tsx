@@ -1,6 +1,7 @@
 import {
   BookOpen,
   Compass,
+  Download,
   Feather,
   Flame,
   HelpCircle,
@@ -23,6 +24,8 @@ interface HeaderProps {
   dueCount: number;
   audioMuted: boolean;
   theme: 'light' | 'dark';
+  canInstallApp?: boolean;
+  onInstallApp?: () => void;
   onToggleAudio: () => void;
   onToggleTheme: () => void;
   onOpenStatus: () => void;
@@ -38,6 +41,8 @@ export function Header({
   dueCount,
   audioMuted,
   theme,
+  canInstallApp,
+  onInstallApp,
   onToggleAudio,
   onToggleTheme,
   onOpenStatus,
@@ -151,6 +156,19 @@ export function Header({
           >
             {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
           </button>
+
+          {canInstallApp && onInstallApp && (
+            <button
+              type="button"
+              id="installAppBtn"
+              className="icon-btn"
+              onClick={onInstallApp}
+              aria-label="Install Aho Reo app"
+              title="Install Aho Reo app"
+            >
+              <Download size={17} />
+            </button>
+          )}
 
           <button
             type="button"

@@ -37,6 +37,7 @@ import { PathwayView } from './components/PathwayView';
 import { ReviewView } from './components/ReviewView';
 import { StudioView } from './components/StudioView';
 import { Toast, type ToastMessage } from './components/Toast';
+import { usePwaInstall } from './hooks/usePwaInstall';
 
 const DEFAULT_PREFS: UserPreferences = {
   theme: 'light',
@@ -46,6 +47,7 @@ const DEFAULT_PREFS: UserPreferences = {
 };
 
 export function App() {
+  const { canInstall: canInstallApp, promptInstall } = usePwaInstall();
   const [hydrated, setHydrated] = useState(false);
   const [bootError, setBootError] = useState<string | null>(null);
   const [catalog, setCatalog] = useState<CatalogEntry[]>([]);
@@ -397,6 +399,16 @@ export function App() {
         dueCount={dueItems.length}
         audioMuted={prefs.audioMuted}
         theme={prefs.theme}
+        canInstallApp={canInstallApp}
+        onInstallApp={() => {
+          void promptInstall().then((result) => {
+            if (result === 'accepted') {
+              notify('Aho Reo installed!');
+            } else if (result === 'ios') {
+              notify('In Safari, tap Share then "Add to Home Screen" to install Aho Reo.');
+            }
+          });
+        }}
         onToggleAudio={handleToggleAudio}
         onToggleTheme={() => updatePrefs({ theme: prefs.theme === 'dark' ? 'light' : 'dark' })}
         onOpenStatus={() => setStatusOpen(true)}
